@@ -24,7 +24,7 @@ public class ConexaoOracle {
         } else {
             try {
                 Class.forName("oracle.jdbc.driver.OracleDriver");
-                ConexaoOracle = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE", "aulapoo2016", "aulapoo2016");
+                ConexaoOracle = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE", "caixaeletronico", "caixaeletronico");
                 System.out.println("Conectado!");
             } catch (SQLException ex) {
                 JOptionPane.showMessageDialog(null, "Erro na conexão: \n" + ex);

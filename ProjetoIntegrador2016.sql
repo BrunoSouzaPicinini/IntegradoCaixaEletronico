@@ -13,7 +13,7 @@ constraint pk_cidade primary key (cd_cidade),
 constraint fk_uf foreign key(cd_uf) references uf(cd_uf)
 );
 
-CREATE TABLE ENDEREco(
+CREATE TABLE ENDERECO(
 cd_endereco integer not null,
 cd_cidade integer not null,
 
@@ -74,6 +74,7 @@ cd_banco integer not null,
 cd_agencia integer not null,
 vl_sd_corrente number(12,2),
 vl_sd_poupanca number(12,2),
+cd_senha number(6),
 
 constraint pk_conta primary key (cd_conta),
 constraint fk_agencia foreign key (cd_Agencia, cd_banco) references agencia(cd_agencia,cd_banco)
@@ -95,6 +96,7 @@ conta integer not null,
 operadora integer not null,
 dt_val date,
 dt_esp date,
+cd_senha number(6),
 
 constraint pk_cartao primary key (cd_Cartao),
 constraint fk_tp_cartao foreign key (tp_cartao) references tp_Cartao(cd_tp_cartao),
@@ -125,7 +127,7 @@ cd_sessao integer not null,
 cd_conta integer not null,
 dt_sessao date,
 
-constraint pk_sessao primary key (cd_sessao, cd_conta),
+constraint pk_sessao primary key (cd_sessao),
 constraint fk_conta_sessao foreign key (cd_conta) references conta(cd_conta)
 );
 
@@ -152,7 +154,7 @@ dt_operacao date,
 cd_op_ct integer,
 
 constraint pk_operacao primary key (cd_operacao),
-constraint fk_cont_operacao foreign key (cd_sessao, cd_conta_sessao) references sessao(cd_sessao, cd_conta),
+constraint fk_cont_operacao foreign key (cd_sessao) references sessao(cd_sessao),
 constraint fk_trans_op foreign key (cd_trans) references transferencia(cd_trans),
 constraint fk_saque_op  foreign key (cd_saque) references saque(cd_saque),
 constraint fk_pagamento_op foreign key (cd_pagamento) references pagamento(cd_pagamento)
@@ -177,6 +179,4 @@ vl_saldo number (12,2),
 
 constraint pk_saldo primary key (cd_saldo, cd_conta),
 constraint fk_conta_saldo foreign key (cd_conta) references conta(cd_conta),
-constraint fk_mov foreign key (cd_mov) references movimentacao(cd_mov)
-
-);
+constraint fk_mov foreign key (cd_mov) references movimentacao(cd_mov));
