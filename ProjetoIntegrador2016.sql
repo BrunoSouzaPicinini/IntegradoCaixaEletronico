@@ -181,7 +181,7 @@ constraint pk_saldo primary key (cd_saldo, cd_conta),
 constraint fk_conta_saldo foreign key (cd_conta) references conta(cd_conta),
 constraint fk_mov foreign key (cd_mov) references movimentacao(cd_mov));
 
---ALTERAÇÕES DE COLUNAS NAS TABELAS CLIENTE, AGENCIA
+--ALTERAÇÕES DE COLUNAS NAS TABELAS CLIENTE, AGENCIA 28/04/2016 BRUNO S PICININI
 
 
 ALTER TABLE CLIENTE MODIFY RG NUMBER(9);
@@ -192,3 +192,15 @@ ALTER TABLE AGENCIA MODIFY TEL_AGENCIA NUMBER(11);
 
 ALTER TABLE UF DROP COLUMN NM_UF;
 ALTER TABLE UF ADD DS_SIGLA CHAR(2);
+
+-- ADD COLUNAS ENDERECO 28/04/2016 BRUNO S PICININI
+
+alter table endereco add logradouro varchar(30);
+alter table endereco add nm_end number;
+alter table endereco add comp varchar (30);
+alter table endereco add bairro varchar (30);
+alter table endereco add cep number (8);
+
+cl screen;
+
+desc endereco;
