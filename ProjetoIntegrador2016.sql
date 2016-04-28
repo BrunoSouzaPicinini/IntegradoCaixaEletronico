@@ -180,3 +180,13 @@ vl_saldo number (12,2),
 constraint pk_saldo primary key (cd_saldo, cd_conta),
 constraint fk_conta_saldo foreign key (cd_conta) references conta(cd_conta),
 constraint fk_mov foreign key (cd_mov) references movimentacao(cd_mov));
+
+--ALTERAÇÕES DE COLUNAS NAS TABELAS CLIENTE, AGENCIA
+
+
+ALTER TABLE CLIENTE MODIFY RG NUMBER(9);
+ALTER TABLE CLIENTE MODIFY CPF NUMBER(11);
+ALTER TABLE CLIENTE MODIFY TEL_CLIENTE NUMBER(11);
+
+ALTER TABLE AGENCIA MODIFY TEL_AGENCIA NUMBER(11);
+

@@ -70,13 +70,13 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="1" max="-2" attributes="0">
                           <Group type="102" attributes="0">
-                              <Component id="jBIncluir" min="-2" pref="87" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
-                              <Component id="jBAlterar" min="-2" pref="73" max="-2" attributes="0"/>
+                              <Component id="jBNovo" min="-2" pref="87" max="-2" attributes="0"/>
                               <EmptySpace max="32767" attributes="0"/>
+                              <Component id="jBAlterar" min="-2" pref="73" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
                               <Component id="jBExcluir" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
-                              <Component id="jBSalvar" min="-2" pref="72" max="-2" attributes="0"/>
+                              <Component id="jBGravar" min="-2" pref="72" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
                               <Component id="jBCancelar" min="-2" max="-2" attributes="0"/>
                           </Group>
@@ -86,15 +86,9 @@
                               <Component id="jTFNome" min="-2" pref="415" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="1" attributes="0">
-                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="jTFCPF" pref="140" max="32767" attributes="0"/>
-                                  <Component id="jTFAgencia" max="32767" attributes="0"/>
-                              </Group>
+                              <Component id="jTFCPF" min="-2" pref="140" max="-2" attributes="0"/>
                               <EmptySpace max="32767" attributes="0"/>
-                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="jTFRG" pref="140" max="32767" attributes="0"/>
-                                  <Component id="jTFConta" max="32767" attributes="0"/>
-                              </Group>
+                              <Component id="jTFRG" min="-2" pref="140" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="64" max="-2" attributes="0"/>
                               <Component id="jTFTelefone" min="-2" pref="128" max="-2" attributes="0"/>
                           </Group>
@@ -117,17 +111,12 @@
                           <Component id="jTFRG" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jTFTelefone" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
+                      <EmptySpace pref="191" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jTFAgencia" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jTFConta" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace pref="124" max="32767" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jBIncluir" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
+                          <Component id="jBNovo" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
                           <Component id="jBAlterar" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
                           <Component id="jBExcluir" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
-                          <Component id="jBSalvar" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
+                          <Component id="jBGravar" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
                           <Component id="jBCancelar" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
@@ -187,18 +176,21 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JButton" name="jBIncluir">
+            <Component class="javax.swing.JButton" name="jBNovo">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Incluir"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBIncluirActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBNovoActionPerformed"/>
               </Events>
             </Component>
             <Component class="javax.swing.JButton" name="jBAlterar">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Alterar"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBAlterarActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="jBExcluir">
               <Properties>
@@ -208,39 +200,18 @@
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBExcluirActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JButton" name="jBSalvar">
+            <Component class="javax.swing.JButton" name="jBGravar">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Salvar"/>
+                <Property name="text" type="java.lang.String" value="Gravar"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBSalvarActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBGravarActionPerformed"/>
               </Events>
             </Component>
             <Component class="javax.swing.JButton" name="jBCancelar">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Cancelar"/>
               </Properties>
-            </Component>
-            <Component class="javax.swing.JTextField" name="jTFAgencia">
-              <Properties>
-                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                  <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-                    <TitledBorder title="Ag&#xea;ncia"/>
-                  </Border>
-                </Property>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JTextField" name="jTFConta">
-              <Properties>
-                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                  <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-                    <TitledBorder title="Conta"/>
-                  </Border>
-                </Property>
-              </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTFContaActionPerformed"/>
-              </Events>
             </Component>
           </SubComponents>
         </Container>
@@ -293,14 +264,18 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="Consultar"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBConsultaActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JComboBox" name="jCBConsulta">
               <Properties>
                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                  <StringArray count="3">
-                    <StringItem index="0" value="C&#xf3;digo"/>
-                    <StringItem index="1" value="Nome"/>
-                    <StringItem index="2" value="CPF"/>
+                  <StringArray count="4">
+                    <StringItem index="0" value="Geral"/>
+                    <StringItem index="1" value="C&#xf3;digo"/>
+                    <StringItem index="2" value="Nome"/>
+                    <StringItem index="3" value="CPF"/>
                   </StringArray>
                 </Property>
               </Properties>
@@ -317,7 +292,7 @@
 
               <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
               <SubComponents>
-                <Component class="javax.swing.JTable" name="jTable1">
+                <Component class="javax.swing.JTable" name="jTConsulta">
                   <Properties>
                     <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
                       <Table columnCount="5" rowCount="0">
