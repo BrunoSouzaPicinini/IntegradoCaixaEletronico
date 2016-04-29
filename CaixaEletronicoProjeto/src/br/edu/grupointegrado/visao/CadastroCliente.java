@@ -201,9 +201,17 @@ public class CadastroCliente extends javax.swing.JFrame {
 
             },
             new String [] {
-                "Código", "Nome", "CPF", "Conta", "Agência"
+                "Código", "Cód. Endereço", "RG", "CPF", "Nome", "Telefone"
             }
-        ));
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
         jScrollPane2.setViewportView(jTConsulta);
 
         javax.swing.GroupLayout jPConsultaLayout = new javax.swing.GroupLayout(jPConsulta);
