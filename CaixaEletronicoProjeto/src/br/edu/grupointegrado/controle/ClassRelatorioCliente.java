@@ -20,13 +20,16 @@ import net.sf.jasperreports.view.JasperViewer;
  */
 public class ClassRelatorioCliente {
     
+    String curDir = System.getProperty("user.dir");
+    
+    
     public ClassRelatorioCliente(ResultSet resultset){
         try{
             JRResultSetDataSource jrRs = new JRResultSetDataSource(resultset);
             JasperPrint jasperPrint =
             JasperFillManager.fillReport(
                     //ALTERAR PARA FUNCIONAR EM OUTROS PCs
-                    "d://Integrado//4semestre//Projetointegrador3//grupo//Relatorio//Relatorio_Cliente.jasper",
+                    curDir+"//Relatorio//Relatorio_Cliente.jasper",
                     new HashMap(), jrRs);
             JasperViewer viewer = new JasperViewer(jasperPrint);
             viewer.setVisible(true);

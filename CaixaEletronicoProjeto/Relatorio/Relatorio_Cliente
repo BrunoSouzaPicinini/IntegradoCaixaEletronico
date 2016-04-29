@@ -54,7 +54,7 @@ INNER JOIN CIDADE CID ON (EN.CD_CIDADE = CID.CD_CIDADE)]]></queryString>
 		</columnHeader>
 		<detail>
 			<band height="100"  isSplitAllowed="true" >
-				<textField isStretchWithOverflow="false" pattern="##0.00" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<textField isStretchWithOverflow="false" pattern="###0" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
 						x="0"
 						y="0"
@@ -67,9 +67,9 @@ INNER JOIN CIDADE CID ON (EN.CD_CIDADE = CID.CD_CIDADE)]]></queryString>
 					</textElement>
 				<textFieldExpression   class="java.math.BigDecimal"><![CDATA[$F{COD}]]></textFieldExpression>
 				</textField>
-				<textField isStretchWithOverflow="false" pattern="##0.00" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<textField isStretchWithOverflow="false" pattern="###0" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
-						x="213"
+						x="223"
 						y="0"
 						width="100"
 						height="18"
@@ -82,7 +82,7 @@ INNER JOIN CIDADE CID ON (EN.CD_CIDADE = CID.CD_CIDADE)]]></queryString>
 				</textField>
 				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
-						x="105"
+						x="109"
 						y="0"
 						width="100"
 						height="18"
@@ -96,7 +96,7 @@ INNER JOIN CIDADE CID ON (EN.CD_CIDADE = CID.CD_CIDADE)]]></queryString>
 				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
 						x="0"
-						y="25"
+						y="26"
 						width="100"
 						height="18"
 						key="textField"/>
@@ -108,8 +108,8 @@ INNER JOIN CIDADE CID ON (EN.CD_CIDADE = CID.CD_CIDADE)]]></queryString>
 				</textField>
 				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
-						x="105"
-						y="25"
+						x="109"
+						y="26"
 						width="100"
 						height="18"
 						key="textField"/>

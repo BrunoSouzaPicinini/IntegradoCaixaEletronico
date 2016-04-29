@@ -9,7 +9,7 @@ import br.edu.grupointegrado.controle.ClassCliente;
 import br.edu.grupointegrado.controle.ClassRelatorioCliente;
 import br.edu.grupointegrado.ferramentas.PreencherjTableGenerico;
 import br.edu.grupointegrado.ferramentas.Rotinas;
-
+import java.io.File;
 /**
  *
  * @author Luan
@@ -21,11 +21,19 @@ public class CadastroCliente extends javax.swing.JFrame {
     
     int situacao;
     
+    //TESTE DIRETORIO
+    
+    
+    //TESTE DIRETORIO
+    
     public CadastroCliente() {
         initComponents();
         situacao = Rotinas.PADRAO;
         preencher.FormatarJtable(jTConsulta, new int[]{80, 300, 80});
        
+        //Teste pegar diretorio atual
+        
+        
         
     }
 
@@ -348,6 +356,9 @@ public class CadastroCliente extends javax.swing.JFrame {
     }//GEN-LAST:event_jBCadastroEnderecoActionPerformed
 
     private void jBrelatorioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBrelatorioActionPerformed
+        
+         String curDir = System.getProperty("user.dir");
+         System.out.println(curDir);
         ClassRelatorioCliente relatorio = new ClassRelatorioCliente(cliente.relatorioClienteGeral()); 
     }//GEN-LAST:event_jBrelatorioActionPerformed
 
