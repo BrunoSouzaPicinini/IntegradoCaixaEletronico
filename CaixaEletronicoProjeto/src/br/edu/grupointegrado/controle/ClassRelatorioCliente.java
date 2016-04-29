@@ -31,7 +31,7 @@ public class ClassRelatorioCliente {
                     //ALTERAR PARA FUNCIONAR EM OUTROS PCs
                    curDir+"//Relatorio//Relatorio_Cliente.jasper",
                     new HashMap(), jrRs);
-            JasperViewer viewer = new JasperViewer(jasperPrint);
+            JasperViewer viewer = new JasperViewer(jasperPrint,false);
             viewer.setVisible(true);
         } catch (Exception erro){
             JOptionPane.showMessageDialog(null,"erro de relatório" + erro);
