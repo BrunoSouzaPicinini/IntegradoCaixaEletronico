@@ -1,3 +1,6 @@
 /CaixaEletronicoProjeto/build/
 
+#Folder
 /CaixaEletronicoProjeto/nbproject/private/*
+
+.private.properties
