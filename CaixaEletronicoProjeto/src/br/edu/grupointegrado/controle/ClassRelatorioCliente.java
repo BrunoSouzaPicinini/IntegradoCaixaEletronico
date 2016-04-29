@@ -1,9 +1,6 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package br.edu.grupointegrado.controle;
+
 
 /**
  *
@@ -21,14 +18,15 @@ import net.sf.jasperreports.view.JasperViewer;
  *
  * @author BrunoSouzaPicinini
  */
-public class ClassRelatorioCidade {
+public class ClassRelatorioCliente {
     
-    public ClassRelatorioCidade(ResultSet resultset){
+    public ClassRelatorioCliente(ResultSet resultset){
         try{
             JRResultSetDataSource jrRs = new JRResultSetDataSource(resultset);
             JasperPrint jasperPrint =
             JasperFillManager.fillReport(
-            "diretorio",new HashMap(), jrRs);
+            "file://Integrado//4semestre//Projetointegrador3//grupo//Relatorio//Relatorio_Cliente.jasper",
+                    new HashMap(), jrRs);
             JasperViewer viewer = new JasperViewer(jasperPrint);
             viewer.setVisible(true);
         } catch (Exception erro){

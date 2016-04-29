@@ -102,6 +102,17 @@ public class ClassCliente extends ConexaoOracle {
         }
     }
     
+    public ResultSet relatorioClienteGeral (){
+        sql.delete(0, sql.length());
+        sql.append("SELECT CLI.CD_CLIENTE AS COD,CLI.RG,CLI.NM_CLIENTE AS NOME, CID.NM_CIDADE AS CIDADE,\n" +
+                    "(SELECT DS_SIGLA FROM UF\n" +
+                    " WHERE CD_UF = CID.CD_UF) AS UF \n" +
+                    "FROM ENDERECO EN\n" +
+                    "INNER JOIN CLIENTE CLI ON (CLI.CD_ENDERECO = EN.CD_ENDERECO)\n" +
+                    "INNER JOIN CIDADE CID ON (EN.CD_CIDADE = CID.CD_CIDADE)");
+        executeSQL(sql.toString());
+        return resultset;
+    }
     
 
     public int getCodCliente() {
