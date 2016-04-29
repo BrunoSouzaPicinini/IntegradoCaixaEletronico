@@ -29,12 +29,13 @@ public class ClassRelatorioCliente {
             JasperPrint jasperPrint =
             JasperFillManager.fillReport(
                     //ALTERAR PARA FUNCIONAR EM OUTROS PCs
-                    curDir+"//Relatorio//Relatorio_Cliente.jasper",
+                   curDir+"//Relatorio//Relatorio_Cliente.jasper",
                     new HashMap(), jrRs);
             JasperViewer viewer = new JasperViewer(jasperPrint);
             viewer.setVisible(true);
         } catch (Exception erro){
             JOptionPane.showMessageDialog(null,"erro de relatório" + erro);
+            
         }
     }
     

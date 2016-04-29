@@ -356,9 +356,8 @@ public class CadastroCliente extends javax.swing.JFrame {
     }//GEN-LAST:event_jBCadastroEnderecoActionPerformed
 
     private void jBrelatorioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBrelatorioActionPerformed
-        
          String curDir = System.getProperty("user.dir");
-         System.out.println(curDir);
+         System.out.println(curDir+"//Relatorio//Relatorio_Cliente.jasper");
         ClassRelatorioCliente relatorio = new ClassRelatorioCliente(cliente.relatorioClienteGeral()); 
     }//GEN-LAST:event_jBrelatorioActionPerformed
 
