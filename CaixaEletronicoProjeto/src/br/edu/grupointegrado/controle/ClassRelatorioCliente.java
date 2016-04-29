@@ -25,7 +25,8 @@ public class ClassRelatorioCliente {
             JRResultSetDataSource jrRs = new JRResultSetDataSource(resultset);
             JasperPrint jasperPrint =
             JasperFillManager.fillReport(
-            "file://Integrado//4semestre//Projetointegrador3//grupo//Relatorio//Relatorio_Cliente.jasper",
+                    //ALTERAR PARA FUNCIONAR EM OUTROS PCs
+                    "d://Integrado//4semestre//Projetointegrador3//grupo//Relatorio//Relatorio_Cliente.jasper",
                     new HashMap(), jrRs);
             JasperViewer viewer = new JasperViewer(jasperPrint);
             viewer.setVisible(true);
