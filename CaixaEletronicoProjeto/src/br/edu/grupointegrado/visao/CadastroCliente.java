@@ -217,6 +217,11 @@ public class CadastroCliente extends javax.swing.JFrame {
         });
 
         jCBConsulta.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Geral", "Código", "Nome", "CPF" }));
+        jCBConsulta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCBConsultaActionPerformed(evt);
+            }
+        });
 
         jTConsulta.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -360,6 +365,10 @@ public class CadastroCliente extends javax.swing.JFrame {
          System.out.println(curDir+"//Relatorio//Relatorio_Cliente.jasper");
         ClassRelatorioCliente relatorio = new ClassRelatorioCliente(cliente.relatorioClienteGeral()); 
     }//GEN-LAST:event_jBrelatorioActionPerformed
+
+    private void jCBConsultaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCBConsultaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jCBConsultaActionPerformed
 
     /**
      * @param args the command line arguments
