@@ -27,28 +27,17 @@ public class TelaDeposito extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jBMenuAnterior = new javax.swing.JButton();
-        jBFinalizar = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jBCheque = new javax.swing.JButton();
         jBDinheiro1 = new javax.swing.JButton();
         jBDinheiroCheque = new javax.swing.JButton();
+        jBFinalizar = new javax.swing.JButton();
+        jBMenuAnterior = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setSize(new java.awt.Dimension(1024, 728));
-
-        jBMenuAnterior.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        jBMenuAnterior.setText("MENU ANTERIOR");
-        jBMenuAnterior.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
-
-        jBFinalizar.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        jBFinalizar.setText("FINALIZAR");
-        jBFinalizar.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
-        jBFinalizar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jBFinalizarActionPerformed(evt);
-            }
-        });
+        setFocusable(false);
+        setFocusableWindowState(false);
+        setSize(new java.awt.Dimension(1024, 768));
 
         jLabel1.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         jLabel1.setText("Selecione a forma de depósito");
@@ -86,6 +75,28 @@ public class TelaDeposito extends javax.swing.JFrame {
             }
         });
 
+        jBFinalizar.setBackground(new java.awt.Color(92, 102, 122));
+        jBFinalizar.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jBFinalizar.setForeground(new java.awt.Color(255, 255, 255));
+        jBFinalizar.setText("EM DINHEIRO E CHEQUE");
+        jBFinalizar.setBorder(null);
+        jBFinalizar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBFinalizarActionPerformed(evt);
+            }
+        });
+
+        jBMenuAnterior.setBackground(new java.awt.Color(92, 102, 122));
+        jBMenuAnterior.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jBMenuAnterior.setForeground(new java.awt.Color(255, 255, 255));
+        jBMenuAnterior.setText("MENU ANTERIOR");
+        jBMenuAnterior.setBorder(null);
+        jBMenuAnterior.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBMenuAnteriorActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -102,15 +113,11 @@ public class TelaDeposito extends javax.swing.JFrame {
                             .addComponent(jBCheque, javax.swing.GroupLayout.PREFERRED_SIZE, 306, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(22, 22, 22))))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(141, 141, 141)
-                        .addComponent(jBMenuAnterior, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(0, 564, Short.MAX_VALUE)
-                        .addComponent(jBFinalizar, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(71, 71, 71))
+                .addContainerGap()
+                .addComponent(jBMenuAnterior, javax.swing.GroupLayout.PREFERRED_SIZE, 306, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 189, Short.MAX_VALUE)
+                .addComponent(jBFinalizar, javax.swing.GroupLayout.PREFERRED_SIZE, 306, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                     .addContainerGap(495, Short.MAX_VALUE)
@@ -126,11 +133,11 @@ public class TelaDeposito extends javax.swing.JFrame {
                 .addComponent(jBCheque, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jBDinheiroCheque, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(28, 28, 28)
-                .addComponent(jBMenuAnterior, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(46, 46, 46)
-                .addComponent(jBFinalizar, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(179, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 274, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jBFinalizar, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jBMenuAnterior, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(23, 23, 23))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(98, 98, 98)
@@ -139,11 +146,8 @@ public class TelaDeposito extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jBFinalizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBFinalizarActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jBFinalizarActionPerformed
 
     private void jBChequeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBChequeActionPerformed
         // TODO add your handling code here:
@@ -156,6 +160,14 @@ public class TelaDeposito extends javax.swing.JFrame {
     private void jBDinheiroChequeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBDinheiroChequeActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jBDinheiroChequeActionPerformed
+
+    private void jBFinalizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBFinalizarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jBFinalizarActionPerformed
+
+    private void jBMenuAnteriorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBMenuAnteriorActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jBMenuAnteriorActionPerformed
 
     /**
      * @param args the command line arguments
