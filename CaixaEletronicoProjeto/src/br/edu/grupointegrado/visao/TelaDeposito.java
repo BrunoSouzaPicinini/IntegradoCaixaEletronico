@@ -28,29 +28,18 @@ public class TelaDeposito extends javax.swing.JFrame {
     private void initComponents() {
 
         jBMenuAnterior = new javax.swing.JButton();
-        jBDinheiro = new javax.swing.JButton();
-        jBDinheiroCheque = new javax.swing.JButton();
-        jBCheque = new javax.swing.JButton();
         jBFinalizar = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+        jBCheque = new javax.swing.JButton();
+        jBDinheiro1 = new javax.swing.JButton();
+        jBDinheiroCheque = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setSize(new java.awt.Dimension(1024, 728));
 
         jBMenuAnterior.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jBMenuAnterior.setText("MENU ANTERIOR");
         jBMenuAnterior.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
-
-        jBDinheiro.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        jBDinheiro.setText("EM DINHEIRO");
-        jBDinheiro.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
-
-        jBDinheiroCheque.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        jBDinheiroCheque.setText("DINHEIRO E CHEQUE(S)");
-        jBDinheiroCheque.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
-
-        jBCheque.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        jBCheque.setText("EM CHEQUE(S)");
-        jBCheque.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
 
         jBFinalizar.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jBFinalizar.setText("FINALIZAR");
@@ -64,44 +53,89 @@ public class TelaDeposito extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         jLabel1.setText("Selecione a forma de depósito");
 
+        jBCheque.setBackground(new java.awt.Color(92, 102, 122));
+        jBCheque.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jBCheque.setForeground(new java.awt.Color(255, 255, 255));
+        jBCheque.setText("EM CHEQUE");
+        jBCheque.setBorder(null);
+        jBCheque.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBChequeActionPerformed(evt);
+            }
+        });
+
+        jBDinheiro1.setBackground(new java.awt.Color(92, 102, 122));
+        jBDinheiro1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jBDinheiro1.setForeground(new java.awt.Color(255, 255, 255));
+        jBDinheiro1.setText("EM DINHEIRO");
+        jBDinheiro1.setBorder(null);
+        jBDinheiro1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBDinheiro1ActionPerformed(evt);
+            }
+        });
+
+        jBDinheiroCheque.setBackground(new java.awt.Color(92, 102, 122));
+        jBDinheiroCheque.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jBDinheiroCheque.setForeground(new java.awt.Color(255, 255, 255));
+        jBDinheiroCheque.setText("EM DINHEIRO E CHEQUE");
+        jBDinheiroCheque.setBorder(null);
+        jBDinheiroCheque.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBDinheiroChequeActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 203, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 406, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(185, 185, 185))
+                        .addGap(172, 172, 172))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jBCheque, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jBDinheiro, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jBDinheiroCheque, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jBFinalizar, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(71, 71, 71))))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jBDinheiroCheque, javax.swing.GroupLayout.PREFERRED_SIZE, 306, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jBCheque, javax.swing.GroupLayout.PREFERRED_SIZE, 306, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(22, 22, 22))))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(141, 141, 141)
-                .addComponent(jBMenuAnterior, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(141, 141, 141)
+                        .addComponent(jBMenuAnterior, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(0, 564, Short.MAX_VALUE)
+                        .addComponent(jBFinalizar, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(71, 71, 71))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                    .addContainerGap(495, Short.MAX_VALUE)
+                    .addComponent(jBDinheiro1, javax.swing.GroupLayout.PREFERRED_SIZE, 306, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(20, 20, 20)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(25, 25, 25)
+                .addGap(28, 28, 28)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(41, 41, 41)
-                .addComponent(jBDinheiro, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(31, 31, 31)
-                .addComponent(jBCheque, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(33, 33, 33)
-                .addComponent(jBDinheiroCheque, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(39, 39, 39)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jBFinalizar, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jBMenuAnterior, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(40, Short.MAX_VALUE))
+                .addGap(128, 128, 128)
+                .addComponent(jBCheque, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jBDinheiroCheque, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(28, 28, 28)
+                .addComponent(jBMenuAnterior, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(46, 46, 46)
+                .addComponent(jBFinalizar, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(179, Short.MAX_VALUE))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(98, 98, 98)
+                    .addComponent(jBDinheiro1, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(535, Short.MAX_VALUE)))
         );
 
         pack();
@@ -110,6 +144,18 @@ public class TelaDeposito extends javax.swing.JFrame {
     private void jBFinalizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBFinalizarActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jBFinalizarActionPerformed
+
+    private void jBChequeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBChequeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jBChequeActionPerformed
+
+    private void jBDinheiro1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBDinheiro1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jBDinheiro1ActionPerformed
+
+    private void jBDinheiroChequeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBDinheiroChequeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jBDinheiroChequeActionPerformed
 
     /**
      * @param args the command line arguments
@@ -148,7 +194,7 @@ public class TelaDeposito extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jBCheque;
-    private javax.swing.JButton jBDinheiro;
+    private javax.swing.JButton jBDinheiro1;
     private javax.swing.JButton jBDinheiroCheque;
     private javax.swing.JButton jBFinalizar;
     private javax.swing.JButton jBMenuAnterior;

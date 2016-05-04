@@ -5,11 +5,12 @@
  */
 package br.edu.grupointegrado.visao;
 
+
 import br.edu.grupointegrado.controle.ClassCliente;
 import br.edu.grupointegrado.controle.ClassRelatorioCliente;
 import br.edu.grupointegrado.ferramentas.PreencherjTableGenerico;
 import br.edu.grupointegrado.ferramentas.Rotinas;
-import java.io.File;
+
 /**
  *
  * @author Luan
@@ -31,9 +32,6 @@ public class CadastroCliente extends javax.swing.JFrame {
         situacao = Rotinas.PADRAO;
         preencher.FormatarJtable(jTConsulta, new int[]{80, 300, 80});
        
-        //Teste pegar diretorio atual
-        
-        
         
     }
 
@@ -178,7 +176,7 @@ public class CadastroCliente extends javax.swing.JFrame {
                         .addGroup(jPCadastroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jBCancelar)
                             .addComponent(jBrelatorio, javax.swing.GroupLayout.Alignment.TRAILING))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(55, Short.MAX_VALUE))
         );
         jPCadastroLayout.setVerticalGroup(
             jPCadastroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -204,7 +202,7 @@ public class CadastroCliente extends javax.swing.JFrame {
                     .addComponent(jBExcluir, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jBGravar, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jBCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(38, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Cadastro", jPCadastro);
