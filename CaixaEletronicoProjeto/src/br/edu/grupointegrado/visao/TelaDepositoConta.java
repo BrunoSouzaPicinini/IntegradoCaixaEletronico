@@ -28,52 +28,70 @@ public class TelaDepositoConta extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
-        jBDinheiro = new javax.swing.JButton();
-        jBDinheiro1 = new javax.swing.JButton();
-        jBDinheiro2 = new javax.swing.JButton();
-        jBDinheiro3 = new javax.swing.JButton();
+        jBMenuAnterior = new javax.swing.JButton();
+        jBSaque = new javax.swing.JButton();
+        jBDeposito = new javax.swing.JButton();
+        jBFinalizarDeposito = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel1.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         jLabel1.setText("Selecione para qual conta será o depósito");
 
-        jBDinheiro.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        jBDinheiro.setText("OUTRA CONTA");
-        jBDinheiro.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
+        jBMenuAnterior.setBackground(new java.awt.Color(96, 102, 122));
+        jBMenuAnterior.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jBMenuAnterior.setForeground(new java.awt.Color(255, 255, 255));
+        jBMenuAnterior.setText("MENU ANTERIOR");
+        jBMenuAnterior.setBorder(null);
 
-        jBDinheiro1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        jBDinheiro1.setText("PRÓPRIA CONTA");
-        jBDinheiro1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
+        jBSaque.setBackground(new java.awt.Color(92, 102, 122));
+        jBSaque.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jBSaque.setForeground(new java.awt.Color(255, 255, 255));
+        jBSaque.setText("PROPRIA CONTA");
+        jBSaque.setBorder(null);
+        jBSaque.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBSaqueActionPerformed(evt);
+            }
+        });
 
-        jBDinheiro2.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        jBDinheiro2.setText("FINALIZAR");
-        jBDinheiro2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
+        jBDeposito.setBackground(new java.awt.Color(92, 102, 122));
+        jBDeposito.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jBDeposito.setForeground(new java.awt.Color(255, 255, 255));
+        jBDeposito.setText("OUTRA CONTA");
+        jBDeposito.setBorder(null);
 
-        jBDinheiro3.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        jBDinheiro3.setText("MENU ANTERIOR");
-        jBDinheiro3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
+        jBFinalizarDeposito.setBackground(new java.awt.Color(92, 102, 122));
+        jBFinalizarDeposito.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jBFinalizarDeposito.setForeground(new java.awt.Color(255, 255, 255));
+        jBFinalizarDeposito.setText("FINALIZAR");
+        jBFinalizarDeposito.setBorder(null);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jBDinheiro, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jBDinheiro1, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jBDinheiro2, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(41, 41, 41))
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(98, 98, 98)
-                        .addComponent(jBDinheiro3, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
                         .addGap(106, 106, 106)
-                        .addComponent(jLabel1)))
-                .addContainerGap(119, Short.MAX_VALUE))
+                        .addComponent(jLabel1)
+                        .addGap(0, 109, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(jBSaque, javax.swing.GroupLayout.PREFERRED_SIZE, 306, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap())
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jBMenuAnterior, javax.swing.GroupLayout.PREFERRED_SIZE, 302, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addContainerGap(391, Short.MAX_VALUE)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jBFinalizarDeposito, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 306, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jBDeposito, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 306, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addContainerGap()))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -81,18 +99,25 @@ public class TelaDepositoConta extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jBDinheiro1, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(29, 29, 29)
-                .addComponent(jBDinheiro, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 128, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jBDinheiro2, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jBDinheiro3, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(45, 45, 45))
+                .addComponent(jBSaque, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 268, Short.MAX_VALUE)
+                .addComponent(jBMenuAnterior, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(167, 167, 167)
+                    .addComponent(jBDeposito, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 160, Short.MAX_VALUE)
+                    .addComponent(jBFinalizarDeposito, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap()))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jBSaqueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBSaqueActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jBSaqueActionPerformed
 
     /**
      * @param args the command line arguments
@@ -130,10 +155,10 @@ public class TelaDepositoConta extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jBDinheiro;
-    private javax.swing.JButton jBDinheiro1;
-    private javax.swing.JButton jBDinheiro2;
-    private javax.swing.JButton jBDinheiro3;
+    private javax.swing.JButton jBDeposito;
+    private javax.swing.JButton jBFinalizarDeposito;
+    private javax.swing.JButton jBMenuAnterior;
+    private javax.swing.JButton jBSaque;
     private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }
