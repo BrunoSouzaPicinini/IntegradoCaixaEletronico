@@ -12,7 +12,7 @@ package br.edu.grupointegrado.visao;
 public class TelaExtrato extends javax.swing.JFrame {
 
     /**
-     * Creates new form TelaExtrato
+     * Creates new form TelaOperacao
      */
     public TelaExtrato() {
         initComponents();
@@ -27,21 +27,96 @@ public class TelaExtrato extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel1 = new javax.swing.JLabel();
+        jBFinalizarExtrato = new javax.swing.JButton();
+        jBImprimir = new javax.swing.JButton();
+        jBMenuAnterior = new javax.swing.JButton();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("EXTRATO");
+        setResizable(false);
+
+        jLabel1.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
+        jLabel1.setText("Extrato");
+
+        jBFinalizarExtrato.setBackground(new java.awt.Color(92, 102, 122));
+        jBFinalizarExtrato.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        jBFinalizarExtrato.setForeground(new java.awt.Color(255, 255, 255));
+        jBFinalizarExtrato.setText("Finalizar");
+        jBFinalizarExtrato.setBorder(null);
+        jBFinalizarExtrato.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBFinalizarExtratoActionPerformed(evt);
+            }
+        });
+
+        jBImprimir.setBackground(new java.awt.Color(92, 102, 122));
+        jBImprimir.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        jBImprimir.setForeground(new java.awt.Color(255, 255, 255));
+        jBImprimir.setText("Imprimir");
+        jBImprimir.setBorder(null);
+        jBImprimir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBImprimirActionPerformed(evt);
+            }
+        });
+
+        jBMenuAnterior.setBackground(new java.awt.Color(92, 102, 122));
+        jBMenuAnterior.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        jBMenuAnterior.setForeground(new java.awt.Color(255, 255, 255));
+        jBMenuAnterior.setText("Menu Anterior");
+        jBMenuAnterior.setBorder(null);
+        jBMenuAnterior.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBMenuAnteriorActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(123, 123, 123)
+                        .addComponent(jBMenuAnterior, javax.swing.GroupLayout.PREFERRED_SIZE, 293, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(32, 32, 32)
+                        .addComponent(jBFinalizarExtrato, javax.swing.GroupLayout.PREFERRED_SIZE, 293, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(380, 380, 380)
+                        .addComponent(jLabel1))
+                    .addComponent(jBImprimir, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(139, 139, 139))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(29, 29, 29)
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 208, Short.MAX_VALUE)
+                .addComponent(jBImprimir, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(33, 33, 33)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jBFinalizarExtrato, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jBMenuAnterior, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(35, 35, 35))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jBFinalizarExtratoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBFinalizarExtratoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jBFinalizarExtratoActionPerformed
+
+    private void jBImprimirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBImprimirActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jBImprimirActionPerformed
+
+    private void jBMenuAnteriorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBMenuAnteriorActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jBMenuAnteriorActionPerformed
 
     /**
      * @param args the command line arguments
@@ -69,6 +144,9 @@ public class TelaExtrato extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(TelaExtrato.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -79,5 +157,9 @@ public class TelaExtrato extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jBFinalizarExtrato;
+    private javax.swing.JButton jBImprimir;
+    private javax.swing.JButton jBMenuAnterior;
+    private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }
