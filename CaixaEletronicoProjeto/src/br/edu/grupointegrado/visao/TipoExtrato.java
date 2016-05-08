@@ -35,6 +35,8 @@ public class TipoExtrato extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("FORMA DE EXTRATO");
+        setFocusable(false);
+        setFocusableWindowState(false);
         setResizable(false);
 
         jLabel1.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
@@ -119,7 +121,8 @@ public class TipoExtrato extends javax.swing.JFrame {
                 .addGap(35, 35, 35))
         );
 
-        pack();
+        setSize(new java.awt.Dimension(896, 519));
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jBUltimos30DiasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBUltimos30DiasActionPerformed

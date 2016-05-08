@@ -76,6 +76,7 @@ public class TelaPrincipaldeCadastros extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jMICadastroClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMICadastroClienteActionPerformed

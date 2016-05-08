@@ -38,6 +38,11 @@ public class TelaOperacao extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("OPERAÇÃO");
+        setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        setFocusable(false);
+        setFocusableWindowState(false);
+        setLocation(new java.awt.Point(0, 0));
+        setLocationByPlatform(true);
         setResizable(false);
 
         jBSaldo.setBackground(new java.awt.Color(92, 102, 122));
@@ -165,7 +170,8 @@ public class TelaOperacao extends javax.swing.JFrame {
                 .addGap(35, 35, 35))
         );
 
-        pack();
+        setSize(new java.awt.Dimension(896, 519));
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jBSaldoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBSaldoActionPerformed

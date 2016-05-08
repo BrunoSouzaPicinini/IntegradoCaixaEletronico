@@ -41,6 +41,8 @@ public class TelaValorSaque extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Valor do Saque");
+        setFocusable(false);
+        setFocusableWindowState(false);
         setResizable(false);
 
         jB20.setBackground(new java.awt.Color(92, 102, 122));
@@ -211,6 +213,7 @@ public class TelaValorSaque extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jB20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jB20ActionPerformed
