@@ -11,11 +11,10 @@ package br.edu.grupointegrado.visao;
  */
 public class TelaOperacao extends javax.swing.JFrame {
 
-    /**
-     * Creates new form TelaOperacao
-     */
+    
     public TelaOperacao() {
         initComponents();
+        
     }
 
     /**
@@ -247,4 +246,15 @@ public class TelaOperacao extends javax.swing.JFrame {
     private javax.swing.JButton jBTransferencia;
     private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
+
+    public void naoIdentificado (){
+    
+        jBSaldo.setEnabled(false);
+        jBExtrato.setEnabled(false);
+        jBSaldo.setEnabled(false);
+        jBSaque.setEnabled(false);
+        jBTransferencia.setEnabled(false);
+        
+    }
+
 }

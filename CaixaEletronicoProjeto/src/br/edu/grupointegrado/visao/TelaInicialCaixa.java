@@ -11,9 +11,8 @@ package br.edu.grupointegrado.visao;
  */
 public class TelaInicialCaixa extends javax.swing.JFrame {
 
-    /**
-     * Creates new form TelaInicialCaixa
-     */
+    TelaOperacao operacao = new TelaOperacao();
+    TelaIdentificacao identificacao = new TelaIdentificacao();
     public TelaInicialCaixa() {
         initComponents();
     }
@@ -65,6 +64,11 @@ public class TelaInicialCaixa extends javax.swing.JFrame {
         jLabel5.setText("PROCURE UM FUNCIONÁRIO DA AGÊNCIA");
 
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/insira o cartão.png"))); // NOI18N
+        jLabel6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel6MouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -112,8 +116,16 @@ public class TelaInicialCaixa extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void formMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_formMouseClicked
+       operacao.setVisible(true);
+       operacao.naoIdentificado();
+       setVisible(false);
        
     }//GEN-LAST:event_formMouseClicked
+
+    private void jLabel6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel6MouseClicked
+       identificacao.setVisible(true);
+       setVisible(false);
+    }//GEN-LAST:event_jLabel6MouseClicked
 
     /**
      * @param args the command line arguments
