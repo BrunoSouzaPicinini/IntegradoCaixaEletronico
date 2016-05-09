@@ -5,17 +5,21 @@
  */
 package br.edu.grupointegrado.visao;
 
+import br.edu.grupointegrado.controle.ClassConta;
+import br.edu.grupointegrado.ferramentas.DocumentoLimitado;
+import java.sql.SQLException;
+
 /**
  *
  * @author BSP
  */
 public class TelaIdentificacao extends javax.swing.JFrame {
 
-    /**
-     * Creates new form TelaIdentificacao
-     */
+    ClassConta conta = new ClassConta();
+
     public TelaIdentificacao() {
         initComponents();
+        jPFSenha.setEnabled(false);
     }
 
     /**
@@ -33,23 +37,27 @@ public class TelaIdentificacao extends javax.swing.JFrame {
         jBConfirmar = new javax.swing.JButton();
         jB2 = new javax.swing.JButton();
         jBCorrigir = new javax.swing.JButton();
-        jTFSenha = new javax.swing.JTextField();
         jB7 = new javax.swing.JButton();
         jB0 = new javax.swing.JButton();
-        jTFAgencia = new javax.swing.JTextField();
         jB8 = new javax.swing.JButton();
-        jLabel3 = new javax.swing.JLabel();
         jB9 = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
         jB4 = new javax.swing.JButton();
-        jTFConta = new javax.swing.JTextField();
         jB5 = new javax.swing.JButton();
         jB6 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jPFSenha = new javax.swing.JPasswordField();
+        jTFConta = new javax.swing.JTextField();
+        jTFAgencia = new javax.swing.JTextField();
+        jLabel6 = new javax.swing.JLabel();
+        jTFBanco = new javax.swing.JTextField();
+        jLabel7 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setFocusable(false);
         setFocusableWindowState(false);
+        getContentPane().setLayout(null);
 
         jB3.setBackground(new java.awt.Color(0, 0, 0));
         jB3.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
@@ -61,6 +69,8 @@ public class TelaIdentificacao extends javax.swing.JFrame {
                 jB3ActionPerformed(evt);
             }
         });
+        getContentPane().add(jB3);
+        jB3.setBounds(500, 240, 69, 54);
 
         jBCancelar.setBackground(new java.awt.Color(255, 0, 0));
         jBCancelar.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
@@ -71,6 +81,8 @@ public class TelaIdentificacao extends javax.swing.JFrame {
                 jBCancelarActionPerformed(evt);
             }
         });
+        getContentPane().add(jBCancelar);
+        jBCancelar.setBounds(600, 230, 120, 51);
 
         jB1.setBackground(new java.awt.Color(0, 0, 0));
         jB1.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
@@ -82,16 +94,25 @@ public class TelaIdentificacao extends javax.swing.JFrame {
                 jB1ActionPerformed(evt);
             }
         });
+        getContentPane().add(jB1);
+        jB1.setBounds(340, 240, 70, 51);
 
         jBConfirmar.setBackground(new java.awt.Color(51, 153, 0));
         jBConfirmar.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         jBConfirmar.setText("Confirmar");
         jBConfirmar.setBorder(null);
+        jBConfirmar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jBConfirmarMouseClicked(evt);
+            }
+        });
         jBConfirmar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jBConfirmarActionPerformed(evt);
             }
         });
+        getContentPane().add(jBConfirmar);
+        jBConfirmar.setBounds(600, 360, 120, 51);
 
         jB2.setBackground(new java.awt.Color(0, 0, 0));
         jB2.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
@@ -103,6 +124,8 @@ public class TelaIdentificacao extends javax.swing.JFrame {
                 jB2ActionPerformed(evt);
             }
         });
+        getContentPane().add(jB2);
+        jB2.setBounds(420, 240, 70, 51);
 
         jBCorrigir.setBackground(new java.awt.Color(255, 255, 0));
         jBCorrigir.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
@@ -113,8 +136,8 @@ public class TelaIdentificacao extends javax.swing.JFrame {
                 jBCorrigirActionPerformed(evt);
             }
         });
-
-        jTFSenha.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        getContentPane().add(jBCorrigir);
+        jBCorrigir.setBounds(600, 290, 120, 51);
 
         jB7.setBackground(new java.awt.Color(0, 0, 0));
         jB7.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
@@ -126,6 +149,8 @@ public class TelaIdentificacao extends javax.swing.JFrame {
                 jB7ActionPerformed(evt);
             }
         });
+        getContentPane().add(jB7);
+        jB7.setBounds(340, 360, 70, 51);
 
         jB0.setBackground(new java.awt.Color(0, 0, 0));
         jB0.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
@@ -137,8 +162,8 @@ public class TelaIdentificacao extends javax.swing.JFrame {
                 jB0ActionPerformed(evt);
             }
         });
-
-        jTFAgencia.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        getContentPane().add(jB0);
+        jB0.setBounds(420, 420, 70, 51);
 
         jB8.setBackground(new java.awt.Color(0, 0, 0));
         jB8.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
@@ -150,9 +175,8 @@ public class TelaIdentificacao extends javax.swing.JFrame {
                 jB8ActionPerformed(evt);
             }
         });
-
-        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel3.setText("Agência");
+        getContentPane().add(jB8);
+        jB8.setBounds(420, 360, 70, 51);
 
         jB9.setBackground(new java.awt.Color(0, 0, 0));
         jB9.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
@@ -164,9 +188,13 @@ public class TelaIdentificacao extends javax.swing.JFrame {
                 jB9ActionPerformed(evt);
             }
         });
+        getContentPane().add(jB9);
+        jB9.setBounds(500, 360, 69, 51);
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel4.setText("Conta");
+        getContentPane().add(jLabel4);
+        jLabel4.setBounds(230, 120, 70, 30);
 
         jB4.setBackground(new java.awt.Color(0, 0, 0));
         jB4.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
@@ -178,8 +206,8 @@ public class TelaIdentificacao extends javax.swing.JFrame {
                 jB4ActionPerformed(evt);
             }
         });
-
-        jTFConta.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        getContentPane().add(jB4);
+        jB4.setBounds(340, 300, 70, 51);
 
         jB5.setBackground(new java.awt.Color(0, 0, 0));
         jB5.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
@@ -191,6 +219,8 @@ public class TelaIdentificacao extends javax.swing.JFrame {
                 jB5ActionPerformed(evt);
             }
         });
+        getContentPane().add(jB5);
+        jB5.setBounds(420, 300, 70, 51);
 
         jB6.setBackground(new java.awt.Color(0, 0, 0));
         jB6.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
@@ -202,109 +232,59 @@ public class TelaIdentificacao extends javax.swing.JFrame {
                 jB6ActionPerformed(evt);
             }
         });
+        getContentPane().add(jB6);
+        jB6.setBounds(500, 300, 69, 51);
 
         jLabel1.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
         jLabel1.setText("Identificação");
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(351, 11, 219, 43);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(284, 284, 284)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                        .addComponent(jB4, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jB5, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jB6, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                        .addComponent(jB1, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jB2, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(10, 10, 10)
-                        .addComponent(jB3, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                        .addComponent(jB7, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jB0, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jB8, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jB9, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(26, 26, 26)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jBCorrigir, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jBConfirmar, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jBCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                    .addComponent(jTFSenha, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(0, 0, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(109, 109, 109)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jTFConta, javax.swing.GroupLayout.PREFERRED_SIZE, 176, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel3)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTFAgencia, javax.swing.GroupLayout.PREFERRED_SIZE, 176, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(497, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel1)
-                .addGap(310, 310, 310))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTFAgencia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTFConta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(30, 30, 30)
-                        .addComponent(jTFSenha, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(18, 18, 18)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jB2, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jB1, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(16, 16, 16)
-                                .addComponent(jB3, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(6, 6, 6)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jB5, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jB4, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jB6, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(10, 10, 10)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jB8, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jB7, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jB9, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(10, 10, 10)
-                        .addComponent(jB0, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(95, 95, 95)
-                        .addComponent(jBCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jBCorrigir, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jBConfirmar, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(14, 14, 14))
-        );
+        jLabel5.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel5.setText("Senha");
+        getContentPane().add(jLabel5);
+        jLabel5.setBounds(230, 170, 80, 30);
+
+        jPFSenha.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jPFSenha.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jPFSenha.setDoubleBuffered(true);
+        jPFSenha.setDragEnabled(true);
+        jPFSenha.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jPFSenhaActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jPFSenha);
+        jPFSenha.setBounds(340, 170, 230, 40);
+        jPFSenha.setDocument(new DocumentoLimitado(6));
+
+        jTFConta.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jTFConta.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        getContentPane().add(jTFConta);
+        jTFConta.setBounds(340, 120, 230, 40);
+        jTFConta.setDocument(new DocumentoLimitado(6));
+
+        jTFAgencia.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jTFAgencia.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        getContentPane().add(jTFAgencia);
+        jTFAgencia.setBounds(210, 70, 230, 40);
+        jTFConta.setDocument(new DocumentoLimitado(6));
+
+        jLabel6.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel6.setText("Agencia");
+        getContentPane().add(jLabel6);
+        jLabel6.setBounds(90, 70, 100, 30);
+
+        jTFBanco.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jTFBanco.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        getContentPane().add(jTFBanco);
+        jTFBanco.setBounds(580, 70, 230, 40);
+        jTFConta.setDocument(new DocumentoLimitado(6));
+
+        jLabel7.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel7.setText("Banco");
+        getContentPane().add(jLabel7);
+        jLabel7.setBounds(470, 70, 100, 30);
 
         setSize(new java.awt.Dimension(896, 518));
         setLocationRelativeTo(null);
@@ -323,7 +303,11 @@ public class TelaIdentificacao extends javax.swing.JFrame {
     }//GEN-LAST:event_jB1ActionPerformed
 
     private void jBConfirmarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBConfirmarActionPerformed
-        // TODO add your handling code here:
+        try {
+            if ((conta.consultaCodigo(Integer.parseInt(jTFConta.getText()))).first()) {
+            }
+        } catch (SQLException ex) {
+        }
     }//GEN-LAST:event_jBConfirmarActionPerformed
 
     private void jB2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jB2ActionPerformed
@@ -361,6 +345,14 @@ public class TelaIdentificacao extends javax.swing.JFrame {
     private void jB6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jB6ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jB6ActionPerformed
+
+    private void jBConfirmarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBConfirmarMouseClicked
+
+    }//GEN-LAST:event_jBConfirmarMouseClicked
+
+    private void jPFSenhaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPFSenhaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jPFSenhaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -412,10 +404,13 @@ public class TelaIdentificacao extends javax.swing.JFrame {
     private javax.swing.JButton jBConfirmar;
     private javax.swing.JButton jBCorrigir;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JPasswordField jPFSenha;
     private javax.swing.JTextField jTFAgencia;
+    private javax.swing.JTextField jTFBanco;
     private javax.swing.JTextField jTFConta;
-    private javax.swing.JTextField jTFSenha;
     // End of variables declaration//GEN-END:variables
 }
