@@ -5,12 +5,15 @@
  */
 package br.edu.grupointegrado.visao;
 
+import br.edu.grupointegrado.controle.ClassOperacao;
+
 /**
  *
  * @author Luan
  */
 public class TelaOperacao extends javax.swing.JFrame {
 
+    ClassOperacao operacao = new ClassOperacao();
     
     public TelaOperacao() {
         initComponents();

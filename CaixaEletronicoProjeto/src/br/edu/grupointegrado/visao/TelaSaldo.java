@@ -11,9 +11,12 @@ package br.edu.grupointegrado.visao;
  */
 public class TelaSaldo extends javax.swing.JFrame {
 
-    private String text="teste";
+    private String text;
+    
     public TelaSaldo() {
         initComponents();
+        
+        
         jTASaldo.setText(text);
         
     }

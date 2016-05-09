@@ -26,6 +26,8 @@ public class ConexaoOracle {
                 Class.forName("oracle.jdbc.driver.OracleDriver");
                 ConexaoOracle = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE", "caixaeletronico", "caixaeletronico");
                 System.out.println("Conectado!");
+                ConexaoOracle.setAutoCommit(false);
+                return ConexaoOracle;
             } catch (SQLException ex) {
                 JOptionPane.showMessageDialog(null, "Erro na conexão: \n" + ex);
                 ex.printStackTrace();
@@ -36,7 +38,23 @@ public class ConexaoOracle {
                 return null;
             }
         }
-        return ConexaoOracle;
+        
+    }
+    
+    public void commit() {
+        try {
+            conecta().commit();
+        } catch (SQLException exSQL) {
+            JOptionPane.showMessageDialog(null, "Problemas ao realizar o commit");
+        }
+    }
+
+    public void rollback() {
+        try {
+            conecta().rollback();
+        } catch (SQLException exSQL) {
+            JOptionPane.showMessageDialog(null, "Problemas ao realizar o rollback");
+        }
     }
 
     public void desconecta() {
