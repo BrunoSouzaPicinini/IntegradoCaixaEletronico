@@ -5,6 +5,8 @@
  */
 package br.edu.grupointegrado.visao;
 
+import br.edu.grupointegrado.ferramentas.DocumentoLimitado;
+
 /**
  *
  * @author Luan
