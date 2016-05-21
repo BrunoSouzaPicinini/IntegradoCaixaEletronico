@@ -8,6 +8,7 @@ package br.edu.grupointegrado.visao;
 import br.edu.grupointegrado.controle.ClassConta;
 import br.edu.grupointegrado.ferramentas.DocumentoLimitado;
 import java.sql.SQLException;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -16,10 +17,11 @@ import java.sql.SQLException;
 public class TelaIdentificacao extends javax.swing.JFrame {
 
     ClassConta conta = new ClassConta();
-
+    
     public TelaIdentificacao() {
         initComponents();
-        jPFSenha.setEnabled(false);
+        //jPFSenha.setEnabled(false);
+
     }
 
     /**
@@ -31,209 +33,220 @@ public class TelaIdentificacao extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jB3 = new javax.swing.JButton();
-        jBCancelar = new javax.swing.JButton();
-        jB1 = new javax.swing.JButton();
-        jBConfirmar = new javax.swing.JButton();
-        jB2 = new javax.swing.JButton();
-        jBCorrigir = new javax.swing.JButton();
-        jB7 = new javax.swing.JButton();
-        jB0 = new javax.swing.JButton();
-        jB8 = new javax.swing.JButton();
-        jB9 = new javax.swing.JButton();
+        jB3I = new javax.swing.JButton();
+        jBCancelarI = new javax.swing.JButton();
+        jB1I = new javax.swing.JButton();
+        jBConfirmarI = new javax.swing.JButton();
+        jB2I = new javax.swing.JButton();
+        jBCorrigirI = new javax.swing.JButton();
+        jB7I = new javax.swing.JButton();
+        jB0I = new javax.swing.JButton();
+        jB8I = new javax.swing.JButton();
+        jB9I = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
-        jB4 = new javax.swing.JButton();
-        jB5 = new javax.swing.JButton();
-        jB6 = new javax.swing.JButton();
+        jB4I = new javax.swing.JButton();
+        jB5I = new javax.swing.JButton();
+        jB6I = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        jPFSenha = new javax.swing.JPasswordField();
-        jTFConta = new javax.swing.JTextField();
-        jTFAgencia = new javax.swing.JTextField();
+        jPFSenhaI = new javax.swing.JPasswordField();
+        jTFBancoI = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
-        jTFBanco = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
+        jTFContaI = new javax.swing.JTextField();
+        jTFAgenciaI = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setFocusable(false);
-        setFocusableWindowState(false);
         getContentPane().setLayout(null);
 
-        jB3.setBackground(new java.awt.Color(0, 0, 0));
-        jB3.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
-        jB3.setForeground(new java.awt.Color(255, 255, 255));
-        jB3.setText("3");
-        jB3.setBorder(null);
-        jB3.addActionListener(new java.awt.event.ActionListener() {
+        jB3I.setBackground(new java.awt.Color(0, 0, 0));
+        jB3I.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
+        jB3I.setForeground(new java.awt.Color(255, 255, 255));
+        jB3I.setText("3");
+        jB3I.setBorder(null);
+        jB3I.setFocusable(false);
+        jB3I.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jB3ActionPerformed(evt);
+                jB3IActionPerformed(evt);
             }
         });
-        getContentPane().add(jB3);
-        jB3.setBounds(500, 240, 69, 54);
+        getContentPane().add(jB3I);
+        jB3I.setBounds(500, 240, 69, 54);
 
-        jBCancelar.setBackground(new java.awt.Color(255, 0, 0));
-        jBCancelar.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
-        jBCancelar.setText("Cancelar");
-        jBCancelar.setBorder(null);
-        jBCancelar.addActionListener(new java.awt.event.ActionListener() {
+        jBCancelarI.setBackground(new java.awt.Color(255, 0, 0));
+        jBCancelarI.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        jBCancelarI.setText("Cancelar");
+        jBCancelarI.setBorder(null);
+        jBCancelarI.setFocusable(false);
+        jBCancelarI.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jBCancelarActionPerformed(evt);
+                jBCancelarIActionPerformed(evt);
             }
         });
-        getContentPane().add(jBCancelar);
-        jBCancelar.setBounds(600, 230, 120, 51);
+        getContentPane().add(jBCancelarI);
+        jBCancelarI.setBounds(600, 230, 120, 51);
 
-        jB1.setBackground(new java.awt.Color(0, 0, 0));
-        jB1.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
-        jB1.setForeground(new java.awt.Color(255, 255, 255));
-        jB1.setText("1");
-        jB1.setBorder(null);
-        jB1.addActionListener(new java.awt.event.ActionListener() {
+        jB1I.setBackground(new java.awt.Color(0, 0, 0));
+        jB1I.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
+        jB1I.setForeground(new java.awt.Color(255, 255, 255));
+        jB1I.setText("1");
+        jB1I.setBorder(null);
+        jB1I.setFocusable(false);
+        jB1I.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jB1ActionPerformed(evt);
+                jB1IActionPerformed(evt);
             }
         });
-        getContentPane().add(jB1);
-        jB1.setBounds(340, 240, 70, 51);
+        getContentPane().add(jB1I);
+        jB1I.setBounds(340, 240, 70, 51);
 
-        jBConfirmar.setBackground(new java.awt.Color(51, 153, 0));
-        jBConfirmar.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
-        jBConfirmar.setText("Confirmar");
-        jBConfirmar.setBorder(null);
-        jBConfirmar.addMouseListener(new java.awt.event.MouseAdapter() {
+        jBConfirmarI.setBackground(new java.awt.Color(51, 153, 0));
+        jBConfirmarI.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        jBConfirmarI.setText("Confirmar");
+        jBConfirmarI.setBorder(null);
+        jBConfirmarI.setFocusable(false);
+        jBConfirmarI.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jBConfirmarMouseClicked(evt);
+                jBConfirmarIMouseClicked(evt);
             }
         });
-        jBConfirmar.addActionListener(new java.awt.event.ActionListener() {
+        jBConfirmarI.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jBConfirmarActionPerformed(evt);
+                jBConfirmarIActionPerformed(evt);
             }
         });
-        getContentPane().add(jBConfirmar);
-        jBConfirmar.setBounds(600, 360, 120, 51);
+        getContentPane().add(jBConfirmarI);
+        jBConfirmarI.setBounds(600, 360, 120, 51);
 
-        jB2.setBackground(new java.awt.Color(0, 0, 0));
-        jB2.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
-        jB2.setForeground(new java.awt.Color(255, 255, 255));
-        jB2.setText("2");
-        jB2.setBorder(null);
-        jB2.addActionListener(new java.awt.event.ActionListener() {
+        jB2I.setBackground(new java.awt.Color(0, 0, 0));
+        jB2I.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
+        jB2I.setForeground(new java.awt.Color(255, 255, 255));
+        jB2I.setText("2");
+        jB2I.setBorder(null);
+        jB2I.setFocusable(false);
+        jB2I.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jB2ActionPerformed(evt);
+                jB2IActionPerformed(evt);
             }
         });
-        getContentPane().add(jB2);
-        jB2.setBounds(420, 240, 70, 51);
+        getContentPane().add(jB2I);
+        jB2I.setBounds(420, 240, 70, 51);
 
-        jBCorrigir.setBackground(new java.awt.Color(255, 255, 0));
-        jBCorrigir.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
-        jBCorrigir.setText("Corrigir");
-        jBCorrigir.setBorder(null);
-        jBCorrigir.addActionListener(new java.awt.event.ActionListener() {
+        jBCorrigirI.setBackground(new java.awt.Color(255, 255, 0));
+        jBCorrigirI.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        jBCorrigirI.setText("Corrigir");
+        jBCorrigirI.setBorder(null);
+        jBCorrigirI.setFocusable(false);
+        jBCorrigirI.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jBCorrigirActionPerformed(evt);
+                jBCorrigirIActionPerformed(evt);
             }
         });
-        getContentPane().add(jBCorrigir);
-        jBCorrigir.setBounds(600, 290, 120, 51);
+        getContentPane().add(jBCorrigirI);
+        jBCorrigirI.setBounds(600, 290, 120, 51);
 
-        jB7.setBackground(new java.awt.Color(0, 0, 0));
-        jB7.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
-        jB7.setForeground(new java.awt.Color(255, 255, 255));
-        jB7.setText("7");
-        jB7.setBorder(null);
-        jB7.addActionListener(new java.awt.event.ActionListener() {
+        jB7I.setBackground(new java.awt.Color(0, 0, 0));
+        jB7I.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
+        jB7I.setForeground(new java.awt.Color(255, 255, 255));
+        jB7I.setText("7");
+        jB7I.setBorder(null);
+        jB7I.setFocusable(false);
+        jB7I.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jB7ActionPerformed(evt);
+                jB7IActionPerformed(evt);
             }
         });
-        getContentPane().add(jB7);
-        jB7.setBounds(340, 360, 70, 51);
+        getContentPane().add(jB7I);
+        jB7I.setBounds(340, 360, 70, 51);
 
-        jB0.setBackground(new java.awt.Color(0, 0, 0));
-        jB0.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
-        jB0.setForeground(new java.awt.Color(255, 255, 255));
-        jB0.setText("0");
-        jB0.setBorder(null);
-        jB0.addActionListener(new java.awt.event.ActionListener() {
+        jB0I.setBackground(new java.awt.Color(0, 0, 0));
+        jB0I.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
+        jB0I.setForeground(new java.awt.Color(255, 255, 255));
+        jB0I.setText("0");
+        jB0I.setBorder(null);
+        jB0I.setFocusable(false);
+        jB0I.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jB0ActionPerformed(evt);
+                jB0IActionPerformed(evt);
             }
         });
-        getContentPane().add(jB0);
-        jB0.setBounds(420, 420, 70, 51);
+        getContentPane().add(jB0I);
+        jB0I.setBounds(420, 420, 70, 51);
 
-        jB8.setBackground(new java.awt.Color(0, 0, 0));
-        jB8.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
-        jB8.setForeground(new java.awt.Color(255, 255, 255));
-        jB8.setText("8");
-        jB8.setBorder(null);
-        jB8.addActionListener(new java.awt.event.ActionListener() {
+        jB8I.setBackground(new java.awt.Color(0, 0, 0));
+        jB8I.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
+        jB8I.setForeground(new java.awt.Color(255, 255, 255));
+        jB8I.setText("8");
+        jB8I.setBorder(null);
+        jB8I.setFocusable(false);
+        jB8I.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jB8ActionPerformed(evt);
+                jB8IActionPerformed(evt);
             }
         });
-        getContentPane().add(jB8);
-        jB8.setBounds(420, 360, 70, 51);
+        getContentPane().add(jB8I);
+        jB8I.setBounds(420, 360, 70, 51);
 
-        jB9.setBackground(new java.awt.Color(0, 0, 0));
-        jB9.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
-        jB9.setForeground(new java.awt.Color(255, 255, 255));
-        jB9.setText("9");
-        jB9.setBorder(null);
-        jB9.addActionListener(new java.awt.event.ActionListener() {
+        jB9I.setBackground(new java.awt.Color(0, 0, 0));
+        jB9I.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
+        jB9I.setForeground(new java.awt.Color(255, 255, 255));
+        jB9I.setText("9");
+        jB9I.setBorder(null);
+        jB9I.setFocusable(false);
+        jB9I.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jB9ActionPerformed(evt);
+                jB9IActionPerformed(evt);
             }
         });
-        getContentPane().add(jB9);
-        jB9.setBounds(500, 360, 69, 51);
+        getContentPane().add(jB9I);
+        jB9I.setBounds(500, 360, 69, 51);
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel4.setText("Conta");
         getContentPane().add(jLabel4);
         jLabel4.setBounds(230, 120, 70, 30);
 
-        jB4.setBackground(new java.awt.Color(0, 0, 0));
-        jB4.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
-        jB4.setForeground(new java.awt.Color(255, 255, 255));
-        jB4.setText("4");
-        jB4.setBorder(null);
-        jB4.addActionListener(new java.awt.event.ActionListener() {
+        jB4I.setBackground(new java.awt.Color(0, 0, 0));
+        jB4I.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
+        jB4I.setForeground(new java.awt.Color(255, 255, 255));
+        jB4I.setText("4");
+        jB4I.setBorder(null);
+        jB4I.setFocusable(false);
+        jB4I.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jB4ActionPerformed(evt);
+                jB4IActionPerformed(evt);
             }
         });
-        getContentPane().add(jB4);
-        jB4.setBounds(340, 300, 70, 51);
+        getContentPane().add(jB4I);
+        jB4I.setBounds(340, 300, 70, 51);
 
-        jB5.setBackground(new java.awt.Color(0, 0, 0));
-        jB5.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
-        jB5.setForeground(new java.awt.Color(255, 255, 255));
-        jB5.setText("5");
-        jB5.setBorder(null);
-        jB5.addActionListener(new java.awt.event.ActionListener() {
+        jB5I.setBackground(new java.awt.Color(0, 0, 0));
+        jB5I.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
+        jB5I.setForeground(new java.awt.Color(255, 255, 255));
+        jB5I.setText("5");
+        jB5I.setBorder(null);
+        jB5I.setFocusable(false);
+        jB5I.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jB5ActionPerformed(evt);
+                jB5IActionPerformed(evt);
             }
         });
-        getContentPane().add(jB5);
-        jB5.setBounds(420, 300, 70, 51);
+        getContentPane().add(jB5I);
+        jB5I.setBounds(420, 300, 70, 51);
 
-        jB6.setBackground(new java.awt.Color(0, 0, 0));
-        jB6.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
-        jB6.setForeground(new java.awt.Color(255, 255, 255));
-        jB6.setText("6");
-        jB6.setBorder(null);
-        jB6.addActionListener(new java.awt.event.ActionListener() {
+        jB6I.setBackground(new java.awt.Color(0, 0, 0));
+        jB6I.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
+        jB6I.setForeground(new java.awt.Color(255, 255, 255));
+        jB6I.setText("6");
+        jB6I.setBorder(null);
+        jB6I.setFocusable(false);
+        jB6I.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jB6ActionPerformed(evt);
+                jB6IActionPerformed(evt);
             }
         });
-        getContentPane().add(jB6);
-        jB6.setBounds(500, 300, 69, 51);
+        getContentPane().add(jB6I);
+        jB6I.setBounds(500, 300, 69, 51);
 
         jLabel1.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
         jLabel1.setText("Identificação");
@@ -245,114 +258,114 @@ public class TelaIdentificacao extends javax.swing.JFrame {
         getContentPane().add(jLabel5);
         jLabel5.setBounds(230, 170, 80, 30);
 
-        jPFSenha.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jPFSenha.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        jPFSenha.setDoubleBuffered(true);
-        jPFSenha.setDragEnabled(true);
-        jPFSenha.addActionListener(new java.awt.event.ActionListener() {
+        jPFSenhaI.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jPFSenhaI.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jPFSenhaI.setDoubleBuffered(true);
+        jPFSenhaI.setDragEnabled(true);
+        jPFSenhaI.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jPFSenhaActionPerformed(evt);
+                jPFSenhaIActionPerformed(evt);
             }
         });
-        getContentPane().add(jPFSenha);
-        jPFSenha.setBounds(340, 170, 230, 40);
-        jPFSenha.setDocument(new DocumentoLimitado(6));
+        getContentPane().add(jPFSenhaI);
+        jPFSenhaI.setBounds(340, 170, 230, 40);
+        jPFSenhaI.setDocument(new DocumentoLimitado(6));
 
-        jTFConta.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jTFConta.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        getContentPane().add(jTFConta);
-        jTFConta.setBounds(340, 120, 230, 40);
-        jTFConta.setDocument(new DocumentoLimitado(6));
-
-        jTFAgencia.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jTFAgencia.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        getContentPane().add(jTFAgencia);
-        jTFAgencia.setBounds(210, 70, 230, 40);
-        jTFConta.setDocument(new DocumentoLimitado(6));
+        jTFBancoI.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jTFBancoI.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        getContentPane().add(jTFBancoI);
+        jTFBancoI.setBounds(560, 70, 230, 40);
+        jTFBancoI.setDocument(new DocumentoLimitado(6));
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel6.setText("Agencia");
         getContentPane().add(jLabel6);
         jLabel6.setBounds(90, 70, 100, 30);
 
-        jTFBanco.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jTFBanco.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        getContentPane().add(jTFBanco);
-        jTFBanco.setBounds(580, 70, 230, 40);
-        jTFConta.setDocument(new DocumentoLimitado(6));
-
         jLabel7.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel7.setText("Banco");
         getContentPane().add(jLabel7);
         jLabel7.setBounds(470, 70, 100, 30);
 
+        jTFContaI.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jTFContaI.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        getContentPane().add(jTFContaI);
+        jTFContaI.setBounds(340, 120, 230, 40);
+        jTFContaI.setDocument(new DocumentoLimitado(6));
+
+        jTFAgenciaI.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jTFAgenciaI.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        getContentPane().add(jTFAgenciaI);
+        jTFAgenciaI.setBounds(200, 70, 230, 40);
+        jTFAgenciaI.setDocument(new DocumentoLimitado(6));
+
         setSize(new java.awt.Dimension(896, 518));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jB3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jB3ActionPerformed
+    private void jB3IActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jB3IActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jB3ActionPerformed
+    }//GEN-LAST:event_jB3IActionPerformed
 
-    private void jBCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBCancelarActionPerformed
+    private void jBCancelarIActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBCancelarIActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jBCancelarActionPerformed
+    }//GEN-LAST:event_jBCancelarIActionPerformed
 
-    private void jB1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jB1ActionPerformed
+    private void jB1IActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jB1IActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jB1ActionPerformed
+    }//GEN-LAST:event_jB1IActionPerformed
 
-    private void jBConfirmarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBConfirmarActionPerformed
+    private void jBConfirmarIActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBConfirmarIActionPerformed
         try {
-            if ((conta.consultaCodigo(Integer.parseInt(jTFConta.getText()))).first()) {
+            if ((conta.consultaCodigo(Integer.parseInt(jTFBancoI.getText()))).first()) {
             }
         } catch (SQLException ex) {
         }
-    }//GEN-LAST:event_jBConfirmarActionPerformed
+    }//GEN-LAST:event_jBConfirmarIActionPerformed
 
-    private void jB2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jB2ActionPerformed
+    private void jB2IActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jB2IActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jB2ActionPerformed
+    }//GEN-LAST:event_jB2IActionPerformed
 
-    private void jBCorrigirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBCorrigirActionPerformed
+    private void jBCorrigirIActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBCorrigirIActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jBCorrigirActionPerformed
+    }//GEN-LAST:event_jBCorrigirIActionPerformed
 
-    private void jB7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jB7ActionPerformed
+    private void jB7IActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jB7IActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jB7ActionPerformed
+    }//GEN-LAST:event_jB7IActionPerformed
 
-    private void jB0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jB0ActionPerformed
+    private void jB0IActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jB0IActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jB0ActionPerformed
+    }//GEN-LAST:event_jB0IActionPerformed
 
-    private void jB8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jB8ActionPerformed
+    private void jB8IActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jB8IActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jB8ActionPerformed
+    }//GEN-LAST:event_jB8IActionPerformed
 
-    private void jB9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jB9ActionPerformed
+    private void jB9IActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jB9IActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jB9ActionPerformed
+    }//GEN-LAST:event_jB9IActionPerformed
 
-    private void jB4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jB4ActionPerformed
+    private void jB4IActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jB4IActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jB4ActionPerformed
+    }//GEN-LAST:event_jB4IActionPerformed
 
-    private void jB5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jB5ActionPerformed
+    private void jB5IActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jB5IActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jB5ActionPerformed
+    }//GEN-LAST:event_jB5IActionPerformed
 
-    private void jB6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jB6ActionPerformed
+    private void jB6IActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jB6IActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jB6ActionPerformed
+    }//GEN-LAST:event_jB6IActionPerformed
 
-    private void jBConfirmarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBConfirmarMouseClicked
+    private void jBConfirmarIMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBConfirmarIMouseClicked
 
-    }//GEN-LAST:event_jBConfirmarMouseClicked
+    }//GEN-LAST:event_jBConfirmarIMouseClicked
 
-    private void jPFSenhaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPFSenhaActionPerformed
+    private void jPFSenhaIActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPFSenhaIActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jPFSenhaActionPerformed
+    }//GEN-LAST:event_jPFSenhaIActionPerformed
 
     /**
      * @param args the command line arguments
@@ -390,27 +403,29 @@ public class TelaIdentificacao extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jB0;
-    private javax.swing.JButton jB1;
-    private javax.swing.JButton jB2;
-    private javax.swing.JButton jB3;
-    private javax.swing.JButton jB4;
-    private javax.swing.JButton jB5;
-    private javax.swing.JButton jB6;
-    private javax.swing.JButton jB7;
-    private javax.swing.JButton jB8;
-    private javax.swing.JButton jB9;
-    private javax.swing.JButton jBCancelar;
-    private javax.swing.JButton jBConfirmar;
-    private javax.swing.JButton jBCorrigir;
+    private javax.swing.JButton jB0I;
+    private javax.swing.JButton jB1I;
+    private javax.swing.JButton jB2I;
+    private javax.swing.JButton jB3I;
+    private javax.swing.JButton jB4I;
+    private javax.swing.JButton jB5I;
+    private javax.swing.JButton jB6I;
+    private javax.swing.JButton jB7I;
+    private javax.swing.JButton jB8I;
+    private javax.swing.JButton jB9I;
+    private javax.swing.JButton jBCancelarI;
+    private javax.swing.JButton jBConfirmarI;
+    private javax.swing.JButton jBCorrigirI;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
-    private javax.swing.JPasswordField jPFSenha;
-    private javax.swing.JTextField jTFAgencia;
-    private javax.swing.JTextField jTFBanco;
-    private javax.swing.JTextField jTFConta;
+    private javax.swing.JPasswordField jPFSenhaI;
+    private javax.swing.JTextField jTFAgenciaI;
+    private javax.swing.JTextField jTFBancoI;
+    private javax.swing.JTextField jTFContaI;
     // End of variables declaration//GEN-END:variables
+
+ 
 }
