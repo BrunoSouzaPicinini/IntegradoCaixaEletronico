@@ -11,9 +11,11 @@ package br.edu.grupointegrado.controle;
  */
 public class ClassOperacao {
     
-    private static int agenciaOrigem;
-    private static int agenciaDestino;
-    
-    private static float valor;
+    private static int cdOperacao;
+    private static int cdSaque;
+    private static int cdTrans;
+    private static int cdSessao;
+    private static int cdPagamento;
+  
     
 }

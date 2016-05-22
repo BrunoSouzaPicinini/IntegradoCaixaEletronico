@@ -17,7 +17,7 @@ import javax.swing.JOptionPane;
 public class TelaIdentificacao extends javax.swing.JFrame {
 
     ClassConta conta = new ClassConta();
-    
+     TelaOperacao operacao = new TelaOperacao();
     public TelaIdentificacao() {
         initComponents();
         //jPFSenha.setEnabled(false);
@@ -316,11 +316,17 @@ public class TelaIdentificacao extends javax.swing.JFrame {
     }//GEN-LAST:event_jB1IActionPerformed
 
     private void jBConfirmarIActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBConfirmarIActionPerformed
-        try {
-            if ((conta.consultaCodigo(Integer.parseInt(jTFBancoI.getText()))).first()) {
-            }
-        } catch (SQLException ex) {
-        }
+        conta.setAgencia(Integer.parseInt(jTFAgenciaI.getText()));
+        conta.setBanco(Integer.parseInt(jTFBancoI.getText()));
+        conta.setCdConta(Integer.parseInt(jTFContaI.getText()));
+        conta.setSenha(Integer.parseInt(jPFSenhaI.getText()));
+        if (conta.acessoConta() == true) {
+            operacao.setVisible(true);
+            operacao.setAlwaysOnTop(true);
+            setVisible(false);
+            
+        }else JOptionPane.showMessageDialog(null, "Dados Incorretos");
+        
     }//GEN-LAST:event_jBConfirmarIActionPerformed
 
     private void jB2IActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jB2IActionPerformed
@@ -427,5 +433,4 @@ public class TelaIdentificacao extends javax.swing.JFrame {
     private javax.swing.JTextField jTFContaI;
     // End of variables declaration//GEN-END:variables
 
- 
 }

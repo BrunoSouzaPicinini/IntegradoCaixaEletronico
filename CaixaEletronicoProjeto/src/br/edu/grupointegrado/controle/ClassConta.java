@@ -25,25 +25,34 @@ public class ClassConta extends ConexaoOracle {
     private int senha;
     private int acesso = 0;
     private StringBuffer sql = new StringBuffer();
-    
-    public boolean acessoConta(){
+
+    public boolean acessoConta() {
         sql.delete(0, sql.length());
         sql.append("SELECT COUNT(CD_CONTA) FROM CONTA WHERE CD_CONTA =");
         sql.append(getCdConta()).append(" AND CD_BANCO =");
         sql.append(getBanco()).append(" AND CD_AGENCIA =");
         sql.append(getAgencia()).append(" AND CD_SENHA =");
         sql.append(getSenha());
+        System.out.println(sql.toString());
         executeSQL(sql.toString());
         try {
+            int colunas = resultset.getMetaData().getColumnCount();
+
+            resultset.next();
             acesso = resultset.getInt(1);
-            if (acesso == 1){ 
-                    return true;}
+            
+
+            
+            System.out.println(acesso);
+            if (acesso == 1) {
+                return true;
+            }
         } catch (SQLException erro) {
             JOptionPane.showMessageDialog(null, "Erro ao listar no JTable " + erro);
             return false;
         }
-            
-       return false;
+
+        return false;
     }
 
     public int getCdConta() {
@@ -94,8 +103,6 @@ public class ClassConta extends ConexaoOracle {
         this.sql = sql;
     }
 
-
-  
     public ResultSet consultaCodigo(int parseInt) {
         sql.delete(0, sql.length());
         sql.append("SELECT * FROM CONTA WHERE CD_CONTA = ");
