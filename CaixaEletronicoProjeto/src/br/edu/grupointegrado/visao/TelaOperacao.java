@@ -14,10 +14,22 @@ import br.edu.grupointegrado.controle.ClassOperacao;
 public class TelaOperacao extends javax.swing.JFrame {
 
     ClassOperacao operacao = new ClassOperacao();
+    private boolean identificacao = false;
+    
+    TelaSaldo saldo = new TelaSaldo();
+    TelaExtrato extrato = new TelaExtrato();
+    TelaValorSaque valorSaque = new TelaValorSaque();
+    TelaOutroValorSaque outroValorSaque = new TelaOutroValorSaque();
+    TelaContaDeposito contaDeposito = new TelaContaDeposito();
+    TelaLeituraCodigoBarras leituraCodigoBarras = new TelaLeituraCodigoBarras();
+    
+    
+    
+    
     
     public TelaOperacao() {
         initComponents();
-        
+
     }
 
     /**
@@ -185,11 +197,17 @@ public class TelaOperacao extends javax.swing.JFrame {
     }//GEN-LAST:event_jBExtratoActionPerformed
 
     private void jBDepositoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBDepositoActionPerformed
-        // TODO add your handling code here:
+        
+        
+        
+
     }//GEN-LAST:event_jBDepositoActionPerformed
 
     private void jBFinalizarOperacaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBFinalizarOperacaoActionPerformed
-        // TODO add your handling code here:
+        if (identificacao) {
+            
+        } else {
+        };
     }//GEN-LAST:event_jBFinalizarOperacaoActionPerformed
 
     private void jBPagamentoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBPagamentoActionPerformed
@@ -250,14 +268,25 @@ public class TelaOperacao extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 
-    public void naoIdentificado (){
-    
+    public void naoIdentificado() {
+        identificacao = false;
         jBSaldo.setEnabled(false);
         jBExtrato.setEnabled(false);
         jBSaldo.setEnabled(false);
         jBSaque.setEnabled(false);
         jBTransferencia.setEnabled(false);
-        
+        System.out.println("Operação - Não Identificada");
+
+    }
+
+    public void Identificado() {
+        identificacao = true;
+        jBSaldo.setEnabled(true);
+        jBExtrato.setEnabled(true);
+        jBSaldo.setEnabled(true);
+        jBSaque.setEnabled(true);
+        jBTransferencia.setEnabled(true);
+        System.out.println("Operação - Identificada");
     }
 
 }

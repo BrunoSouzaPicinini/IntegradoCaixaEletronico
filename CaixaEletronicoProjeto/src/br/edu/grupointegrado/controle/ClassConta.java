@@ -33,6 +33,7 @@ public class ClassConta extends ConexaoOracle {
         sql.append(getBanco()).append(" AND CD_AGENCIA =");
         sql.append(getAgencia()).append(" AND CD_SENHA =");
         sql.append(getSenha());
+        System.out.println("BUSCA DE REGISTRO:");
         System.out.println(sql.toString());
         executeSQL(sql.toString());
         try {
@@ -42,7 +43,7 @@ public class ClassConta extends ConexaoOracle {
             acesso = resultset.getInt(1);
             
 
-            
+            System.out.print("Resultado:");
             System.out.println(acesso);
             if (acesso == 1) {
                 return true;

@@ -120,9 +120,10 @@ public class TelaInicialCaixa extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void formMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_formMouseClicked
-        
+      
+        System.out.println("Sessao - Sem Identificação");
         sessao.incluirSessaoNaoIdentificada();
-        System.out.println("INSERT INTO Sessao - Sem Identificação");
+        
        operacao.setVisible(true);
        operacao.naoIdentificado();
        setVisible(false);
@@ -131,6 +132,7 @@ public class TelaInicialCaixa extends javax.swing.JFrame {
 
     private void jLabel6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel6MouseClicked
        identificacao.setVisible(true);
+       operacao.Identificado();
        setVisible(false);
     }//GEN-LAST:event_jLabel6MouseClicked
 
