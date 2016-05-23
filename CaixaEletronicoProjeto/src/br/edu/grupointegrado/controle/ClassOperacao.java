@@ -16,6 +16,46 @@ public class ClassOperacao {
     private static int cdTrans;
     private static int cdSessao;
     private static int cdPagamento;
+
+    public static int getCdOperacao() {
+        return cdOperacao;
+    }
+
+    public static void setCdOperacao(int cdOperacao) {
+        ClassOperacao.cdOperacao = cdOperacao;
+    }
+
+    public static int getCdSaque() {
+        return cdSaque;
+    }
+
+    public static void setCdSaque(int cdSaque) {
+        ClassOperacao.cdSaque = cdSaque;
+    }
+
+    public static int getCdTrans() {
+        return cdTrans;
+    }
+
+    public static void setCdTrans(int cdTrans) {
+        ClassOperacao.cdTrans = cdTrans;
+    }
+
+    public static int getCdSessao() {
+        return cdSessao;
+    }
+
+    public static void setCdSessao(int cdSessao) {
+        ClassOperacao.cdSessao = cdSessao;
+    }
+
+    public static int getCdPagamento() {
+        return cdPagamento;
+    }
+
+    public static void setCdPagamento(int cdPagamento) {
+        ClassOperacao.cdPagamento = cdPagamento;
+    }
   
     
 }

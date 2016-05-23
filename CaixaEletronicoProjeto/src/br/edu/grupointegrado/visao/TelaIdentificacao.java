@@ -6,6 +6,7 @@
 package br.edu.grupointegrado.visao;
 
 import br.edu.grupointegrado.controle.ClassConta;
+import br.edu.grupointegrado.controle.ClassSessao;
 import br.edu.grupointegrado.ferramentas.DocumentoLimitado;
 import java.sql.SQLException;
 import javax.swing.JOptionPane;
@@ -16,8 +17,11 @@ import javax.swing.JOptionPane;
  */
 public class TelaIdentificacao extends javax.swing.JFrame {
 
+    
+    TelaOperacao operacao = new TelaOperacao();
     ClassConta conta = new ClassConta();
-     TelaOperacao operacao = new TelaOperacao();
+    ClassSessao sessao = new ClassSessao();
+    
     public TelaIdentificacao() {
         initComponents();
         //jPFSenha.setEnabled(false);
@@ -316,14 +320,21 @@ public class TelaIdentificacao extends javax.swing.JFrame {
     }//GEN-LAST:event_jB1IActionPerformed
 
     private void jBConfirmarIActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBConfirmarIActionPerformed
-        conta.setAgencia(Integer.parseInt(jTFAgenciaI.getText()));
-        conta.setBanco(Integer.parseInt(jTFBancoI.getText()));
-        conta.setCdConta(Integer.parseInt(jTFContaI.getText()));
-        conta.setSenha(Integer.parseInt(jPFSenhaI.getText()));
+        
+        ClassConta.setAgencia(Integer.parseInt(jTFAgenciaI.getText()));
+        ClassConta.setBanco(Integer.parseInt(jTFBancoI.getText()));
+        ClassConta.setCdConta(Integer.parseInt(jTFContaI.getText()));
+        ClassConta.setSenha(Integer.parseInt(jPFSenhaI.getText()));
+        
         if (conta.acessoConta() == true) {
-            operacao.setVisible(true);
-            operacao.setAlwaysOnTop(true);
+            
             setVisible(false);
+            operacao.setVisible(true);
+            
+            
+            ClassSessao.carregarContaSessao();
+            sessao.incluirSessao();
+            System.out.println("Sessão Incluida");
             
         }else JOptionPane.showMessageDialog(null, "Dados Incorretos");
         

@@ -18,12 +18,12 @@ import javax.swing.JOptionPane;
  */
 public class ClassConta extends ConexaoOracle {
 
-    private int cdConta;
-    private int banco;
-    private int agencia;
-    private int saldo;
-    private int senha;
-    private int acesso = 0;
+    private static int cdConta;
+    private static int banco;
+    private static int agencia;
+    private static int saldo;
+    private static int senha;
+    private static int acesso = 0;
     private StringBuffer sql = new StringBuffer();
 
     public boolean acessoConta() {
@@ -55,54 +55,55 @@ public class ClassConta extends ConexaoOracle {
         return false;
     }
 
-    public int getCdConta() {
+    public static int getCdConta() {
         return cdConta;
     }
 
-    public void setCdConta(int cdConta) {
-        this.cdConta = cdConta;
+    public static void setCdConta(int cdConta) {
+        ClassConta.cdConta = cdConta;
     }
 
-    public int getBanco() {
+    public static int getBanco() {
         return banco;
     }
 
-    public void setBanco(int banco) {
-        this.banco = banco;
+    public static void setBanco(int banco) {
+        ClassConta.banco = banco;
     }
 
-    public int getAgencia() {
+    public static int getAgencia() {
         return agencia;
     }
 
-    public void setAgencia(int agencia) {
-        this.agencia = agencia;
+    public static void setAgencia(int agencia) {
+        ClassConta.agencia = agencia;
     }
 
-    public int getSaldo() {
+    public static int getSaldo() {
         return saldo;
     }
 
-    public void setSaldo(int saldo) {
-        this.saldo = saldo;
+    public static void setSaldo(int saldo) {
+        ClassConta.saldo = saldo;
     }
 
-    public int getSenha() {
+    public static int getSenha() {
         return senha;
     }
 
-    public void setSenha(int senha) {
-        this.senha = senha;
+    public static void setSenha(int senha) {
+        ClassConta.senha = senha;
     }
 
-    public StringBuffer getSql() {
-        return sql;
+    public static int getAcesso() {
+        return acesso;
     }
 
-    public void setSql(StringBuffer sql) {
-        this.sql = sql;
+    public static void setAcesso(int acesso) {
+        ClassConta.acesso = acesso;
     }
 
+    
     public ResultSet consultaCodigo(int parseInt) {
         sql.delete(0, sql.length());
         sql.append("SELECT * FROM CONTA WHERE CD_CONTA = ");

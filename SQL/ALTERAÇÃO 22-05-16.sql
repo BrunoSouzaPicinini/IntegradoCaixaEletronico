@@ -1,0 +1,5 @@
+desc SESSAO; 
+
+--22/05/2016 Bruno de Souza Picinini
+
+ALTER TABLE SESSAO MODIFY CD_CONTA NUMBER NULL;
