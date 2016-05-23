@@ -204,14 +204,17 @@ public class TelaOperacao extends javax.swing.JFrame {
     }//GEN-LAST:event_jBDepositoActionPerformed
 
     private void jBFinalizarOperacaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBFinalizarOperacaoActionPerformed
-        if (identificacao) {
-            
-        } else {
-        };
+       
     }//GEN-LAST:event_jBFinalizarOperacaoActionPerformed
 
     private void jBPagamentoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBPagamentoActionPerformed
-        // TODO add your handling code here:
+         if (identificacao) {
+            
+        } else {
+        };
+        
+        
+        
     }//GEN-LAST:event_jBPagamentoActionPerformed
 
     private void jBTransferenciaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBTransferenciaActionPerformed
