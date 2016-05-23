@@ -334,7 +334,7 @@ public class TelaIdentificacao extends javax.swing.JFrame {
             
             ClassSessao.carregarContaSessao();
             sessao.incluirSessao();
-            System.out.println("Sessão Incluida");
+            System.out.println("INSERT INTO Sessao - Com Identificação");
             
         }else JOptionPane.showMessageDialog(null, "Dados Incorretos");
         

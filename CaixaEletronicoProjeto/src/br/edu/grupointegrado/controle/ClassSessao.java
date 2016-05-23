@@ -49,6 +49,16 @@ public class ClassSessao extends ConexaoOracle{
         incluirsql(sql.toString());
         commit();
     }
+    
+    public void incluirSessaoNaoIdentificada() {
+        sql.delete(0, sql.length());
+        sql.append("INSERT INTO SESSAO (CD_SESSAO,DT_SESSAO) VALUES (");
+        sql.append(ultimasequencia("SESSAO", "CD_SESSAO")).append(",To_Date('");
+        sql.append(getDateTime()).append("', 'dd/mm/yyyy hh24:mi:ss'))");
+        System.out.println(sql.toString());
+        incluirsql(sql.toString());
+        commit();
+    }
 
     public static int getCdSessao() {
         return cdSessao;
@@ -89,6 +99,8 @@ public class ClassSessao extends ConexaoOracle{
     public static void setCdBanco(int cdBanco) {
         ClassSessao.cdBanco = cdBanco;
     }
+
+    
     
     
     

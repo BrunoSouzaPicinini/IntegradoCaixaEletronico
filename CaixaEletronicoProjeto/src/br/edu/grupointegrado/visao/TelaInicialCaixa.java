@@ -5,6 +5,9 @@
  */
 package br.edu.grupointegrado.visao;
 
+import br.edu.grupointegrado.controle.ClassConta;
+import br.edu.grupointegrado.controle.ClassSessao;
+
 /**
  *
  * @author BSP
@@ -13,6 +16,7 @@ public class TelaInicialCaixa extends javax.swing.JFrame {
 
     TelaOperacao operacao = new TelaOperacao();
     TelaIdentificacao identificacao = new TelaIdentificacao();
+    ClassSessao sessao = new ClassSessao();
     public TelaInicialCaixa() {
         initComponents();
     }
@@ -116,6 +120,9 @@ public class TelaInicialCaixa extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void formMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_formMouseClicked
+        
+        sessao.incluirSessaoNaoIdentificada();
+        System.out.println("INSERT INTO Sessao - Sem Identificação");
        operacao.setVisible(true);
        operacao.naoIdentificado();
        setVisible(false);
