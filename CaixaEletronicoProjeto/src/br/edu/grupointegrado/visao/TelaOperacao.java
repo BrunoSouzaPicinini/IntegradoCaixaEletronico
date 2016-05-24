@@ -223,7 +223,7 @@ public class TelaOperacao extends javax.swing.JFrame {
         } else {
              System.out.println("Pagamento - Sem Identificação");
         }
-         
+            leituraCodigoBarras.setOperacao(this);
          setVisible(false);
             leituraCodigoBarras.setVisible(true);
         
@@ -292,6 +292,7 @@ public class TelaOperacao extends javax.swing.JFrame {
         jBSaldo.setEnabled(false);
         jBSaque.setEnabled(false);
         jBTransferencia.setEnabled(false);
+        jBPagamento.setEnabled(false);
         System.out.println("Operação - Não Identificada");
 
     }

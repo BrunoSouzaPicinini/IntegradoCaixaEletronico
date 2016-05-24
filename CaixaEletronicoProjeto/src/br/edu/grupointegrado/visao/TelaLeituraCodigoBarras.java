@@ -11,7 +11,12 @@ package br.edu.grupointegrado.visao;
  */
 public class TelaLeituraCodigoBarras extends javax.swing.JFrame {
 
+    
+    TelaOperacao operacao;
+    TelaInserirCodigoManualmente cdManual;
+    
     /**
+     * 
      * Creates new form TelaOperacao
      */
     public TelaLeituraCodigoBarras() {
@@ -150,11 +155,15 @@ public class TelaLeituraCodigoBarras extends javax.swing.JFrame {
     }//GEN-LAST:event_jBFinalizarLeituraCodigoActionPerformed
 
     private void jBMenuAnteriorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBMenuAnteriorActionPerformed
-        // TODO add your handling code here:
+         setVisible(false);
+         operacao.setVisible(true);
     }//GEN-LAST:event_jBMenuAnteriorActionPerformed
 
     private void jBInserirManualmenteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBInserirManualmenteActionPerformed
-        // TODO add your handling code here:
+        cdManual = new TelaInserirCodigoManualmente();
+        setVisible(false);
+        cdManual.setVisible(true);
+        
     }//GEN-LAST:event_jBInserirManualmenteActionPerformed
 
     /**
@@ -203,4 +212,12 @@ public class TelaLeituraCodigoBarras extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     // End of variables declaration//GEN-END:variables
+
+    public void setOperacao(TelaOperacao operacao) {
+        this.operacao = operacao;
+    }
+
+
+
+    
 }

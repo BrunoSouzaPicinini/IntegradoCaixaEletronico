@@ -299,6 +299,11 @@ public class TelaIdentificacao extends javax.swing.JFrame {
 
         jTFAgenciaI.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jTFAgenciaI.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jTFAgenciaI.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTFAgenciaIActionPerformed(evt);
+            }
+        });
         getContentPane().add(jTFAgenciaI);
         jTFAgenciaI.setBounds(200, 70, 230, 40);
         jTFAgenciaI.setDocument(new DocumentoLimitado(6));
@@ -384,6 +389,10 @@ public class TelaIdentificacao extends javax.swing.JFrame {
     private void jPFSenhaIActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPFSenhaIActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jPFSenhaIActionPerformed
+
+    private void jTFAgenciaIActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTFAgenciaIActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTFAgenciaIActionPerformed
 
     /**
      * @param args the command line arguments

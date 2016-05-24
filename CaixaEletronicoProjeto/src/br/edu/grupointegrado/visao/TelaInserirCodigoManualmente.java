@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package br.edu.grupointegrado.visao;
-
+import br.edu.grupointegrado.ferramentas.DocumentoLimitado;
 /**
  *
  * @author Luan
@@ -50,8 +50,6 @@ public class TelaInserirCodigoManualmente extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("LEITURA MANUAL DO CÓDIGO DE BARRAS");
-        setFocusable(false);
-        setFocusableWindowState(false);
         setResizable(false);
 
         jLabel1.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
@@ -61,6 +59,7 @@ public class TelaInserirCodigoManualmente extends javax.swing.JFrame {
         jBCancelar.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         jBCancelar.setText("Cancelar");
         jBCancelar.setBorder(null);
+        jBCancelar.setFocusable(false);
         jBCancelar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jBCancelarActionPerformed(evt);
@@ -71,6 +70,7 @@ public class TelaInserirCodigoManualmente extends javax.swing.JFrame {
         jBConfirmar.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         jBConfirmar.setText("Confirmar");
         jBConfirmar.setBorder(null);
+        jBConfirmar.setFocusable(false);
         jBConfirmar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jBConfirmarActionPerformed(evt);
@@ -81,6 +81,7 @@ public class TelaInserirCodigoManualmente extends javax.swing.JFrame {
         jBCorrigir.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         jBCorrigir.setText("Corrigir");
         jBCorrigir.setBorder(null);
+        jBCorrigir.setFocusable(false);
         jBCorrigir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jBCorrigirActionPerformed(evt);
@@ -92,6 +93,7 @@ public class TelaInserirCodigoManualmente extends javax.swing.JFrame {
         jB7.setForeground(new java.awt.Color(255, 255, 255));
         jB7.setText("7");
         jB7.setBorder(null);
+        jB7.setFocusable(false);
         jB7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jB7ActionPerformed(evt);
@@ -103,6 +105,7 @@ public class TelaInserirCodigoManualmente extends javax.swing.JFrame {
         jB0.setForeground(new java.awt.Color(255, 255, 255));
         jB0.setText("0");
         jB0.setBorder(null);
+        jB0.setFocusable(false);
         jB0.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jB0ActionPerformed(evt);
@@ -114,6 +117,7 @@ public class TelaInserirCodigoManualmente extends javax.swing.JFrame {
         jB8.setForeground(new java.awt.Color(255, 255, 255));
         jB8.setText("8");
         jB8.setBorder(null);
+        jB8.setFocusable(false);
         jB8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jB8ActionPerformed(evt);
@@ -125,6 +129,7 @@ public class TelaInserirCodigoManualmente extends javax.swing.JFrame {
         jB9.setForeground(new java.awt.Color(255, 255, 255));
         jB9.setText("9");
         jB9.setBorder(null);
+        jB9.setFocusable(false);
         jB9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jB9ActionPerformed(evt);
@@ -136,6 +141,7 @@ public class TelaInserirCodigoManualmente extends javax.swing.JFrame {
         jB4.setForeground(new java.awt.Color(255, 255, 255));
         jB4.setText("4");
         jB4.setBorder(null);
+        jB4.setFocusable(false);
         jB4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jB4ActionPerformed(evt);
@@ -147,6 +153,7 @@ public class TelaInserirCodigoManualmente extends javax.swing.JFrame {
         jB5.setForeground(new java.awt.Color(255, 255, 255));
         jB5.setText("5");
         jB5.setBorder(null);
+        jB5.setFocusable(false);
         jB5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jB5ActionPerformed(evt);
@@ -158,6 +165,7 @@ public class TelaInserirCodigoManualmente extends javax.swing.JFrame {
         jB6.setForeground(new java.awt.Color(255, 255, 255));
         jB6.setText("6");
         jB6.setBorder(null);
+        jB6.setFocusable(false);
         jB6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jB6ActionPerformed(evt);
@@ -169,6 +177,7 @@ public class TelaInserirCodigoManualmente extends javax.swing.JFrame {
         jB3.setForeground(new java.awt.Color(255, 255, 255));
         jB3.setText("3");
         jB3.setBorder(null);
+        jB3.setFocusable(false);
         jB3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jB3ActionPerformed(evt);
@@ -180,6 +189,7 @@ public class TelaInserirCodigoManualmente extends javax.swing.JFrame {
         jB1.setForeground(new java.awt.Color(255, 255, 255));
         jB1.setText("1");
         jB1.setBorder(null);
+        jB1.setFocusable(false);
         jB1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jB1ActionPerformed(evt);
@@ -191,6 +201,7 @@ public class TelaInserirCodigoManualmente extends javax.swing.JFrame {
         jB2.setForeground(new java.awt.Color(255, 255, 255));
         jB2.setText("2");
         jB2.setBorder(null);
+        jB2.setFocusable(false);
         jB2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jB2ActionPerformed(evt);
@@ -198,14 +209,19 @@ public class TelaInserirCodigoManualmente extends javax.swing.JFrame {
         });
 
         jTFCodigodeBarras1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jTFCodigodeBarras1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
 
         jTFCodigodeBarras4.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jTFCodigodeBarras4.setHorizontalAlignment(javax.swing.JTextField.CENTER);
 
         jTFCodigodeBarras3.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jTFCodigodeBarras3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
 
         jTFCodigodeBarras5.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jTFCodigodeBarras5.setHorizontalAlignment(javax.swing.JTextField.CENTER);
 
         jTFCodigodeBarras2.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jTFCodigodeBarras2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTFCodigodeBarras2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTFCodigodeBarras2ActionPerformed(evt);
@@ -219,13 +235,50 @@ public class TelaInserirCodigoManualmente extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 149, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jB1, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(10, 10, 10)
+                                .addComponent(jB2, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(10, 10, 10)
+                                .addComponent(jB3, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(26, 26, 26)
+                                .addComponent(jBCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jB4, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(10, 10, 10)
+                                .addComponent(jB5, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(10, 10, 10)
+                                .addComponent(jB6, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(26, 26, 26)
+                                .addComponent(jBCorrigir, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jB7, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(10, 10, 10)
+                                .addComponent(jB8, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(10, 10, 10)
+                                .addComponent(jB9, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(26, 26, 26)
+                                .addComponent(jBConfirmar, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(80, 80, 80)
+                                .addComponent(jB0, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(222, 222, 222))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 610, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(121, 121, 121))))
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(213, 213, 213)
-                        .addComponent(jLabel1))
+                        .addComponent(jLabel1)
+                        .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(26, 26, 26)
+                        .addContainerGap()
                         .addComponent(jTFCodigodeBarras1, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(6, 6, 6)
                         .addComponent(jTFCodigodeBarras2, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -233,42 +286,9 @@ public class TelaInserirCodigoManualmente extends javax.swing.JFrame {
                         .addComponent(jTFCodigodeBarras3, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(6, 6, 6)
                         .addComponent(jTFCodigodeBarras4, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(6, 6, 6)
-                        .addComponent(jTFCodigodeBarras5, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(38, 38, 38))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jB1, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(10, 10, 10)
-                        .addComponent(jB2, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(10, 10, 10)
-                        .addComponent(jB3, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(26, 26, 26)
-                        .addComponent(jBCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jB4, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(10, 10, 10)
-                        .addComponent(jB5, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(10, 10, 10)
-                        .addComponent(jB6, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(26, 26, 26)
-                        .addComponent(jBCorrigir, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jB7, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(10, 10, 10)
-                        .addComponent(jB8, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(10, 10, 10)
-                        .addComponent(jB9, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(26, 26, 26)
-                        .addComponent(jBConfirmar, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(80, 80, 80)
-                        .addComponent(jB0, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(222, 222, 222))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 610, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(121, 121, 121))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jTFCodigodeBarras5)))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -316,6 +336,12 @@ public class TelaInserirCodigoManualmente extends javax.swing.JFrame {
                 .addComponent(jB0, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
+
+        jTFCodigodeBarras1.setDocument(new DocumentoLimitado(10));
+        jTFCodigodeBarras4.setDocument(new DocumentoLimitado(1));
+        jTFCodigodeBarras3.setDocument(new DocumentoLimitado(11));
+        jTFCodigodeBarras5.setDocument(new DocumentoLimitado(14));
+        jTFCodigodeBarras2.setDocument(new DocumentoLimitado(11));
 
         pack();
         setLocationRelativeTo(null);
