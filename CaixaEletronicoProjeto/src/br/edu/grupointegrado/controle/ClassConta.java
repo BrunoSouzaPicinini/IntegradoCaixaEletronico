@@ -18,12 +18,60 @@ import javax.swing.JOptionPane;
  */
 public class ClassConta extends ConexaoOracle {
 
-    private static int cdConta;
-    private static int banco;
-    private static int agencia;
-    private static int saldo;
-    private static int senha;
-    private static int acesso = 0;
+    private int cdConta;
+
+    public int getCdConta() {
+        return cdConta;
+    }
+
+    public void setCdConta(int cdConta) {
+        this.cdConta = cdConta;
+    }
+
+    public int getBanco() {
+        return banco;
+    }
+
+    public void setBanco(int banco) {
+        this.banco = banco;
+    }
+
+    public int getAgencia() {
+        return agencia;
+    }
+
+    public void setAgencia(int agencia) {
+        this.agencia = agencia;
+    }
+
+    public int getSaldo() {
+        return saldo;
+    }
+
+    public void setSaldo(int saldo) {
+        this.saldo = saldo;
+    }
+
+    public int getSenha() {
+        return senha;
+    }
+
+    public void setSenha(int senha) {
+        this.senha = senha;
+    }
+
+    public int getAcesso() {
+        return acesso;
+    }
+
+    public void setAcesso(int acesso) {
+        this.acesso = acesso;
+    }
+    private  int banco;
+    private  int agencia;
+    private  int saldo;
+    private  int senha;
+    private  int acesso = 0;
     private StringBuffer sql = new StringBuffer();
 
     public boolean acessoConta() {
@@ -54,54 +102,6 @@ public class ClassConta extends ConexaoOracle {
         }
 
         return false;
-    }
-
-    public static int getCdConta() {
-        return cdConta;
-    }
-
-    public static void setCdConta(int cdConta) {
-        ClassConta.cdConta = cdConta;
-    }
-
-    public static int getBanco() {
-        return banco;
-    }
-
-    public static void setBanco(int banco) {
-        ClassConta.banco = banco;
-    }
-
-    public static int getAgencia() {
-        return agencia;
-    }
-
-    public static void setAgencia(int agencia) {
-        ClassConta.agencia = agencia;
-    }
-
-    public static int getSaldo() {
-        return saldo;
-    }
-
-    public static void setSaldo(int saldo) {
-        ClassConta.saldo = saldo;
-    }
-
-    public static int getSenha() {
-        return senha;
-    }
-
-    public static void setSenha(int senha) {
-        ClassConta.senha = senha;
-    }
-
-    public static int getAcesso() {
-        return acesso;
-    }
-
-    public static void setAcesso(int acesso) {
-        ClassConta.acesso = acesso;
     }
 
     

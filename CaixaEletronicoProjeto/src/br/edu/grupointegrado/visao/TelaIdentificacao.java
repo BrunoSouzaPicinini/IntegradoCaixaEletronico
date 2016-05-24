@@ -321,10 +321,10 @@ public class TelaIdentificacao extends javax.swing.JFrame {
 
     private void jBConfirmarIActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBConfirmarIActionPerformed
         
-        ClassConta.setAgencia(Integer.parseInt(jTFAgenciaI.getText()));
-        ClassConta.setBanco(Integer.parseInt(jTFBancoI.getText()));
-        ClassConta.setCdConta(Integer.parseInt(jTFContaI.getText()));
-        ClassConta.setSenha(Integer.parseInt(jPFSenhaI.getText()));
+        conta.setAgencia(Integer.parseInt(jTFAgenciaI.getText()));
+        conta.setBanco(Integer.parseInt(jTFBancoI.getText()));
+        conta.setCdConta(Integer.parseInt(jTFContaI.getText()));
+        conta.setSenha(Integer.parseInt(jPFSenhaI.getText()));
         
         if (conta.acessoConta() == true) {
             
@@ -332,7 +332,7 @@ public class TelaIdentificacao extends javax.swing.JFrame {
             operacao.setVisible(true);
             
             
-            ClassSessao.carregarContaSessao();
+            ClassSessao.carregarContaSessao(conta);
             System.out.println("Sessao - Com Identificação");
             sessao.incluirSessao();
             

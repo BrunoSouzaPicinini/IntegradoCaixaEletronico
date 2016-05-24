@@ -31,10 +31,10 @@ public class ClassSessao extends ConexaoOracle{
 	return dateFormat.format(date);
 }
     
-    public static void carregarContaSessao(){
-        setCdConta(ClassConta.getCdConta());
-        setCdAgencia(ClassConta.getAgencia()); 
-        setCdBanco(ClassConta.getBanco());
+    public static void carregarContaSessao(ClassConta conta){
+        setCdConta(conta.getCdConta());
+        setCdAgencia(conta.getAgencia()); 
+        setCdBanco(conta.getBanco());
     }
    
     public void incluirSessao() {

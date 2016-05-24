@@ -6,6 +6,8 @@
 package br.edu.grupointegrado.visao;
 
 import br.edu.grupointegrado.controle.ClassOperacao;
+import br.edu.grupointegrado.controle.ClassPagamento;
+import br.edu.grupointegrado.controle.ClassSessao;
 
 /**
  *
@@ -14,14 +16,15 @@ import br.edu.grupointegrado.controle.ClassOperacao;
 public class TelaOperacao extends javax.swing.JFrame {
 
     ClassOperacao operacao = new ClassOperacao();
+    ClassPagamento pagamento;
     private boolean identificacao = false;
     
-    TelaSaldo saldo = new TelaSaldo();
-    TelaExtrato extrato = new TelaExtrato();
-    TelaValorSaque valorSaque = new TelaValorSaque();
-    TelaOutroValorSaque outroValorSaque = new TelaOutroValorSaque();
-    TelaContaDeposito contaDeposito = new TelaContaDeposito();
-    TelaLeituraCodigoBarras leituraCodigoBarras = new TelaLeituraCodigoBarras();
+    TelaSaldo saldo ;
+    TelaExtrato extrato ;
+    TelaValorSaque valorSaque;
+    TelaOutroValorSaque outroValorSaque;
+    TelaContaDeposito contaDeposito ;
+    TelaLeituraCodigoBarras leituraCodigoBarras;
     
     
     
@@ -208,10 +211,21 @@ public class TelaOperacao extends javax.swing.JFrame {
     }//GEN-LAST:event_jBFinalizarOperacaoActionPerformed
 
     private void jBPagamentoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBPagamentoActionPerformed
-         if (identificacao) {
+        pagamento = new ClassPagamento();
+        leituraCodigoBarras = new TelaLeituraCodigoBarras();
+        
+        if (identificacao) {
+            pagamento.setCdConta(ClassSessao.getCdConta());
+            pagamento.setCdAgencia(ClassSessao.getCdAgencia());
+            pagamento.setCdBanco(ClassSessao.getCdBanco());
+             System.out.println("Pagamento - Com Identificação");
             
         } else {
-        };
+             System.out.println("Pagamento - Sem Identificação");
+        }
+         
+         setVisible(false);
+            leituraCodigoBarras.setVisible(true);
         
         
         
