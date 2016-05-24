@@ -163,7 +163,7 @@ public class TelaLeituraCodigoBarras extends javax.swing.JFrame {
         cdManual = new TelaInserirCodigoManualmente();
         setVisible(false);
         cdManual.setVisible(true);
-        
+        operacao.operacao.rollback();
     }//GEN-LAST:event_jBInserirManualmenteActionPerformed
 
     /**

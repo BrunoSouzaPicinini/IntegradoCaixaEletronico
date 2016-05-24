@@ -5,11 +5,13 @@
  */
 package br.edu.grupointegrado.controle;
 
+import br.edu.grupointegrado.conexao.ConexaoOracle;
+
 /**
  *
  * @author BSP
  */
-public class ClassOperacao {
+public class ClassOperacao extends ConexaoOracle {
     
     private static int cdOperacao;
     private static int cdSaque;
