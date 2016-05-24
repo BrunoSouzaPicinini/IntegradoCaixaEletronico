@@ -17,5 +17,5 @@ public class ClassPagamento extends ConexaoOracle {
     private static int cdAgencia;
     private static int cdBanco;
     private static int cdConta;
-    private static String cdBarra;
+    private static int cdBarra;
 }
