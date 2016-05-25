@@ -5,6 +5,8 @@
  */
 package br.edu.grupointegrado.visao;
 
+import br.edu.grupointegrado.controle.ClassPagamento;
+
 /**
  *
  * @author Luan
@@ -14,6 +16,8 @@ public class TelaLeituraCodigoBarras extends javax.swing.JFrame {
     
     TelaOperacao operacao;
     TelaInserirCodigoManualmente cdManual;
+    ClassPagamento pagamento ;
+
     
     /**
      * 
@@ -162,8 +166,11 @@ public class TelaLeituraCodigoBarras extends javax.swing.JFrame {
     private void jBInserirManualmenteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBInserirManualmenteActionPerformed
         cdManual = new TelaInserirCodigoManualmente();
         setVisible(false);
+        cdManual.setPagamento(pagamento);
+        
         cdManual.setVisible(true);
-        operacao.operacao.rollback();
+        
+        
     }//GEN-LAST:event_jBInserirManualmenteActionPerformed
 
     /**
@@ -217,7 +224,13 @@ public class TelaLeituraCodigoBarras extends javax.swing.JFrame {
         this.operacao = operacao;
     }
 
+public ClassPagamento getPagamento() {
+        return pagamento;
+    }
 
+    public void setPagamento(ClassPagamento pagamento) {
+        this.pagamento = pagamento;
+    }
 
     
 }

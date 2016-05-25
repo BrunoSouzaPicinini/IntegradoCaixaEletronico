@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package br.edu.grupointegrado.visao;
+import br.edu.grupointegrado.controle.ClassPagamento;
 import br.edu.grupointegrado.ferramentas.DocumentoLimitado;
 /**
  *
@@ -11,6 +12,9 @@ import br.edu.grupointegrado.ferramentas.DocumentoLimitado;
  */
 public class TelaInserirCodigoManualmente extends javax.swing.JFrame {
 
+    ClassPagamento pagamento;
+    StringBuffer stringCodigoBarras = new StringBuffer();
+    TelaFinalizar finalizar = new TelaFinalizar();
     /**
      * Creates new form TelaOperacao
      */
@@ -352,7 +356,19 @@ public class TelaInserirCodigoManualmente extends javax.swing.JFrame {
     }//GEN-LAST:event_jBCancelarActionPerformed
 
     private void jBConfirmarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBConfirmarActionPerformed
-        // TODO add your handling code here:
+        stringCodigoBarras.delete(0, stringCodigoBarras.length());
+        stringCodigoBarras.append(jTFCodigodeBarras1.getText());
+        stringCodigoBarras.append(jTFCodigodeBarras2.getText());
+        stringCodigoBarras.append(jTFCodigodeBarras3.getText());
+        stringCodigoBarras.append(jTFCodigodeBarras4.getText());
+        stringCodigoBarras.append(jTFCodigodeBarras5.getText());
+        pagamento.setCodBarra(stringCodigoBarras.toString());
+        System.out.println(stringCodigoBarras.toString());
+        pagamento.incluirPagamento();
+        setVisible(false);
+        finalizar.setVisible(true);
+        
+        
     }//GEN-LAST:event_jBConfirmarActionPerformed
 
     private void jBCorrigirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBCorrigirActionPerformed
@@ -463,4 +479,11 @@ public class TelaInserirCodigoManualmente extends javax.swing.JFrame {
     private javax.swing.JTextField jTFCodigodeBarras4;
     private javax.swing.JTextField jTFCodigodeBarras5;
     // End of variables declaration//GEN-END:variables
+
+public void setPagamento(ClassPagamento pagamento) {
+        this.pagamento = pagamento;
+    }
+
+   
+
 }

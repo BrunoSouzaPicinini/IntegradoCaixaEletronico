@@ -5,6 +5,7 @@
  */
 package br.edu.grupointegrado.visao;
 
+import br.edu.grupointegrado.controle.ClassConta;
 import br.edu.grupointegrado.controle.ClassOperacao;
 import br.edu.grupointegrado.controle.ClassPagamento;
 import br.edu.grupointegrado.controle.ClassSessao;
@@ -14,7 +15,9 @@ import br.edu.grupointegrado.controle.ClassSessao;
  * @author Luan
  */
 public class TelaOperacao extends javax.swing.JFrame {
+    ClassConta conta;
 
+    
     ClassOperacao operacao = new ClassOperacao();
     ClassPagamento pagamento;
     private boolean identificacao = false;
@@ -213,16 +216,14 @@ public class TelaOperacao extends javax.swing.JFrame {
     private void jBPagamentoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBPagamentoActionPerformed
         pagamento = new ClassPagamento();
         leituraCodigoBarras = new TelaLeituraCodigoBarras();
-        
-        if (identificacao) {
+        leituraCodigoBarras.setPagamento(pagamento);
+       
             pagamento.setCdConta(ClassSessao.getCdConta());
             pagamento.setCdAgencia(ClassSessao.getCdAgencia());
             pagamento.setCdBanco(ClassSessao.getCdBanco());
              System.out.println("Pagamento - Com Identificação");
             
-        } else {
-             System.out.println("Pagamento - Sem Identificação");
-        }
+        
             leituraCodigoBarras.setOperacao(this);
          setVisible(false);
             leituraCodigoBarras.setVisible(true);
@@ -285,6 +286,15 @@ public class TelaOperacao extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 
+    public ClassConta getConta() {
+        return conta;
+    }
+
+    public void setConta(ClassConta conta) {
+        this.conta = conta;
+    }
+    
+    
     public void naoIdentificado() {
         identificacao = false;
         jBSaldo.setEnabled(false);

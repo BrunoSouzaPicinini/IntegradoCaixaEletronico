@@ -68,19 +68,10 @@ public class ClassPagamento extends ConexaoOracle {
         sql.append(getCdConta()).append(",");
         sql.append(getCdBanco()).append(",");
         sql.append(getCdAgencia()).append(",'");
-        sql.append(getCodBarra()).append("'");
+        sql.append(getCodBarra()).append("')");
         System.out.println(sql.toString());
         incluirsql(sql.toString());
-        
-    }
-    
-    public void incluirPagamentoNaoIdentificado() {
-        sql.delete(0, sql.length());
-        sql.append("INSERT INTO PAGAMENTO (CD_PAGAMENTO,COD_BARRA) VALUES (");
-        sql.append(ultimasequencia("PAGAMENTO", "CD_PAGAMENTO")).append(",'");
-        sql.append(getCodBarra()).append("'");
-        System.out.println(sql.toString());
-        incluirsql(sql.toString());
+        commit();
         
     }
     
