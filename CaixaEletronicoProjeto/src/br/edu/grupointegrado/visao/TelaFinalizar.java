@@ -33,6 +33,7 @@ public class TelaFinalizar extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("OPERAÇÃO TERMINADA");
+        setAlwaysOnTop(true);
         setFocusable(false);
         setFocusableWindowState(false);
         setResizable(false);

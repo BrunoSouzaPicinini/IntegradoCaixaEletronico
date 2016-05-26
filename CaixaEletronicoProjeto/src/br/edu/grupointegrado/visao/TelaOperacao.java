@@ -216,14 +216,14 @@ public class TelaOperacao extends javax.swing.JFrame {
     private void jBPagamentoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBPagamentoActionPerformed
         pagamento = new ClassPagamento();
         leituraCodigoBarras = new TelaLeituraCodigoBarras();
-        leituraCodigoBarras.setPagamento(pagamento);
+       
        
             pagamento.setCdConta(ClassSessao.getCdConta());
             pagamento.setCdAgencia(ClassSessao.getCdAgencia());
             pagamento.setCdBanco(ClassSessao.getCdBanco());
-             System.out.println("Pagamento - Com Identificação");
+             System.out.println("Pagamento");
             
-        
+            leituraCodigoBarras.setPagamento(pagamento);
             leituraCodigoBarras.setOperacao(this);
          setVisible(false);
             leituraCodigoBarras.setVisible(true);

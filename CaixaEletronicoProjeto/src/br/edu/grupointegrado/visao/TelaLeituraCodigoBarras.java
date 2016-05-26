@@ -165,9 +165,9 @@ public class TelaLeituraCodigoBarras extends javax.swing.JFrame {
 
     private void jBInserirManualmenteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBInserirManualmenteActionPerformed
         cdManual = new TelaInserirCodigoManualmente();
-        setVisible(false);
+      
         cdManual.setPagamento(pagamento);
-        
+        setVisible(false);
         cdManual.setVisible(true);
         
         

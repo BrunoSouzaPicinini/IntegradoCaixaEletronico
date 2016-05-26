@@ -369,6 +369,8 @@ public class TelaInserirCodigoManualmente extends javax.swing.JFrame {
         finalizar.setVisible(true);
         
         
+        
+        
     }//GEN-LAST:event_jBConfirmarActionPerformed
 
     private void jBCorrigirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBCorrigirActionPerformed
