@@ -5,17 +5,23 @@
  */
 package br.edu.grupointegrado.visao;
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /**
  *
  * @author Luan
  */
 public class TelaFinalizar extends javax.swing.JFrame {
 
+    TelaInicialCaixa inicial;
+    TelaOperacao operacao;
     /**
      * Creates new form TelaOperacao
      */
     public TelaFinalizar() {
         initComponents();
+        
     }
 
     /**
@@ -93,11 +99,15 @@ public class TelaFinalizar extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jBFinalizarOperacaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBFinalizarOperacaoActionPerformed
-        // TODO add your handling code here:
+        inicial = new TelaInicialCaixa();
+        setVisible(false);
+        inicial.setVisible(true);
     }//GEN-LAST:event_jBFinalizarOperacaoActionPerformed
 
     private void jBOutraOperaçãoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBOutraOperaçãoActionPerformed
-        // TODO add your handling code here:
+        operacao = new TelaOperacao();
+        setVisible(false);
+            operacao.setVisible(true);
     }//GEN-LAST:event_jBOutraOperaçãoActionPerformed
 
     /**
@@ -141,4 +151,11 @@ public class TelaFinalizar extends javax.swing.JFrame {
     private javax.swing.JButton jBOutraOperação;
     private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
+    
+    public void naoIdentificado() {
+        jBOutraOperação.setEnabled(false);
+        
+    }
+
+
 }

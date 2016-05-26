@@ -41,11 +41,11 @@ public class TelaInicialCaixa extends javax.swing.JFrame {
         jLabel1.setText("Selecione a opção desejada");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setAlwaysOnTop(true);
         setBackground(new java.awt.Color(153, 153, 153));
         setFocusable(false);
         setFocusableWindowState(false);
         setLocation(new java.awt.Point(0, 0));
-        setPreferredSize(new java.awt.Dimension(880, 480));
         setResizable(false);
         setSize(new java.awt.Dimension(880, 480));
         addMouseListener(new java.awt.event.MouseAdapter() {

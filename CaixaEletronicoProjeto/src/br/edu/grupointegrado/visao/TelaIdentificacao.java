@@ -18,9 +18,9 @@ import javax.swing.JOptionPane;
 public class TelaIdentificacao extends javax.swing.JFrame {
 
     
-    TelaOperacao operacao = new TelaOperacao();
+    TelaOperacao operacao;
     ClassConta conta = new ClassConta();
-    ClassSessao sessao = new ClassSessao();
+    ClassSessao sessao;
     
     public TelaIdentificacao() {
         initComponents();
@@ -332,14 +332,19 @@ public class TelaIdentificacao extends javax.swing.JFrame {
         conta.setSenha(Integer.parseInt(jPFSenhaI.getText()));
         
         if (conta.acessoConta() == true) {
+            sessao = new ClassSessao();
+            ClassSessao.carregarContaSessao(conta);
+            System.out.println("Sessao - Com Identificação");
+            sessao.incluirSessao();
             
+            
+            operacao = new TelaOperacao();
+            operacao.operacao.setCdSessao(sessao.getCdSessao());
             setVisible(false);
             operacao.setVisible(true);
             
             
-            ClassSessao.carregarContaSessao(conta);
-            System.out.println("Sessao - Com Identificação");
-            sessao.incluirSessao();
+            
             
             
         }else JOptionPane.showMessageDialog(null, "Dados Incorretos");

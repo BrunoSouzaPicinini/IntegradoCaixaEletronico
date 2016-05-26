@@ -17,10 +17,20 @@ import br.edu.grupointegrado.controle.ClassSessao;
 public class TelaOperacao extends javax.swing.JFrame {
     ClassConta conta;
 
-    
+    ClassSessao sessao;
+
+    public ClassSessao getSessao() {
+        return sessao;
+    }
+
+    public void setSessao(ClassSessao sessao) {
+        this.sessao = sessao;
+    }
     ClassOperacao operacao = new ClassOperacao();
     ClassPagamento pagamento;
     private boolean identificacao = false;
+
+    
     TelaFinalizar finalizar = new TelaFinalizar();
     TelaSaldo saldo ;
     TelaExtrato extrato ;
@@ -58,6 +68,7 @@ public class TelaOperacao extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("OPERAÇÃO");
+        setAlwaysOnTop(true);
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         setFocusable(false);
         setFocusableWindowState(false);
@@ -286,6 +297,10 @@ public class TelaOperacao extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 
+    public boolean isIdentificacao() {
+        return identificacao;
+    }
+    
     public ClassConta getConta() {
         return conta;
     }
@@ -306,6 +321,8 @@ public class TelaOperacao extends javax.swing.JFrame {
         System.out.println("Operação - Não Identificada");
 
     }
+    
+   
 
     public void Identificado() {
         identificacao = true;

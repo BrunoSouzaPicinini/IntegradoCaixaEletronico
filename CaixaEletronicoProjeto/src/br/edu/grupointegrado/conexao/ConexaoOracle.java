@@ -136,6 +136,20 @@ public class ConexaoOracle {
             return "";
         }
     }
+    
+    public String ultimoInserido(String tabela, String atributo) {
+        String sql = "SELECT COALESCE(MAX(+" + atributo + "),0) AS ULTIMO FROM " + tabela;
+        executeSQL(sql);
+        try {
+            resultset.first();
+            return resultset.getString("ULTIMO");
+        } catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null, "Erro ao encontroar numero de sequencia! \n" + ex);
+            return "";
+        }
+    }
+    
+    
 }
 //    public static void main(String[] args) {
 //

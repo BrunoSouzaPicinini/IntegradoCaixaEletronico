@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package br.edu.grupointegrado.visao;
+import br.edu.grupointegrado.controle.ClassOperacao;
 import br.edu.grupointegrado.controle.ClassPagamento;
 import br.edu.grupointegrado.ferramentas.DocumentoLimitado;
 /**
@@ -56,6 +57,7 @@ public class TelaInserirCodigoManualmente extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("LEITURA MANUAL DO CÓDIGO DE BARRAS");
+        setAlwaysOnTop(true);
         setResizable(false);
 
         jLabel1.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
@@ -367,7 +369,13 @@ public class TelaInserirCodigoManualmente extends javax.swing.JFrame {
         pagamento.setCodBarra(stringCodigoBarras.toString());
         System.out.println(stringCodigoBarras.toString());
         pagamento.incluirPagamento();
+        
+        ClassOperacao.setCdPagamento(pagamento.getCdPagamento());
+        operacao.operacao.incluirOperacaoPagamento();
         setVisible(false);
+        
+        
+        
         operacao.finalizar.setVisible(true);
         
         

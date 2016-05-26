@@ -72,7 +72,7 @@ public class ClassPagamento extends ConexaoOracle {
         System.out.println(sql.toString());
         incluirsql(sql.toString());
         commit();
-        
+        setCdPagamento(Integer.parseInt(ultimoInserido("PAGAMENTO"," CD_PAGAMENTO")));
     }
     
     

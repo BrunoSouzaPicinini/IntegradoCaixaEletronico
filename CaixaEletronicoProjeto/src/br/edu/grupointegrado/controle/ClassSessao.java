@@ -48,6 +48,7 @@ public class ClassSessao extends ConexaoOracle{
         System.out.println(sql.toString());
         incluirsql(sql.toString());
         commit();
+        setCdSessao(Integer.parseInt(ultimoInserido("SESSAO"," CD_SESSAO")));
     }
     
     public void incluirSessaoNaoIdentificada() {
@@ -58,6 +59,7 @@ public class ClassSessao extends ConexaoOracle{
         System.out.println(sql.toString());
         incluirsql(sql.toString());
         commit();
+        setCdSessao(Integer.parseInt(ultimoInserido("SESSAO"," CD_SESSAO")));
     }
 
     public static int getCdSessao() {

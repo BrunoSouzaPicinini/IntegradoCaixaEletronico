@@ -47,6 +47,7 @@ public class TelaLeituraCodigoBarras extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("LEITURA DO CÓDIGO DE BARRAS");
+        setAlwaysOnTop(true);
         setFocusable(false);
         setFocusableWindowState(false);
         setResizable(false);
@@ -115,14 +116,10 @@ public class TelaLeituraCodigoBarras extends javax.swing.JFrame {
                             .addComponent(jBInserirManualmente, javax.swing.GroupLayout.PREFERRED_SIZE, 293, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jBFinalizarLeituraCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, 293, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel2)
+                            .addComponent(jLabel3)
                             .addGroup(layout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel3)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jLabel4)))
-                                .addGap(17, 17, 17)))))
+                                .addGap(18, 18, 18)
+                                .addComponent(jLabel4)))))
                 .addGap(114, 114, 114))
         );
         layout.setVerticalGroup(
