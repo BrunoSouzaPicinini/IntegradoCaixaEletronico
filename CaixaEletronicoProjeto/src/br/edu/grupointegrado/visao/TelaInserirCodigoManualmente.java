@@ -14,7 +14,9 @@ public class TelaInserirCodigoManualmente extends javax.swing.JFrame {
 
     ClassPagamento pagamento;
     StringBuffer stringCodigoBarras = new StringBuffer();
-    TelaFinalizar finalizar = new TelaFinalizar();
+    TelaOperacao operacao;
+
+   
     /**
      * Creates new form TelaOperacao
      */
@@ -366,7 +368,7 @@ public class TelaInserirCodigoManualmente extends javax.swing.JFrame {
         System.out.println(stringCodigoBarras.toString());
         pagamento.incluirPagamento();
         setVisible(false);
-        finalizar.setVisible(true);
+        operacao.finalizar.setVisible(true);
         
         
         
@@ -482,6 +484,9 @@ public class TelaInserirCodigoManualmente extends javax.swing.JFrame {
     private javax.swing.JTextField jTFCodigodeBarras5;
     // End of variables declaration//GEN-END:variables
 
+    public void setOperacao(TelaOperacao operacao) {
+        this.operacao = operacao;
+    }
 public void setPagamento(ClassPagamento pagamento) {
         this.pagamento = pagamento;
     }

@@ -21,7 +21,7 @@ public class TelaOperacao extends javax.swing.JFrame {
     ClassOperacao operacao = new ClassOperacao();
     ClassPagamento pagamento;
     private boolean identificacao = false;
-    
+    TelaFinalizar finalizar = new TelaFinalizar();
     TelaSaldo saldo ;
     TelaExtrato extrato ;
     TelaValorSaque valorSaque;
