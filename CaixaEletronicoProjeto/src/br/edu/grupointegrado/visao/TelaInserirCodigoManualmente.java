@@ -5,9 +5,11 @@
  */
 package br.edu.grupointegrado.visao;
 
+import br.edu.grupointegrado.controle.ClassMovimentacao;
 import br.edu.grupointegrado.controle.ClassOperacao;
 import br.edu.grupointegrado.controle.ClassPagamento;
 import br.edu.grupointegrado.ferramentas.DocumentoLimitado;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -16,6 +18,7 @@ import br.edu.grupointegrado.ferramentas.DocumentoLimitado;
 public class TelaInserirCodigoManualmente extends javax.swing.JFrame {
 
     ClassPagamento pagamento;
+    ClassMovimentacao movimentacao;
     StringBuffer stringCodigoBarras = new StringBuffer();
     TelaOperacao operacao;
     StringBuffer valor = new StringBuffer();
@@ -369,13 +372,20 @@ public class TelaInserirCodigoManualmente extends javax.swing.JFrame {
         stringCodigoBarras.append(jTFCodigodeBarras4.getText());
         stringCodigoBarras.append(jTFCodigodeBarras5.getText());
         pagamento.setCodBarra(stringCodigoBarras.toString());
-        System.out.println(stringCodigoBarras.toString());
+        System.out.println(stringCodigoBarras.toString()); 
+        
         pagamento.incluirPagamento();
         extrairValorBoleto();
         ClassOperacao.setCdPagamento(pagamento.getCdPagamento());
+        
         operacao.operacao.incluirOperacaoPagamento();
+        movimentacao = new ClassMovimentacao();
+        movimentacao.setCdOperacao(operacao.operacao.getCdOperacao());
+        movimentacao.setDsMovimentacao("PAGAMENTO");
+        movimentacao.setVlMovimentacao(Double.parseDouble(valor.toString()));
+        movimentacao.inserirMovimentacao();
+        
         setVisible(false);
-
         operacao.finalizar.setVisible(true);
 
 
@@ -500,6 +510,7 @@ public class TelaInserirCodigoManualmente extends javax.swing.JFrame {
 
     public String extrairValorBoleto() {
         valor.delete(0, valor.length());
+        valor.append("-");
         boolean diferenteZero = false;
         for (int i = 4; i < 14; i++) {
            
@@ -507,6 +518,11 @@ public class TelaInserirCodigoManualmente extends javax.swing.JFrame {
                 diferenteZero = true;
                 valor.append(jTFCodigodeBarras5.getText().toString().charAt(i));
         }}
+        String valorTemp = valor.toString();
+        int tamanho = valor.length();
+        valor.delete(valor.length()-2, valor.length());
+        valor.append(".");
+        valor.append(valorTemp, tamanho -2, tamanho);
         System.out.println("valor:" + valor.toString());
         return (valor.toString());
     }

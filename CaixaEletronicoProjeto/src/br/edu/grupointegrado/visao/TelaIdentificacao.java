@@ -16,16 +16,20 @@ import javax.swing.JOptionPane;
  * @author BSP
  */
 public class TelaIdentificacao extends javax.swing.JFrame {
-
-    
+    TelaInicialCaixa inicial;
     TelaOperacao operacao;
     ClassConta conta = new ClassConta();
     ClassSessao sessao;
+    javax.swing.JTextField jTFComFoco;
+
     
+   
+    private StringBuffer conteudoJTFComFoco = new StringBuffer();
+
     public TelaIdentificacao() {
         initComponents();
         //jPFSenha.setEnabled(false);
-
+        conteudoJTFComFoco.delete(0, conteudoJTFComFoco.length());
     }
 
     /**
@@ -266,6 +270,11 @@ public class TelaIdentificacao extends javax.swing.JFrame {
         jPFSenhaI.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jPFSenhaI.setDoubleBuffered(true);
         jPFSenhaI.setDragEnabled(true);
+        jPFSenhaI.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                jPFSenhaIFocusGained(evt);
+            }
+        });
         jPFSenhaI.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jPFSenhaIActionPerformed(evt);
@@ -277,6 +286,11 @@ public class TelaIdentificacao extends javax.swing.JFrame {
 
         jTFBancoI.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jTFBancoI.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jTFBancoI.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                jTFBancoIFocusGained(evt);
+            }
+        });
         getContentPane().add(jTFBancoI);
         jTFBancoI.setBounds(560, 70, 230, 40);
         jTFBancoI.setDocument(new DocumentoLimitado(6));
@@ -293,12 +307,22 @@ public class TelaIdentificacao extends javax.swing.JFrame {
 
         jTFContaI.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jTFContaI.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jTFContaI.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                jTFContaIFocusGained(evt);
+            }
+        });
         getContentPane().add(jTFContaI);
         jTFContaI.setBounds(340, 120, 230, 40);
         jTFContaI.setDocument(new DocumentoLimitado(6));
 
         jTFAgenciaI.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jTFAgenciaI.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jTFAgenciaI.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                jTFAgenciaIFocusGained(evt);
+            }
+        });
         jTFAgenciaI.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTFAgenciaIActionPerformed(evt);
@@ -313,78 +337,120 @@ public class TelaIdentificacao extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jB3IActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jB3IActionPerformed
-        // TODO add your handling code here:
+        if (conteudoJTFComFoco.length() < 6) {
+            conteudoJTFComFoco.append("3");
+            jTFComFoco.setText(conteudoJTFComFoco.toString());
+            System.out.println(conteudoJTFComFoco.toString());
+        }
     }//GEN-LAST:event_jB3IActionPerformed
 
     private void jBCancelarIActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBCancelarIActionPerformed
-        // TODO add your handling code here:
+        setVisible(false);
+        inicial.setVisible(true);
     }//GEN-LAST:event_jBCancelarIActionPerformed
 
     private void jB1IActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jB1IActionPerformed
-        // TODO add your handling code here:
+        if (conteudoJTFComFoco.length() < 6) {
+            conteudoJTFComFoco.append("1");
+            jTFComFoco.setText(conteudoJTFComFoco.toString());
+            System.out.println(conteudoJTFComFoco.toString());
+        }
     }//GEN-LAST:event_jB1IActionPerformed
 
     private void jBConfirmarIActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBConfirmarIActionPerformed
-        
+
         conta.setAgencia(Integer.parseInt(jTFAgenciaI.getText()));
         conta.setBanco(Integer.parseInt(jTFBancoI.getText()));
         conta.setCdConta(Integer.parseInt(jTFContaI.getText()));
         conta.setSenha(Integer.parseInt(jPFSenhaI.getText()));
-        
+
         if (conta.acessoConta() == true) {
             sessao = new ClassSessao();
             ClassSessao.carregarContaSessao(conta);
             System.out.println("Sessao - Com Identificação");
             sessao.incluirSessao();
-            
-            
+
             operacao = new TelaOperacao();
             operacao.operacao.setCdSessao(sessao.getCdSessao());
             setVisible(false);
             operacao.setVisible(true);
-            
-            
-            
-            
-            
-        }else JOptionPane.showMessageDialog(null, "Dados Incorretos");
-        
+
+        } else {
+            JOptionPane.showMessageDialog(null, "Dados Incorretos");
+        }
+
     }//GEN-LAST:event_jBConfirmarIActionPerformed
 
     private void jB2IActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jB2IActionPerformed
-        // TODO add your handling code here:
+        if (conteudoJTFComFoco.length() < 6) {
+            conteudoJTFComFoco.append("2");
+            jTFComFoco.setText(conteudoJTFComFoco.toString());
+            System.out.println(conteudoJTFComFoco.toString());
+        }
     }//GEN-LAST:event_jB2IActionPerformed
 
     private void jBCorrigirIActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBCorrigirIActionPerformed
-        // TODO add your handling code here:
+        if (conteudoJTFComFoco.length() > 0) {
+            conteudoJTFComFoco.delete(conteudoJTFComFoco.length() - 1, conteudoJTFComFoco.length());
+            jTFComFoco.setText(conteudoJTFComFoco.toString());
+            System.out.println(conteudoJTFComFoco.toString());
+        }
     }//GEN-LAST:event_jBCorrigirIActionPerformed
 
     private void jB7IActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jB7IActionPerformed
-        // TODO add your handling code here:
+        if (conteudoJTFComFoco.length() < 6) {
+            conteudoJTFComFoco.append("7");
+            jTFComFoco.setText(conteudoJTFComFoco.toString());
+            System.out.println(conteudoJTFComFoco.toString());
+        }
     }//GEN-LAST:event_jB7IActionPerformed
 
     private void jB0IActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jB0IActionPerformed
-        // TODO add your handling code here:
+        if (conteudoJTFComFoco.length() < 6) {
+            conteudoJTFComFoco.append("0");
+            jTFComFoco.setText(conteudoJTFComFoco.toString());
+            System.out.println(conteudoJTFComFoco.toString());
+        }
     }//GEN-LAST:event_jB0IActionPerformed
 
     private void jB8IActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jB8IActionPerformed
-        // TODO add your handling code here:
+        if (conteudoJTFComFoco.length() < 6) {
+            conteudoJTFComFoco.append("8");
+            jTFComFoco.setText(conteudoJTFComFoco.toString());
+            System.out.println(conteudoJTFComFoco.toString());
+        }
     }//GEN-LAST:event_jB8IActionPerformed
 
     private void jB9IActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jB9IActionPerformed
-        // TODO add your handling code here:
+        if (conteudoJTFComFoco.length() < 6) {
+            conteudoJTFComFoco.append("9");
+            jTFComFoco.setText(conteudoJTFComFoco.toString());
+            System.out.println(conteudoJTFComFoco.toString());
+        }
     }//GEN-LAST:event_jB9IActionPerformed
 
     private void jB4IActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jB4IActionPerformed
-        // TODO add your handling code here:
+        if (conteudoJTFComFoco.length() < 6) {
+            conteudoJTFComFoco.append("4");
+            jTFComFoco.setText(conteudoJTFComFoco.toString());
+            System.out.println(conteudoJTFComFoco.toString());
+        }
     }//GEN-LAST:event_jB4IActionPerformed
 
     private void jB5IActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jB5IActionPerformed
-        // TODO add your handling code here:
+        if (conteudoJTFComFoco.length() < 6) {
+            conteudoJTFComFoco.append("5");
+            jTFComFoco.setText(conteudoJTFComFoco.toString());
+            System.out.println(conteudoJTFComFoco.toString());
+        }
     }//GEN-LAST:event_jB5IActionPerformed
 
     private void jB6IActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jB6IActionPerformed
-        // TODO add your handling code here:
+        if (conteudoJTFComFoco.length() < 6) {
+            conteudoJTFComFoco.append("6");
+            jTFComFoco.setText(conteudoJTFComFoco.toString());
+            System.out.println(conteudoJTFComFoco.toString());
+        }
     }//GEN-LAST:event_jB6IActionPerformed
 
     private void jBConfirmarIMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBConfirmarIMouseClicked
@@ -398,6 +464,35 @@ public class TelaIdentificacao extends javax.swing.JFrame {
     private void jTFAgenciaIActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTFAgenciaIActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTFAgenciaIActionPerformed
+
+    private void jTFAgenciaIFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTFAgenciaIFocusGained
+        jTFComFoco = jTFAgenciaI;
+        
+        conteudoJTFComFoco.delete(0, conteudoJTFComFoco.length());
+        conteudoJTFComFoco.append(jTFComFoco.getText());
+
+    }//GEN-LAST:event_jTFAgenciaIFocusGained
+
+    private void jTFBancoIFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTFBancoIFocusGained
+        jTFComFoco = jTFBancoI;
+     
+        conteudoJTFComFoco.delete(0, conteudoJTFComFoco.length());
+        conteudoJTFComFoco.append(jTFComFoco.getText());
+    }//GEN-LAST:event_jTFBancoIFocusGained
+
+    private void jTFContaIFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTFContaIFocusGained
+        jTFComFoco = jTFContaI;
+       
+        conteudoJTFComFoco.delete(0, conteudoJTFComFoco.length());
+        conteudoJTFComFoco.append(jTFComFoco.getText());
+    }//GEN-LAST:event_jTFContaIFocusGained
+
+    private void jPFSenhaIFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jPFSenhaIFocusGained
+        jTFComFoco = jPFSenhaI;
+   
+        conteudoJTFComFoco.delete(0, conteudoJTFComFoco.length());
+        conteudoJTFComFoco.append(jTFComFoco.getText());
+    }//GEN-LAST:event_jPFSenhaIFocusGained
 
     /**
      * @param args the command line arguments
@@ -458,5 +553,7 @@ public class TelaIdentificacao extends javax.swing.JFrame {
     private javax.swing.JTextField jTFBancoI;
     private javax.swing.JTextField jTFContaI;
     // End of variables declaration//GEN-END:variables
-
+public void setInicial(TelaInicialCaixa inicial) {
+        this.inicial = inicial;
+    }
 }

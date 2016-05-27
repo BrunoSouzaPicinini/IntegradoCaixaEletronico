@@ -132,6 +132,8 @@ public class TelaInicialCaixa extends javax.swing.JFrame {
 
     private void jLabel6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel6MouseClicked
        identificacao.setVisible(true);
+       identificacao.setInicial(this);
+       
        operacao.Identificado();
        setVisible(false);
     }//GEN-LAST:event_jLabel6MouseClicked

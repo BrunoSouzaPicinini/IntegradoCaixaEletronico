@@ -15,7 +15,7 @@ public class ClassMovimentacao extends ConexaoOracle {
 
     private int cdMovimentacao;
     private int cdOperacao;
-    private int dsMovimentacao;
+    private String dsMovimentacao;
     private double vlMovimentacao;
     private StringBuffer sql = new StringBuffer();
 
@@ -35,11 +35,11 @@ public class ClassMovimentacao extends ConexaoOracle {
         this.cdOperacao = cdOperacao;
     }
 
-    public int getDsMovimentacao() {
+    public String getDsMovimentacao() {
         return dsMovimentacao;
     }
 
-    public void setDsMovimentacao(int dsMovimentacao) {
+    public void setDsMovimentacao(String dsMovimentacao) {
         this.dsMovimentacao = dsMovimentacao;
     }
 
