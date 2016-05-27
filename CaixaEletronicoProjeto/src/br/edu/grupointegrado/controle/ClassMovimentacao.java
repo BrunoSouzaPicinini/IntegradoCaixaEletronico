@@ -12,6 +12,7 @@ import br.edu.grupointegrado.conexao.ConexaoOracle;
  * @author BSP
  */
 public class ClassMovimentacao extends ConexaoOracle {
+
     private int cdMovimentacao;
     private int cdOperacao;
     private int dsMovimentacao;
@@ -49,6 +50,17 @@ public class ClassMovimentacao extends ConexaoOracle {
     public void setVlMovimentacao(double vlMovimentacao) {
         this.vlMovimentacao = vlMovimentacao;
     }
-    
-    
+
+    public void inserirMovimentacao() {
+        sql.delete(0, sql.length());
+        sql.append("INSERT INTO MOVIMENTACAO(CD_MOV,CD_OPERACAO,DS_MOV,VL_MOV) VALUES (");
+        sql.append(ultimasequencia("MOVIMENTACAO", "CD_MOV")).append(",");
+        sql.append(getCdOperacao()).append(",'");
+        sql.append(getDsMovimentacao()).append("',");
+        sql.append(getVlMovimentacao()).append(")");
+        System.out.println(sql.toString());
+        incluirsql(sql.toString());
+        commit();
+        setCdMovimentacao(Integer.parseInt(ultimoInserido("OPERACAO"," CD_OPERACAO")));
+    }
 }

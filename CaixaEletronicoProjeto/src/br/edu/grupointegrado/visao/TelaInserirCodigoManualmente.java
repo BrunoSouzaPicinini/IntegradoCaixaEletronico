@@ -4,9 +4,11 @@
  * and open the template in the editor.
  */
 package br.edu.grupointegrado.visao;
+
 import br.edu.grupointegrado.controle.ClassOperacao;
 import br.edu.grupointegrado.controle.ClassPagamento;
 import br.edu.grupointegrado.ferramentas.DocumentoLimitado;
+
 /**
  *
  * @author Luan
@@ -16,8 +18,8 @@ public class TelaInserirCodigoManualmente extends javax.swing.JFrame {
     ClassPagamento pagamento;
     StringBuffer stringCodigoBarras = new StringBuffer();
     TelaOperacao operacao;
+    StringBuffer valor = new StringBuffer();
 
-   
     /**
      * Creates new form TelaOperacao
      */
@@ -369,18 +371,14 @@ public class TelaInserirCodigoManualmente extends javax.swing.JFrame {
         pagamento.setCodBarra(stringCodigoBarras.toString());
         System.out.println(stringCodigoBarras.toString());
         pagamento.incluirPagamento();
-        
+        extrairValorBoleto();
         ClassOperacao.setCdPagamento(pagamento.getCdPagamento());
         operacao.operacao.incluirOperacaoPagamento();
         setVisible(false);
-        
-        
-        
+
         operacao.finalizar.setVisible(true);
-        
-        
-        
-        
+
+
     }//GEN-LAST:event_jBConfirmarActionPerformed
 
     private void jBCorrigirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBCorrigirActionPerformed
@@ -495,10 +493,22 @@ public class TelaInserirCodigoManualmente extends javax.swing.JFrame {
     public void setOperacao(TelaOperacao operacao) {
         this.operacao = operacao;
     }
-public void setPagamento(ClassPagamento pagamento) {
+
+    public void setPagamento(ClassPagamento pagamento) {
         this.pagamento = pagamento;
     }
 
-   
+    public String extrairValorBoleto() {
+        valor.delete(0, valor.length());
+        boolean diferenteZero = false;
+        for (int i = 4; i < 14; i++) {
+           
+            if(((jTFCodigodeBarras5.getText().toString().charAt(i))!= '0')||(diferenteZero)){
+                diferenteZero = true;
+                valor.append(jTFCodigodeBarras5.getText().toString().charAt(i));
+        }}
+        System.out.println("valor:" + valor.toString());
+        return (valor.toString());
+    }
 
 }

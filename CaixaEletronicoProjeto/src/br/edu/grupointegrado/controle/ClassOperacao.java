@@ -80,7 +80,7 @@ public class ClassOperacao extends ConexaoOracle {
         System.out.println(sql.toString());
         incluirsql(sql.toString());
         commit();
-
+        setCdOperacao(Integer.parseInt(ultimoInserido("OPERACAO", "CD_OPERACAO")));
     }
     
     public void incluirOperacaoSaque() {
@@ -93,7 +93,7 @@ public class ClassOperacao extends ConexaoOracle {
         System.out.println(sql.toString());
         incluirsql(sql.toString());
         commit();
-
+        setCdOperacao(Integer.parseInt(ultimoInserido("OPERACAO", "CD_OPERACAO")));
     }
     
     public void incluirOperacaoTransDep() {
@@ -106,7 +106,7 @@ public class ClassOperacao extends ConexaoOracle {
         System.out.println(sql.toString());
         incluirsql(sql.toString());
         commit();
-
+        setCdOperacao(Integer.parseInt(ultimoInserido("OPERACAO", "CD_OPERACAO")));
     }
 
 }

@@ -3,3 +3,4 @@ DESC OPERACAO;
 
 ALTER TABLE OPERACAO DROP COLUMN CD_OP_CT;
 
+select * from operacao;
