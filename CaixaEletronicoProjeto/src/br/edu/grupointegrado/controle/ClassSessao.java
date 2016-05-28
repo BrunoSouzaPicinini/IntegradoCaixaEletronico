@@ -20,8 +20,7 @@ public class ClassSessao extends ConexaoOracle {
 
     private static ClassConta conta;
     private static TelaInicialCaixa inicial;
-
-    
+    private static int identificado;
     private static int cdSessao;
     private static int cdConta;
     private static String date;
@@ -55,6 +54,7 @@ public class ClassSessao extends ConexaoOracle {
         setCdSessao(Integer.parseInt(ultimoInserido("SESSAO", " CD_SESSAO")));
     }
 
+   
     public void incluirSessaoNaoIdentificada() {
         sql.delete(0, sql.length());
         sql.append("INSERT INTO SESSAO (CD_SESSAO,DT_SESSAO) VALUES (");
@@ -120,5 +120,16 @@ public class ClassSessao extends ConexaoOracle {
     public static void setInicial(TelaInicialCaixa inicial) {
         ClassSessao.inicial = inicial;
     }
+
+     public static int getIdentificado() {
+        return identificado;
+    }
+
+    public static void setIdentificado(int identificado) {
+        ClassSessao.identificado = identificado;
+    }
+
+    
+    
 
 }

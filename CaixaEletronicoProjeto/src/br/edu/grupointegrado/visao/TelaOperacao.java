@@ -209,7 +209,8 @@ public class TelaOperacao extends javax.swing.JFrame {
     private void jBDepositoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBDepositoActionPerformed
         contaDeposito = new TelaContaDeposito();
         transferencia = new ClassTransferencia();
-        
+         setVisible(false);
+         contaDeposito.setVisible(true);
 
     }//GEN-LAST:event_jBDepositoActionPerformed
 

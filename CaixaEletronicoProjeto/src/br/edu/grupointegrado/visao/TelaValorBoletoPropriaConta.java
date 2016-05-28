@@ -5,18 +5,16 @@
  */
 package br.edu.grupointegrado.visao;
 
-import br.edu.grupointegrado.ferramentas.DocumentoLimitado;
-
 /**
  *
- * @author Luan
+ * @author BSP
  */
-public class TelaDepositoContaFavorecida extends javax.swing.JFrame {
+public class TelaValorBoletoPropriaConta extends javax.swing.JFrame {
 
     /**
-     * Creates new form TelaOperacao
+     * Creates new form TelaValorBoletoPropriaConta
      */
-    public TelaDepositoContaFavorecida() {
+    public TelaValorBoletoPropriaConta() {
         initComponents();
     }
 
@@ -30,161 +28,39 @@ public class TelaDepositoContaFavorecida extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
-        jBCancelar = new javax.swing.JButton();
-        jBConfirmar = new javax.swing.JButton();
-        jBCorrigir = new javax.swing.JButton();
-        jB7 = new javax.swing.JButton();
-        jB0 = new javax.swing.JButton();
-        jB8 = new javax.swing.JButton();
-        jB9 = new javax.swing.JButton();
-        jB4 = new javax.swing.JButton();
-        jB5 = new javax.swing.JButton();
-        jB6 = new javax.swing.JButton();
-        jB3 = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
+        jTFValor = new javax.swing.JTextField();
         jB1 = new javax.swing.JButton();
         jB2 = new javax.swing.JButton();
-        jTFValor = new javax.swing.JTextField();
-        jLabel2 = new javax.swing.JLabel();
-        jTFBanco = new javax.swing.JTextField();
-        jTFConta = new javax.swing.JTextField();
-        jLabel6 = new javax.swing.JLabel();
-        jTFAgencia = new javax.swing.JTextField();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
+        jB3 = new javax.swing.JButton();
+        jBCancelar = new javax.swing.JButton();
+        jBCorrigir = new javax.swing.JButton();
+        jBConfirmar = new javax.swing.JButton();
+        jB9 = new javax.swing.JButton();
+        jB6 = new javax.swing.JButton();
+        jB5 = new javax.swing.JButton();
+        jB8 = new javax.swing.JButton();
+        jB0 = new javax.swing.JButton();
+        jB7 = new javax.swing.JButton();
+        jB4 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("CONTA QUE RECEBERÁ O DEPÓSITO");
-        setAlwaysOnTop(true);
-        setFocusable(false);
-        setFocusableWindowState(false);
-        setResizable(false);
+        setPreferredSize(new java.awt.Dimension(880, 485));
 
         jLabel1.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
-        jLabel1.setText("Digite os dados do favorecido");
+        jLabel1.setText("Informe o Valor");
 
-        jBCancelar.setBackground(new java.awt.Color(255, 0, 0));
-        jBCancelar.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
-        jBCancelar.setText("Cancelar");
-        jBCancelar.setBorder(null);
-        jBCancelar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jBCancelarActionPerformed(evt);
-            }
-        });
+        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel2.setText("Valor");
 
-        jBConfirmar.setBackground(new java.awt.Color(51, 153, 0));
-        jBConfirmar.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
-        jBConfirmar.setText("Confirmar");
-        jBConfirmar.setBorder(null);
-        jBConfirmar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jBConfirmarActionPerformed(evt);
-            }
-        });
-
-        jBCorrigir.setBackground(new java.awt.Color(255, 255, 0));
-        jBCorrigir.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
-        jBCorrigir.setText("Corrigir");
-        jBCorrigir.setBorder(null);
-        jBCorrigir.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jBCorrigirActionPerformed(evt);
-            }
-        });
-
-        jB7.setBackground(new java.awt.Color(0, 0, 0));
-        jB7.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
-        jB7.setForeground(new java.awt.Color(255, 255, 255));
-        jB7.setText("7");
-        jB7.setBorder(null);
-        jB7.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jB7ActionPerformed(evt);
-            }
-        });
-
-        jB0.setBackground(new java.awt.Color(0, 0, 0));
-        jB0.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
-        jB0.setForeground(new java.awt.Color(255, 255, 255));
-        jB0.setText("0");
-        jB0.setBorder(null);
-        jB0.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jB0ActionPerformed(evt);
-            }
-        });
-
-        jB8.setBackground(new java.awt.Color(0, 0, 0));
-        jB8.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
-        jB8.setForeground(new java.awt.Color(255, 255, 255));
-        jB8.setText("8");
-        jB8.setBorder(null);
-        jB8.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jB8ActionPerformed(evt);
-            }
-        });
-
-        jB9.setBackground(new java.awt.Color(0, 0, 0));
-        jB9.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
-        jB9.setForeground(new java.awt.Color(255, 255, 255));
-        jB9.setText("9");
-        jB9.setBorder(null);
-        jB9.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jB9ActionPerformed(evt);
-            }
-        });
-
-        jB4.setBackground(new java.awt.Color(0, 0, 0));
-        jB4.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
-        jB4.setForeground(new java.awt.Color(255, 255, 255));
-        jB4.setText("4");
-        jB4.setBorder(null);
-        jB4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jB4ActionPerformed(evt);
-            }
-        });
-
-        jB5.setBackground(new java.awt.Color(0, 0, 0));
-        jB5.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
-        jB5.setForeground(new java.awt.Color(255, 255, 255));
-        jB5.setText("5");
-        jB5.setBorder(null);
-        jB5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jB5ActionPerformed(evt);
-            }
-        });
-
-        jB6.setBackground(new java.awt.Color(0, 0, 0));
-        jB6.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
-        jB6.setForeground(new java.awt.Color(255, 255, 255));
-        jB6.setText("6");
-        jB6.setBorder(null);
-        jB6.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jB6ActionPerformed(evt);
-            }
-        });
-
-        jB3.setBackground(new java.awt.Color(0, 0, 0));
-        jB3.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
-        jB3.setForeground(new java.awt.Color(255, 255, 255));
-        jB3.setText("3");
-        jB3.setBorder(null);
-        jB3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jB3ActionPerformed(evt);
-            }
-        });
+        jTFValor.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
 
         jB1.setBackground(new java.awt.Color(0, 0, 0));
         jB1.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
         jB1.setForeground(new java.awt.Color(255, 255, 255));
         jB1.setText("1");
         jB1.setBorder(null);
+        jB1.setFocusable(false);
         jB1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jB1ActionPerformed(evt);
@@ -196,63 +72,152 @@ public class TelaDepositoContaFavorecida extends javax.swing.JFrame {
         jB2.setForeground(new java.awt.Color(255, 255, 255));
         jB2.setText("2");
         jB2.setBorder(null);
+        jB2.setFocusable(false);
         jB2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jB2ActionPerformed(evt);
             }
         });
 
-        jTFValor.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jB3.setBackground(new java.awt.Color(0, 0, 0));
+        jB3.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
+        jB3.setForeground(new java.awt.Color(255, 255, 255));
+        jB3.setText("3");
+        jB3.setBorder(null);
+        jB3.setFocusable(false);
+        jB3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jB3ActionPerformed(evt);
+            }
+        });
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel2.setText("Valor");
+        jBCancelar.setBackground(new java.awt.Color(255, 0, 0));
+        jBCancelar.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        jBCancelar.setText("Cancelar");
+        jBCancelar.setBorder(null);
+        jBCancelar.setFocusable(false);
+        jBCancelar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBCancelarActionPerformed(evt);
+            }
+        });
 
-        jTFBanco.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jTFBanco.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jBCorrigir.setBackground(new java.awt.Color(255, 255, 0));
+        jBCorrigir.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        jBCorrigir.setText("Corrigir");
+        jBCorrigir.setBorder(null);
+        jBCorrigir.setFocusable(false);
+        jBCorrigir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBCorrigirActionPerformed(evt);
+            }
+        });
 
-        jTFConta.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jTFConta.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jBConfirmar.setBackground(new java.awt.Color(51, 153, 0));
+        jBConfirmar.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        jBConfirmar.setText("Confirmar");
+        jBConfirmar.setBorder(null);
+        jBConfirmar.setFocusable(false);
+        jBConfirmar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBConfirmarActionPerformed(evt);
+            }
+        });
 
-        jLabel6.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel6.setText("Agencia");
+        jB9.setBackground(new java.awt.Color(0, 0, 0));
+        jB9.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
+        jB9.setForeground(new java.awt.Color(255, 255, 255));
+        jB9.setText("9");
+        jB9.setBorder(null);
+        jB9.setFocusable(false);
+        jB9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jB9ActionPerformed(evt);
+            }
+        });
 
-        jTFAgencia.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jTFAgencia.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jB6.setBackground(new java.awt.Color(0, 0, 0));
+        jB6.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
+        jB6.setForeground(new java.awt.Color(255, 255, 255));
+        jB6.setText("6");
+        jB6.setBorder(null);
+        jB6.setFocusable(false);
+        jB6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jB6ActionPerformed(evt);
+            }
+        });
 
-        jLabel7.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel7.setText("Banco");
+        jB5.setBackground(new java.awt.Color(0, 0, 0));
+        jB5.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
+        jB5.setForeground(new java.awt.Color(255, 255, 255));
+        jB5.setText("5");
+        jB5.setBorder(null);
+        jB5.setFocusable(false);
+        jB5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jB5ActionPerformed(evt);
+            }
+        });
 
-        jLabel8.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel8.setText("Conta");
+        jB8.setBackground(new java.awt.Color(0, 0, 0));
+        jB8.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
+        jB8.setForeground(new java.awt.Color(255, 255, 255));
+        jB8.setText("8");
+        jB8.setBorder(null);
+        jB8.setFocusable(false);
+        jB8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jB8ActionPerformed(evt);
+            }
+        });
+
+        jB0.setBackground(new java.awt.Color(0, 0, 0));
+        jB0.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
+        jB0.setForeground(new java.awt.Color(255, 255, 255));
+        jB0.setText("0");
+        jB0.setBorder(null);
+        jB0.setFocusable(false);
+        jB0.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jB0ActionPerformed(evt);
+            }
+        });
+
+        jB7.setBackground(new java.awt.Color(0, 0, 0));
+        jB7.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
+        jB7.setForeground(new java.awt.Color(255, 255, 255));
+        jB7.setText("7");
+        jB7.setBorder(null);
+        jB7.setFocusable(false);
+        jB7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jB7ActionPerformed(evt);
+            }
+        });
+
+        jB4.setBackground(new java.awt.Color(0, 0, 0));
+        jB4.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
+        jB4.setForeground(new java.awt.Color(255, 255, 255));
+        jB4.setText("4");
+        jB4.setBorder(null);
+        jB4.setFocusable(false);
+        jB4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jB4ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(171, 171, 171)
-                        .addComponent(jLabel1))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(57, 57, 57)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(20, 20, 20)
-                                .addComponent(jTFAgencia, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(30, 30, 30)
-                                .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(10, 10, 10)
-                                .addComponent(jTFBanco, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(146, 146, 146)
-                                .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jTFConta, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addContainerGap(103, Short.MAX_VALUE))
+                .addGap(287, 287, 287)
+                .addComponent(jLabel1)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
+                .addContainerGap(203, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                         .addGap(104, 104, 104)
@@ -287,26 +252,16 @@ public class TelaDepositoContaFavorecida extends javax.swing.JFrame {
                         .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(24, 24, 24)
                         .addComponent(jTFValor, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(197, 197, 197))
+                .addGap(198, 198, 198))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(11, 11, 11)
+                .addContainerGap()
                 .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTFAgencia, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTFBanco, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(10, 10, 10)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTFConta, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 98, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jTFValor, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -332,66 +287,18 @@ public class TelaDepositoContaFavorecida extends javax.swing.JFrame {
                         .addGap(10, 10, 10)
                         .addComponent(jB0, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(76, 76, 76)
+                        .addGap(65, 65, 65)
                         .addComponent(jBCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jBCorrigir, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jBConfirmar, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(25, 25, 25))
+                .addGap(34, 34, 34))
         );
-
-        jTFConta.setDocument(new DocumentoLimitado(6));
-        jTFConta.setDocument(new DocumentoLimitado(6));
-        jTFConta.setDocument(new DocumentoLimitado(6));
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jBCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBCancelarActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jBCancelarActionPerformed
-
-    private void jBConfirmarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBConfirmarActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jBConfirmarActionPerformed
-
-    private void jBCorrigirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBCorrigirActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jBCorrigirActionPerformed
-
-    private void jB7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jB7ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jB7ActionPerformed
-
-    private void jB0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jB0ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jB0ActionPerformed
-
-    private void jB8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jB8ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jB8ActionPerformed
-
-    private void jB9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jB9ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jB9ActionPerformed
-
-    private void jB4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jB4ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jB4ActionPerformed
-
-    private void jB5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jB5ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jB5ActionPerformed
-
-    private void jB6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jB6ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jB6ActionPerformed
-
-    private void jB3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jB3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jB3ActionPerformed
 
     private void jB1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jB1ActionPerformed
         // TODO add your handling code here:
@@ -400,6 +307,50 @@ public class TelaDepositoContaFavorecida extends javax.swing.JFrame {
     private void jB2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jB2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jB2ActionPerformed
+
+    private void jB3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jB3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jB3ActionPerformed
+
+    private void jBCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBCancelarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jBCancelarActionPerformed
+
+    private void jBCorrigirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBCorrigirActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jBCorrigirActionPerformed
+
+    private void jBConfirmarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBConfirmarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jBConfirmarActionPerformed
+
+    private void jB9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jB9ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jB9ActionPerformed
+
+    private void jB6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jB6ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jB6ActionPerformed
+
+    private void jB5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jB5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jB5ActionPerformed
+
+    private void jB8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jB8ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jB8ActionPerformed
+
+    private void jB0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jB0ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jB0ActionPerformed
+
+    private void jB7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jB7ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jB7ActionPerformed
+
+    private void jB4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jB4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jB4ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -418,21 +369,20 @@ public class TelaDepositoContaFavorecida extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(TelaDepositoContaFavorecida.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaValorBoletoPropriaConta.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(TelaDepositoContaFavorecida.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaValorBoletoPropriaConta.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(TelaDepositoContaFavorecida.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaValorBoletoPropriaConta.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(TelaDepositoContaFavorecida.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaValorBoletoPropriaConta.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new TelaDepositoContaFavorecida().setVisible(true);
+                new TelaValorBoletoPropriaConta().setVisible(true);
             }
         });
     }
@@ -453,12 +403,6 @@ public class TelaDepositoContaFavorecida extends javax.swing.JFrame {
     private javax.swing.JButton jBCorrigir;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JTextField jTFAgencia;
-    private javax.swing.JTextField jTFBanco;
-    private javax.swing.JTextField jTFConta;
     private javax.swing.JTextField jTFValor;
     // End of variables declaration//GEN-END:variables
 }

@@ -123,7 +123,7 @@ public class TelaInicialCaixa extends javax.swing.JFrame {
       
         System.out.println("Sessao - Sem Identificação");
         sessao.incluirSessaoNaoIdentificada();
-        
+        sessao.setIdentificado(0);
        operacao.setVisible(true);
        operacao.naoIdentificado();
        setVisible(false);

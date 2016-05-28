@@ -11,9 +11,7 @@ package br.edu.grupointegrado.visao;
  */
 public class TelaContaDeposito extends javax.swing.JFrame {
 
-    /**
-     * Creates new form TelaOperacao
-     */
+    TelaFormaDeposito forma = new TelaFormaDeposito();
     public TelaContaDeposito() {
         initComponents();
     }
@@ -127,7 +125,8 @@ public class TelaContaDeposito extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jBOutraContaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBOutraContaActionPerformed
-        // TODO add your handling code here:
+       setVisible(false);
+        forma.setVisible(true);
     }//GEN-LAST:event_jBOutraContaActionPerformed
 
     private void jBFinalizarContaDepositoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBFinalizarContaDepositoActionPerformed
@@ -139,7 +138,8 @@ public class TelaContaDeposito extends javax.swing.JFrame {
     }//GEN-LAST:event_jBMenuAnteriorActionPerformed
 
     private void jBPropriaContaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBPropriaContaActionPerformed
-        // TODO add your handling code here:
+        setVisible(false);
+        forma.setVisible(true);
     }//GEN-LAST:event_jBPropriaContaActionPerformed
 
     /**

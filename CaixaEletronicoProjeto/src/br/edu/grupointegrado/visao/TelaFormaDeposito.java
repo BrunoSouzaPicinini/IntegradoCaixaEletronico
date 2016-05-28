@@ -5,15 +5,16 @@
  */
 package br.edu.grupointegrado.visao;
 
+import br.edu.grupointegrado.controle.ClassSessao;
+
 /**
  *
  * @author Luan
  */
 public class TelaFormaDeposito extends javax.swing.JFrame {
 
-    /**
-     * Creates new form TelaOperacao
-     */
+    TelaValorBoletoPropriaConta contaPropria;
+    TelaDepositoContaFavorecida contaOutro;
     public TelaFormaDeposito() {
         initComponents();
     }
@@ -36,6 +37,7 @@ public class TelaFormaDeposito extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("FORMA DEPÓSITO");
+        setAlwaysOnTop(true);
         setFocusable(false);
         setFocusableWindowState(false);
         setResizable(false);
@@ -141,7 +143,15 @@ public class TelaFormaDeposito extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jBChequeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBChequeActionPerformed
-        // TODO add your handling code here:
+        setVisible(false);
+        if ((ClassSessao.getIdentificado())==1) {
+            contaPropria = new TelaValorBoletoPropriaConta();
+            contaPropria.setVisible(true);
+        }else{
+            contaOutro = new TelaDepositoContaFavorecida();
+            contaOutro.setVisible(true);
+        }
+       
     }//GEN-LAST:event_jBChequeActionPerformed
 
     private void jBFinalizarFormaDepositoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBFinalizarFormaDepositoActionPerformed
@@ -149,7 +159,14 @@ public class TelaFormaDeposito extends javax.swing.JFrame {
     }//GEN-LAST:event_jBFinalizarFormaDepositoActionPerformed
 
     private void jBDinheiroChequeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBDinheiroChequeActionPerformed
-        // TODO add your handling code here:
+       setVisible(false);
+        if ((ClassSessao.getIdentificado())==1) {
+            contaPropria = new TelaValorBoletoPropriaConta();
+            contaPropria.setVisible(true);
+        }else{
+            contaOutro = new TelaDepositoContaFavorecida();
+            contaOutro.setVisible(true);
+        }
     }//GEN-LAST:event_jBDinheiroChequeActionPerformed
 
     private void jBMenuAnteriorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBMenuAnteriorActionPerformed
@@ -157,7 +174,14 @@ public class TelaFormaDeposito extends javax.swing.JFrame {
     }//GEN-LAST:event_jBMenuAnteriorActionPerformed
 
     private void jBEmDinheiroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBEmDinheiroActionPerformed
-        // TODO add your handling code here:
+        setVisible(false);
+        if ((ClassSessao.getIdentificado())==1) {
+            contaPropria = new TelaValorBoletoPropriaConta();
+            contaPropria.setVisible(true);
+        }else{
+            contaOutro = new TelaDepositoContaFavorecida();
+            contaOutro.setVisible(true);
+        }
     }//GEN-LAST:event_jBEmDinheiroActionPerformed
 
     /**
