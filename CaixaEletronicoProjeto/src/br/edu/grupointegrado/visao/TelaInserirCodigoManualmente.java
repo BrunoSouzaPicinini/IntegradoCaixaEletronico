@@ -383,7 +383,7 @@ public class TelaInserirCodigoManualmente extends javax.swing.JFrame {
         movimentacao.setCdOperacao(operacao.operacao.getCdOperacao());
         movimentacao.setDsMovimentacao("PAGAMENTO");
         movimentacao.setVlMovimentacao(Double.parseDouble(valor.toString()));
-        movimentacao.inserirMovimentacao();
+        movimentacao.inserirMovimentacao(operacao.getConta());
         
         setVisible(false);
         operacao.finalizar.setVisible(true);

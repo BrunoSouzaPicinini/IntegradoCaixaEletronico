@@ -44,11 +44,11 @@ public class ClassConta extends ConexaoOracle {
         this.agencia = agencia;
     }
 
-    public int getSaldo() {
+    public Double getSaldo() {
         return saldo;
     }
 
-    public void setSaldo(int saldo) {
+    public void setSaldo(Double saldo) {
         this.saldo = saldo;
     }
 
@@ -69,7 +69,7 @@ public class ClassConta extends ConexaoOracle {
     }
     private int banco;
     private int agencia;
-    private int saldo;
+    private Double saldo;
     private int senha;
     private int acesso = 0;
     private StringBuffer sql = new StringBuffer();
@@ -114,7 +114,7 @@ public class ClassConta extends ConexaoOracle {
     public void alterarSaldoConta(Double valorMovimentado) {
         /* MODELO SQL
         UPDATE CONTA SET VL_SD_CORRENTE = ((SELECT VL_SD_CORRENTE FROM CONTA 
-        WHERE CD_CONTA = 1 AND CD_BANCO = 1 AND CD_AGENCIA = 1)-10.59)
+        WHERE CD_CONTA = 1 AND CD_BANCO = 1 AND CD_AGENCIA = 1)+-10.59)
         WHERE CD_CONTA = 1 AND CD_BANCO = 1 AND CD_AGENCIA = 1;
          */
 
@@ -123,10 +123,11 @@ public class ClassConta extends ConexaoOracle {
                 + "        WHERE CD_CONTA = ");
         sql.append(getCdConta()).append(" AND CD_BANCO = ");
         sql.append(getBanco()).append(" AND CD_AGENCIA = ");
-        sql.append(")").append(valorMovimentado).append(")");
+        sql.append(getAgencia());
+        sql.append(")+").append(valorMovimentado).append(")");
         sql.append(" WHERE CD_CONTA = ").append(getCdConta());
         sql.append(" AND CD_BANCO = ").append(getBanco());
-        sql.append(" AND AGENCIA = ").append(getAgencia());
+        sql.append(" AND CD_AGENCIA = ").append(getAgencia());
         System.out.println(sql.toString());
         atualizarSQL(sql.toString());
     }
