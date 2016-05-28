@@ -110,6 +110,31 @@ public class ClassConta extends ConexaoOracle {
         executeSQL(sql.toString());
         return resultset;
     }
+    
+    public void atualizarSaldo() {
+    sql.delete(0, sql.length());
+    sql.append("SELECT VL_SD_CORRENTE FROM CONTA WHERE CD_CONTA =");
+        sql.append(getCdConta()).append(" AND CD_BANCO =");
+        sql.append(getBanco()).append(" AND CD_AGENCIA =");
+        sql.append(getAgencia());
+        System.out.println(sql.toString());
+        executeSQL(sql.toString());
+        try {
+            int colunas = resultset.getMetaData().getColumnCount();
+
+            resultset.next();
+          saldo = resultset.getDouble(1);
+            System.out.println(saldo);
+            
+            
+        } catch (SQLException erro) {
+            JOptionPane.showMessageDialog(null, "Erro ao consultar Saldo " + erro);
+           
+        }
+
+       
+    
+    }
 
     public void alterarSaldoConta(Double valorMovimentado) {
         /* MODELO SQL

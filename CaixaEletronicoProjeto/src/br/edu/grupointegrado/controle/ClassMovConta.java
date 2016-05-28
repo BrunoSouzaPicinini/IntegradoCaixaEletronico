@@ -71,7 +71,7 @@ public void inserirMovimentacaoConta(Double saldo) {
         sql.append(getDateTime()).append("', 'dd/mm/yyyy hh24:mi:ss'))");
         System.out.println(sql.toString());
         incluirsql(sql.toString());
-        commit();
+        
         
     }
 

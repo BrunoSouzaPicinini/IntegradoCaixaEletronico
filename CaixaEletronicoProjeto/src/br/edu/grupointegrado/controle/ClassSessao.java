@@ -17,7 +17,8 @@ import java.text.SimpleDateFormat;
  * @author BSP
  */
 public class ClassSessao extends ConexaoOracle{
-
+   
+    
     private static int cdSessao;
     private static int cdConta;
     private static String date;

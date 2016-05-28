@@ -63,16 +63,18 @@ public class ClassMovimentacao extends ConexaoOracle {
         sql.append(getVlMovimentacao()).append(")");
         System.out.println(sql.toString());
         incluirsql(sql.toString());
-        commit();
+        
         setCdMovimentacao(Integer.parseInt(ultimoInserido("OPERACAO"," CD_OPERACAO")));
         
         movConta.setCdAgencia(conta.getAgencia());
         movConta.setCdBanco(conta.getBanco());
         movConta.setCdConta(conta.getCdConta());
         movConta.setCdMovimentacao(getCdMovimentacao());
-        
+        conta.atualizarSaldo();
         movConta.inserirMovimentacaoConta(conta.getSaldo());
-        //conta.alterarSaldoConta(getVlMovimentacao());
+        System.out.println(getVlMovimentacao());
         
+        conta.alterarSaldoConta(getVlMovimentacao());
+        commit();
     }
 }

@@ -44,6 +44,7 @@ public class ConexaoOracle {
     public void commit() {
         try {
             conecta().commit();
+            System.out.println("Commit");
         } catch (SQLException exSQL) {
             JOptionPane.showMessageDialog(null, "Problemas ao realizar o commit");
         }
@@ -52,6 +53,7 @@ public class ConexaoOracle {
     public void rollback() {
         try {
             conecta().rollback();
+            System.out.println("RollBack");
         } catch (SQLException exSQL) {
             JOptionPane.showMessageDialog(null, "Problemas ao realizar o rollback");
         }
