@@ -127,6 +127,7 @@ public class TelaContaDeposito extends javax.swing.JFrame {
     private void jBOutraContaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBOutraContaActionPerformed
        setVisible(false);
         forma.setVisible(true);
+        
     }//GEN-LAST:event_jBOutraContaActionPerformed
 
     private void jBFinalizarContaDepositoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBFinalizarContaDepositoActionPerformed
