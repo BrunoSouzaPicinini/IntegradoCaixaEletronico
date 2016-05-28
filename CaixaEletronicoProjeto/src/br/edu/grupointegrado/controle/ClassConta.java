@@ -67,11 +67,11 @@ public class ClassConta extends ConexaoOracle {
     public void setAcesso(int acesso) {
         this.acesso = acesso;
     }
-    private  int banco;
-    private  int agencia;
-    private  int saldo;
-    private  int senha;
-    private  int acesso = 0;
+    private int banco;
+    private int agencia;
+    private int saldo;
+    private int senha;
+    private int acesso = 0;
     private StringBuffer sql = new StringBuffer();
 
     public boolean acessoConta() {
@@ -89,7 +89,6 @@ public class ClassConta extends ConexaoOracle {
 
             resultset.next();
             acesso = resultset.getInt(1);
-            
 
             System.out.print("Resultado:");
             System.out.println(acesso);
@@ -104,13 +103,32 @@ public class ClassConta extends ConexaoOracle {
         return false;
     }
 
-    
     public ResultSet consultaCodigo(int parseInt) {
         sql.delete(0, sql.length());
         sql.append("SELECT * FROM CONTA WHERE CD_CONTA = ");
         sql.append(getCdConta());
         executeSQL(sql.toString());
         return resultset;
+    }
+
+    public void alterarSaldoConta(Double valorMovimentado) {
+        /* MODELO SQL
+        UPDATE CONTA SET VL_SD_CORRENTE = ((SELECT VL_SD_CORRENTE FROM CONTA 
+        WHERE CD_CONTA = 1 AND CD_BANCO = 1 AND CD_AGENCIA = 1)-10.59)
+        WHERE CD_CONTA = 1 AND CD_BANCO = 1 AND CD_AGENCIA = 1;
+         */
+
+        sql.delete(0, sql.length());
+        sql.append("UPDATE CONTA SET VL_SD_CORRENTE = ((SELECT VL_SD_CORRENTE FROM CONTA \n"
+                + "        WHERE CD_CONTA = ");
+        sql.append(getCdConta()).append(" AND CD_BANCO = ");
+        sql.append(getBanco()).append(" AND CD_AGENCIA = ");
+        sql.append(")").append(valorMovimentado).append(")");
+        sql.append(" WHERE CD_CONTA = ").append(getCdConta());
+        sql.append(" AND CD_BANCO = ").append(getBanco());
+        sql.append(" AND AGENCIA = ").append(getAgencia());
+        System.out.println(sql.toString());
+        atualizarSQL(sql.toString());
     }
 
 }
