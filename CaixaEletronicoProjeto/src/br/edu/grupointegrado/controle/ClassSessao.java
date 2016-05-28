@@ -6,7 +6,7 @@
 package br.edu.grupointegrado.controle;
 
 import br.edu.grupointegrado.conexao.ConexaoOracle;
-
+import br.edu.grupointegrado.visao.TelaInicialCaixa;
 
 import java.util.Date;
 import java.text.DateFormat;
@@ -16,8 +16,11 @@ import java.text.SimpleDateFormat;
  *
  * @author BSP
  */
-public class ClassSessao extends ConexaoOracle{
-   
+public class ClassSessao extends ConexaoOracle {
+
+    private static ClassConta conta;
+    private static TelaInicialCaixa inicial;
+
     
     private static int cdSessao;
     private static int cdConta;
@@ -25,19 +28,19 @@ public class ClassSessao extends ConexaoOracle{
     private static int cdAgencia;
     private static int cdBanco;
     StringBuffer sql = new StringBuffer();
-    
+
     private String getDateTime() {
-	DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
-	Date date = new Date();
-	return dateFormat.format(date);
-}
-    
-    public static void carregarContaSessao(ClassConta conta){
+        DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+        Date date = new Date();
+        return dateFormat.format(date);
+    }
+
+    public static void carregarContaSessao(ClassConta conta) {
         setCdConta(conta.getCdConta());
-        setCdAgencia(conta.getAgencia()); 
+        setCdAgencia(conta.getAgencia());
         setCdBanco(conta.getBanco());
     }
-   
+
     public void incluirSessao() {
         sql.delete(0, sql.length());
         sql.append("INSERT INTO SESSAO (CD_SESSAO,CD_CONTA,CD_BANCO,CD_AGENCIA,DT_SESSAO) VALUES (");
@@ -49,9 +52,9 @@ public class ClassSessao extends ConexaoOracle{
         System.out.println(sql.toString());
         incluirsql(sql.toString());
         commit();
-        setCdSessao(Integer.parseInt(ultimoInserido("SESSAO"," CD_SESSAO")));
+        setCdSessao(Integer.parseInt(ultimoInserido("SESSAO", " CD_SESSAO")));
     }
-    
+
     public void incluirSessaoNaoIdentificada() {
         sql.delete(0, sql.length());
         sql.append("INSERT INTO SESSAO (CD_SESSAO,DT_SESSAO) VALUES (");
@@ -60,7 +63,7 @@ public class ClassSessao extends ConexaoOracle{
         System.out.println(sql.toString());
         incluirsql(sql.toString());
         commit();
-        setCdSessao(Integer.parseInt(ultimoInserido("SESSAO"," CD_SESSAO")));
+        setCdSessao(Integer.parseInt(ultimoInserido("SESSAO", " CD_SESSAO")));
     }
 
     public static int getCdSessao() {
@@ -103,8 +106,19 @@ public class ClassSessao extends ConexaoOracle{
         ClassSessao.cdBanco = cdBanco;
     }
 
-    
-    
-    
-    
+    public static ClassConta getConta() {
+        return conta;
+    }
+
+    public static void setConta(ClassConta conta) {
+        ClassSessao.conta = conta;
+    }
+    public static TelaInicialCaixa getInicial() {
+        return inicial;
+    }
+
+    public static void setInicial(TelaInicialCaixa inicial) {
+        ClassSessao.inicial = inicial;
+    }
+
 }

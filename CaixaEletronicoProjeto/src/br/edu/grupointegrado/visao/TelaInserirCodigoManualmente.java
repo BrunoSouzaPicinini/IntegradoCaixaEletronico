@@ -8,6 +8,7 @@ package br.edu.grupointegrado.visao;
 import br.edu.grupointegrado.controle.ClassMovimentacao;
 import br.edu.grupointegrado.controle.ClassOperacao;
 import br.edu.grupointegrado.controle.ClassPagamento;
+import br.edu.grupointegrado.controle.ClassSessao;
 import br.edu.grupointegrado.ferramentas.DocumentoLimitado;
 import javax.swing.JOptionPane;
 
@@ -383,7 +384,7 @@ public class TelaInserirCodigoManualmente extends javax.swing.JFrame {
         movimentacao.setCdOperacao(operacao.operacao.getCdOperacao());
         movimentacao.setDsMovimentacao("PAGAMENTO");
         movimentacao.setVlMovimentacao(Double.parseDouble(valor.toString()));
-        movimentacao.inserirMovimentacao(operacao.getConta());
+        movimentacao.inserirMovimentacao(ClassSessao.getConta());
         
         setVisible(false);
         operacao.finalizar.setVisible(true);

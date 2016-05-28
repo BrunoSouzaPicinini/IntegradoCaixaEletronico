@@ -9,6 +9,7 @@ import br.edu.grupointegrado.controle.ClassConta;
 import br.edu.grupointegrado.controle.ClassOperacao;
 import br.edu.grupointegrado.controle.ClassPagamento;
 import br.edu.grupointegrado.controle.ClassSessao;
+import br.edu.grupointegrado.controle.ClassTransferencia;
 
 /**
  *
@@ -17,20 +18,12 @@ import br.edu.grupointegrado.controle.ClassSessao;
 public class TelaOperacao extends javax.swing.JFrame {
     ClassConta conta;
 
-    ClassSessao sessao;
-
-    public ClassSessao getSessao() {
-        return sessao;
-    }
-
-    public void setSessao(ClassSessao sessao) {
-        this.sessao = sessao;
-    }
+   
+    ClassTransferencia transferencia;
     ClassOperacao operacao = new ClassOperacao();
     ClassPagamento pagamento;
     private boolean identificacao = false;
-
-    
+    TelaInicialCaixa inicial;
     TelaFinalizar finalizar = new TelaFinalizar();
     TelaSaldo saldo ;
     TelaExtrato extrato ;
@@ -45,7 +38,7 @@ public class TelaOperacao extends javax.swing.JFrame {
     
     public TelaOperacao() {
         initComponents();
-
+        conta = ClassSessao.getConta();
     }
 
     /**
@@ -214,8 +207,8 @@ public class TelaOperacao extends javax.swing.JFrame {
     }//GEN-LAST:event_jBExtratoActionPerformed
 
     private void jBDepositoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBDepositoActionPerformed
-        
-        
+        contaDeposito = new TelaContaDeposito();
+        transferencia = new ClassTransferencia();
         
 
     }//GEN-LAST:event_jBDepositoActionPerformed
@@ -301,13 +294,6 @@ public class TelaOperacao extends javax.swing.JFrame {
         return identificacao;
     }
     
-    public ClassConta getConta() {
-        return conta;
-    }
-
-    public void setConta(ClassConta conta) {
-        this.conta = conta;
-    }
     
     
     public void naoIdentificado() {
