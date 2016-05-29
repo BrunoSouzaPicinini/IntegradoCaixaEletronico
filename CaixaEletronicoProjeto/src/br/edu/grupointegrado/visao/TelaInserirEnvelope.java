@@ -11,6 +11,9 @@ package br.edu.grupointegrado.visao;
  */
 public class TelaInserirEnvelope extends javax.swing.JFrame {
 
+    
+    TelaOperacao operacao;
+
     /**
      * Creates new form TelaOperacao
      */
@@ -56,6 +59,11 @@ public class TelaInserirEnvelope extends javax.swing.JFrame {
         jLabel2.setText("Insira o envelope no local indicado.");
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/Insira o Envelope.png"))); // NOI18N
+        jLabel5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel5MouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -98,8 +106,13 @@ public class TelaInserirEnvelope extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jBCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBCancelarActionPerformed
-        // TODO add your handling code here:
+        setVisible(false);
+        operacao.setVisible(true);
     }//GEN-LAST:event_jBCancelarActionPerformed
+
+    private void jLabel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MouseClicked
+
+    }//GEN-LAST:event_jLabel5MouseClicked
 
     /**
      * @param args the command line arguments
@@ -143,4 +156,9 @@ public class TelaInserirEnvelope extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel5;
     // End of variables declaration//GEN-END:variables
+    
+
+    public void setOperacao(TelaOperacao operacao) {
+        this.operacao = operacao;
+    }
 }

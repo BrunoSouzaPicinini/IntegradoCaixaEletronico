@@ -113,6 +113,7 @@ public class ClassSessao extends ConexaoOracle {
     public static void setConta(ClassConta conta) {
         ClassSessao.conta = conta;
     }
+    
     public static TelaInicialCaixa getInicial() {
         return inicial;
     }

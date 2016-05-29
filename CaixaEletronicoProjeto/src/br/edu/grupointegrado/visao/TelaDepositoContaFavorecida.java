@@ -13,9 +13,9 @@ import br.edu.grupointegrado.ferramentas.DocumentoLimitado;
  */
 public class TelaDepositoContaFavorecida extends javax.swing.JFrame {
 
-    /**
-     * Creates new form TelaOperacao
-     */
+    TelaOperacao operacao;
+
+    
     public TelaDepositoContaFavorecida() {
         initComponents();
     }
@@ -350,7 +350,8 @@ public class TelaDepositoContaFavorecida extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jBCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBCancelarActionPerformed
-        // TODO add your handling code here:
+        setVisible(false);
+        operacao.setVisible(false);
     }//GEN-LAST:event_jBCancelarActionPerformed
 
     private void jBConfirmarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBConfirmarActionPerformed
@@ -461,4 +462,11 @@ public class TelaDepositoContaFavorecida extends javax.swing.JFrame {
     private javax.swing.JTextField jTFConta;
     private javax.swing.JTextField jTFValor;
     // End of variables declaration//GEN-END:variables
+    public TelaOperacao getOperacao() {
+        return operacao;
+    }
+
+    public void setOperacao(TelaOperacao operacao) {
+        this.operacao = operacao;
+    }
 }

@@ -18,7 +18,7 @@ import br.edu.grupointegrado.controle.ClassTransferencia;
 public class TelaOperacao extends javax.swing.JFrame {
     ClassConta conta;
 
-   
+    
     ClassTransferencia transferencia;
     ClassOperacao operacao = new ClassOperacao();
     ClassPagamento pagamento;
@@ -208,14 +208,17 @@ public class TelaOperacao extends javax.swing.JFrame {
 
     private void jBDepositoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBDepositoActionPerformed
         contaDeposito = new TelaContaDeposito();
+        contaDeposito.setOperacao(this);
         transferencia = new ClassTransferencia();
+        
          setVisible(false);
          contaDeposito.setVisible(true);
 
     }//GEN-LAST:event_jBDepositoActionPerformed
 
     private void jBFinalizarOperacaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBFinalizarOperacaoActionPerformed
-       
+        setVisible(false);
+        inicial.setVisible(true);
     }//GEN-LAST:event_jBFinalizarOperacaoActionPerformed
 
     private void jBPagamentoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBPagamentoActionPerformed
@@ -321,4 +324,10 @@ public class TelaOperacao extends javax.swing.JFrame {
         System.out.println("Operação - Identificada");
     }
 
+    public void setInicial(TelaInicialCaixa inicial) {
+        this.inicial = inicial;
+    }
+    
+    
+    
 }

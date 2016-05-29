@@ -15,6 +15,11 @@ public class TelaFormaDeposito extends javax.swing.JFrame {
 
     TelaValorBoletoPropriaConta contaPropria;
     TelaDepositoContaFavorecida contaOutro;
+    TelaOperacao operacao;
+    TelaInicialCaixa inicial;
+
+    
+
     public TelaFormaDeposito() {
         initComponents();
     }
@@ -144,42 +149,46 @@ public class TelaFormaDeposito extends javax.swing.JFrame {
 
     private void jBChequeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBChequeActionPerformed
         setVisible(false);
-        if ((ClassSessao.getIdentificado())==1) {
+        if ((ClassSessao.getIdentificado()) == 1) {
             contaPropria = new TelaValorBoletoPropriaConta();
             contaPropria.setVisible(true);
-        }else{
+        } else {
             contaOutro = new TelaDepositoContaFavorecida();
             contaOutro.setVisible(true);
         }
-       
+
     }//GEN-LAST:event_jBChequeActionPerformed
 
     private void jBFinalizarFormaDepositoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBFinalizarFormaDepositoActionPerformed
-        // TODO add your handling code here:
+        setVisible(false);
+        inicial.setVisible(true);
     }//GEN-LAST:event_jBFinalizarFormaDepositoActionPerformed
 
     private void jBDinheiroChequeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBDinheiroChequeActionPerformed
-       setVisible(false);
-        if ((ClassSessao.getIdentificado())==1) {
+        setVisible(false);
+        if ((ClassSessao.getIdentificado()) == 1) {
             contaPropria = new TelaValorBoletoPropriaConta();
             contaPropria.setVisible(true);
-        }else{
+        } else {
             contaOutro = new TelaDepositoContaFavorecida();
             contaOutro.setVisible(true);
         }
     }//GEN-LAST:event_jBDinheiroChequeActionPerformed
 
     private void jBMenuAnteriorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBMenuAnteriorActionPerformed
-        // TODO add your handling code here:
+        setVisible(false);
+        operacao.setVisible(true);
     }//GEN-LAST:event_jBMenuAnteriorActionPerformed
 
     private void jBEmDinheiroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBEmDinheiroActionPerformed
         setVisible(false);
-        if ((ClassSessao.getIdentificado())==1) {
+        if ((ClassSessao.getIdentificado()) == 1) {
             contaPropria = new TelaValorBoletoPropriaConta();
+            contaPropria.setOperacao(operacao);
             contaPropria.setVisible(true);
-        }else{
+        } else {
             contaOutro = new TelaDepositoContaFavorecida();
+            contaOutro.setOperacao(operacao);
             contaOutro.setVisible(true);
         }
     }//GEN-LAST:event_jBEmDinheiroActionPerformed
@@ -230,4 +239,14 @@ public class TelaFormaDeposito extends javax.swing.JFrame {
     private javax.swing.JButton jBMenuAnterior;
     private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
+
+
+    public void setOperacao(TelaOperacao operacao) {
+        this.operacao = operacao;
+    }
+
+    public void setInicial(TelaInicialCaixa inicial) {
+        this.inicial = inicial;
+    }
+    
 }

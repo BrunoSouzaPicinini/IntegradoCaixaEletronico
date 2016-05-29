@@ -11,9 +11,11 @@ package br.edu.grupointegrado.visao;
  */
 public class TelaValorBoletoPropriaConta extends javax.swing.JFrame {
 
-    /**
-     * Creates new form TelaValorBoletoPropriaConta
-     */
+    TelaOperacao operacao;
+    
+
+    
+    
     public TelaValorBoletoPropriaConta() {
         initComponents();
     }
@@ -313,7 +315,8 @@ public class TelaValorBoletoPropriaConta extends javax.swing.JFrame {
     }//GEN-LAST:event_jB3ActionPerformed
 
     private void jBCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBCancelarActionPerformed
-        // TODO add your handling code here:
+        setVisible(false);
+        operacao.setVisible(true);
     }//GEN-LAST:event_jBCancelarActionPerformed
 
     private void jBCorrigirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBCorrigirActionPerformed
@@ -405,4 +408,9 @@ public class TelaValorBoletoPropriaConta extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JTextField jTFValor;
     // End of variables declaration//GEN-END:variables
+   
+
+    public void setOperacao(TelaOperacao operacao) {
+        this.operacao = operacao;
+    }
 }

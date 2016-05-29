@@ -124,6 +124,7 @@ public class TelaInicialCaixa extends javax.swing.JFrame {
         System.out.println("Sessao - Sem Identificação");
         sessao.incluirSessaoNaoIdentificada();
         sessao.setIdentificado(0);
+       operacao.setInicial(this);
        operacao.setVisible(true);
        operacao.naoIdentificado();
        setVisible(false);
@@ -132,6 +133,7 @@ public class TelaInicialCaixa extends javax.swing.JFrame {
 
     private void jLabel6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel6MouseClicked
        identificacao.setVisible(true);
+       identificacao.setSessao(sessao);
        identificacao.setInicial(this);
        
        operacao.Identificado();

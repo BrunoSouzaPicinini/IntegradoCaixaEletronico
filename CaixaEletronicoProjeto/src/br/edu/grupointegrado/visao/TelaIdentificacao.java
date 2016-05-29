@@ -365,12 +365,14 @@ public class TelaIdentificacao extends javax.swing.JFrame {
         conta.setSenha(Integer.parseInt(jPFSenhaI.getText()));
 
         if (conta.acessoConta() == true) {
-            sessao = new ClassSessao();
+         
             ClassSessao.carregarContaSessao(conta);
+            
             System.out.println("Sessao - Com Identificação");
             sessao.incluirSessao();
 
             operacao = new TelaOperacao();
+            operacao.setInicial(inicial);
             operacao.operacao.setCdSessao(sessao.getCdSessao());
             sessao.setConta(conta);
             setVisible(false);
@@ -381,6 +383,8 @@ public class TelaIdentificacao extends javax.swing.JFrame {
         }
 
     }//GEN-LAST:event_jBConfirmarIActionPerformed
+
+    
 
     private void jB2IActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jB2IActionPerformed
         if (conteudoJTFComFoco.length() < 6) {
@@ -557,4 +561,13 @@ public class TelaIdentificacao extends javax.swing.JFrame {
 public void setInicial(TelaInicialCaixa inicial) {
         this.inicial = inicial;
     }
+
+public ClassSessao getSessao() {
+        return sessao;
+    }
+
+    public void setSessao(ClassSessao sessao) {
+        this.sessao = sessao;
+    }
+
 }

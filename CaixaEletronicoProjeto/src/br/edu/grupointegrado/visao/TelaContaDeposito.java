@@ -10,7 +10,12 @@ package br.edu.grupointegrado.visao;
  * @author Luan
  */
 public class TelaContaDeposito extends javax.swing.JFrame {
+     TelaOperacao operacao;
+     TelaInicialCaixa inicial;
 
+    
+
+    
     TelaFormaDeposito forma = new TelaFormaDeposito();
     public TelaContaDeposito() {
         initComponents();
@@ -125,20 +130,24 @@ public class TelaContaDeposito extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jBOutraContaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBOutraContaActionPerformed
-       setVisible(false);
+        forma.setOperacao(operacao);
+        setVisible(false);
         forma.setVisible(true);
         
     }//GEN-LAST:event_jBOutraContaActionPerformed
 
     private void jBFinalizarContaDepositoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBFinalizarContaDepositoActionPerformed
-        // TODO add your handling code here:
+        setVisible(false);
+        inicial.setVisible(true);
     }//GEN-LAST:event_jBFinalizarContaDepositoActionPerformed
 
     private void jBMenuAnteriorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBMenuAnteriorActionPerformed
-        // TODO add your handling code here:
+        setVisible(false);
+        operacao.setVisible(true);
     }//GEN-LAST:event_jBMenuAnteriorActionPerformed
 
     private void jBPropriaContaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBPropriaContaActionPerformed
+        forma.setOperacao(operacao);
         setVisible(false);
         forma.setVisible(true);
     }//GEN-LAST:event_jBPropriaContaActionPerformed
@@ -186,4 +195,15 @@ public class TelaContaDeposito extends javax.swing.JFrame {
     private javax.swing.JButton jBPropriaConta;
     private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
+    
+
+    public void setOperacao(TelaOperacao operacao) {
+        this.operacao = operacao;
+    }
+
+    public void setInicial(TelaInicialCaixa inicial) {
+        this.inicial = inicial;
+    }
+    
+    
 }
