@@ -6,6 +6,7 @@
 package br.edu.grupointegrado.visao;
 
 import br.edu.grupointegrado.controle.ClassSessao;
+import br.edu.grupointegrado.controle.ClassTransferencia;
 
 /**
  *
@@ -17,8 +18,8 @@ public class TelaFormaDeposito extends javax.swing.JFrame {
     TelaDepositoContaFavorecida contaOutro;
     TelaOperacao operacao;
     TelaInicialCaixa inicial;
-
-    
+    private int contaDestino;
+    ClassTransferencia deposito;
 
     public TelaFormaDeposito() {
         initComponents();
@@ -149,11 +150,14 @@ public class TelaFormaDeposito extends javax.swing.JFrame {
 
     private void jBChequeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBChequeActionPerformed
         setVisible(false);
-        if ((ClassSessao.getIdentificado()) == 1) {
+        if (((ClassSessao.getIdentificado()) == 1)&&((getContaDestino()) == 1)) {
             contaPropria = new TelaValorBoletoPropriaConta();
+            contaPropria.setOperacao(operacao);
+            contaPropria.setDeposito(deposito);
             contaPropria.setVisible(true);
         } else {
             contaOutro = new TelaDepositoContaFavorecida();
+            contaOutro.setOperacao(operacao);
             contaOutro.setVisible(true);
         }
 
@@ -166,11 +170,14 @@ public class TelaFormaDeposito extends javax.swing.JFrame {
 
     private void jBDinheiroChequeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBDinheiroChequeActionPerformed
         setVisible(false);
-        if ((ClassSessao.getIdentificado()) == 1) {
+        if (((ClassSessao.getIdentificado()) == 1)&&((getContaDestino()) == 1)) {
             contaPropria = new TelaValorBoletoPropriaConta();
+            contaPropria.setOperacao(operacao);
+            contaPropria.setDeposito(deposito);
             contaPropria.setVisible(true);
         } else {
             contaOutro = new TelaDepositoContaFavorecida();
+            contaOutro.setOperacao(operacao);
             contaOutro.setVisible(true);
         }
     }//GEN-LAST:event_jBDinheiroChequeActionPerformed
@@ -182,10 +189,11 @@ public class TelaFormaDeposito extends javax.swing.JFrame {
 
     private void jBEmDinheiroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBEmDinheiroActionPerformed
         setVisible(false);
-        if ((ClassSessao.getIdentificado()) == 1) {
+        if (((ClassSessao.getIdentificado()) == 1)&&((getContaDestino()) == 1)) {
             contaPropria = new TelaValorBoletoPropriaConta();
             contaPropria.setOperacao(operacao);
             contaPropria.setVisible(true);
+            contaPropria.setDeposito(deposito);
         } else {
             contaOutro = new TelaDepositoContaFavorecida();
             contaOutro.setOperacao(operacao);
@@ -247,6 +255,17 @@ public class TelaFormaDeposito extends javax.swing.JFrame {
 
     public void setInicial(TelaInicialCaixa inicial) {
         this.inicial = inicial;
+    }
+     public int getContaDestino() {
+        return contaDestino;
+    }
+
+    public void setContaDestino(int contaDestino) {
+        this.contaDestino = contaDestino;
+    }
+
+    public void setDeposito(ClassTransferencia deposito) {
+        this.deposito = deposito;
     }
     
 }

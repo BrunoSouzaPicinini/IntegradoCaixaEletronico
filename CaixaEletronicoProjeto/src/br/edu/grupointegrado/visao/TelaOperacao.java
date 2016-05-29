@@ -31,7 +31,7 @@ public class TelaOperacao extends javax.swing.JFrame {
     TelaOutroValorSaque outroValorSaque;
     TelaContaDeposito contaDeposito ;
     TelaLeituraCodigoBarras leituraCodigoBarras;
-    
+    TelaFormaDeposito forma;
     
     
     
@@ -207,13 +207,27 @@ public class TelaOperacao extends javax.swing.JFrame {
     }//GEN-LAST:event_jBExtratoActionPerformed
 
     private void jBDepositoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBDepositoActionPerformed
-        contaDeposito = new TelaContaDeposito();
-        contaDeposito.setOperacao(this);
         transferencia = new ClassTransferencia();
+        if ((ClassSessao.getIdentificado()) == 1){
+        contaDeposito = new TelaContaDeposito();
+        transferencia.setContaOrigem(ClassSessao.getCdConta());
+        transferencia.setAgenciaOrigem(ClassSessao.getCdAgencia());
+        transferencia.setBancoOrigem(ClassSessao.getCdBanco());
+             System.out.println("Depósito");
+        contaDeposito.setOperacao(this);
+        contaDeposito.setInicial(inicial);
+        contaDeposito.setDeposito(transferencia);
         
          setVisible(false);
          contaDeposito.setVisible(true);
-
+        }else{
+        forma = new TelaFormaDeposito();
+        forma.setOperacao(this);
+        forma.setInicial(inicial);
+        }
+        
+       
+        
     }//GEN-LAST:event_jBDepositoActionPerformed
 
     private void jBFinalizarOperacaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBFinalizarOperacaoActionPerformed

@@ -5,18 +5,20 @@
  */
 package br.edu.grupointegrado.visao;
 
+import br.edu.grupointegrado.controle.ClassTransferencia;
+
 /**
  *
  * @author Luan
  */
 public class TelaContaDeposito extends javax.swing.JFrame {
-     TelaOperacao operacao;
-     TelaInicialCaixa inicial;
 
-    
+    TelaOperacao operacao;
+    TelaInicialCaixa inicial;
+    ClassTransferencia deposito;
 
-    
     TelaFormaDeposito forma = new TelaFormaDeposito();
+
     public TelaContaDeposito() {
         initComponents();
     }
@@ -130,10 +132,12 @@ public class TelaContaDeposito extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jBOutraContaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBOutraContaActionPerformed
+        forma.setContaDestino(0);
         forma.setOperacao(operacao);
+        forma.setInicial(inicial);
         setVisible(false);
         forma.setVisible(true);
-        
+
     }//GEN-LAST:event_jBOutraContaActionPerformed
 
     private void jBFinalizarContaDepositoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBFinalizarContaDepositoActionPerformed
@@ -147,7 +151,10 @@ public class TelaContaDeposito extends javax.swing.JFrame {
     }//GEN-LAST:event_jBMenuAnteriorActionPerformed
 
     private void jBPropriaContaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBPropriaContaActionPerformed
+        forma.setContaDestino(1);
         forma.setOperacao(operacao);
+        forma.setInicial(inicial);
+        forma.setDeposito(deposito);
         setVisible(false);
         forma.setVisible(true);
     }//GEN-LAST:event_jBPropriaContaActionPerformed
@@ -195,7 +202,6 @@ public class TelaContaDeposito extends javax.swing.JFrame {
     private javax.swing.JButton jBPropriaConta;
     private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
-    
 
     public void setOperacao(TelaOperacao operacao) {
         this.operacao = operacao;
@@ -204,6 +210,15 @@ public class TelaContaDeposito extends javax.swing.JFrame {
     public void setInicial(TelaInicialCaixa inicial) {
         this.inicial = inicial;
     }
-    
-    
+
+    public ClassTransferencia getDeposito() {
+        return deposito;
+    }
+
+    public void setDeposito(ClassTransferencia deposito) {
+        this.deposito = deposito;
+    }
+
+   
+
 }

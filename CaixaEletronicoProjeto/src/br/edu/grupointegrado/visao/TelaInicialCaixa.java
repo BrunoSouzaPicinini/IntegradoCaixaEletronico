@@ -127,6 +127,7 @@ public class TelaInicialCaixa extends javax.swing.JFrame {
        operacao.setInicial(this);
        operacao.setVisible(true);
        operacao.naoIdentificado();
+       operacao.operacao.setCdSessao(sessao.getCdSessao());
        setVisible(false);
        
     }//GEN-LAST:event_formMouseClicked

@@ -5,14 +5,23 @@
  */
 package br.edu.grupointegrado.visao;
 
+import br.edu.grupointegrado.controle.ClassTransferencia;
+import br.edu.grupointegrado.controle.ClassMovimentacao;
+import br.edu.grupointegrado.controle.ClassOperacao;
+import br.edu.grupointegrado.controle.ClassSessao;
+
 /**
  *
  * @author Luan
  */
 public class TelaInserirEnvelope extends javax.swing.JFrame {
 
-    
     TelaOperacao operacao;
+    ClassTransferencia deposito;
+    ClassMovimentacao movimentacao;
+    private double valor;
+    private int identificado =0;
+    private int proprio =0;
 
     /**
      * Creates new form TelaOperacao
@@ -111,7 +120,30 @@ public class TelaInserirEnvelope extends javax.swing.JFrame {
     }//GEN-LAST:event_jBCancelarActionPerformed
 
     private void jLabel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MouseClicked
-
+        
+        if ((identificado == 1)&&(proprio == 1)) {
+            deposito.setValorTransferencia(valor);
+            deposito.incluirOperacaoDepositoProprio();
+            operacao.operacao.setCdTrans(deposito.getCdtransferencia());
+            System.out.println(deposito.getCdtransferencia());
+            ClassOperacao.setCdTrans(deposito.getCdtransferencia());
+            operacao.operacao.incluirOperacaoTransDep();
+            
+            movimentacao = new ClassMovimentacao();
+            movimentacao.setCdOperacao(operacao.operacao.getCdOperacao());
+            movimentacao.setDsMovimentacao("DEPOSITO");
+            movimentacao.setVlMovimentacao(valor);
+            movimentacao.inserirMovimentacao(ClassSessao.getConta());
+            
+           
+            
+        } if ((identificado == 1)&&(proprio == 0)) {
+            deposito.incluirOperacaoTransDepNaoIdentificada();
+        }if ((identificado == 0)&&(proprio == 0)){
+            deposito.incluirOperacaoTransDepNaoIdentificada();
+        }
+         setVisible(false);
+            operacao.finalizar.setVisible(true);
     }//GEN-LAST:event_jLabel5MouseClicked
 
     /**
@@ -156,9 +188,37 @@ public class TelaInserirEnvelope extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel5;
     // End of variables declaration//GEN-END:variables
-    
 
     public void setOperacao(TelaOperacao operacao) {
         this.operacao = operacao;
     }
+
+    public double getValor() {
+        return valor;
+    }
+
+    public void setValor(double valor) {
+        this.valor = valor;
+    }
+
+    public int getIdentificado() {
+        return identificado;
+    }
+
+    public void setIdentificado(int identificado) {
+        this.identificado = identificado;
+    }
+
+    public int getProprio() {
+        return proprio;
+    }
+
+    public void setProprio(int proprio) {
+        this.proprio = proprio;
+    }
+
+    public void setDeposito(ClassTransferencia deposito) {
+        this.deposito = deposito;
+    }
+ 
 }

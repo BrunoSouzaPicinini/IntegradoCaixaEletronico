@@ -3,8 +3,16 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/Integrado/4semestre/Projetointegrador3/grupo/CaixaEletronicoProjeto/src/br/edu/grupointegrado/controle/ClassPagamento.java</file>
-            <file>file:/D:/Integrado/4semestre/Projetointegrador3/grupo/CaixaEletronicoProjeto/src/br/edu/grupointegrado/visao/TelaLeituraCodigoBarras.java</file>
+            <file>file:/D:/Integrado/4semestre/Projetointegrador3/grupo/CaixaEletronicoProjeto/src/br/edu/grupointegrado/visao/TelaOperacao.java</file>
+            <file>file:/D:/Integrado/4semestre/Projetointegrador3/grupo/CaixaEletronicoProjeto/src/br/edu/grupointegrado/visao/TelaContaDeposito.java</file>
+            <file>file:/D:/Integrado/4semestre/Projetointegrador3/grupo/CaixaEletronicoProjeto/src/br/edu/grupointegrado/visao/TelaInserirEnvelope.java</file>
+            <file>file:/D:/Integrado/4semestre/Projetointegrador3/grupo/CaixaEletronicoProjeto/src/br/edu/grupointegrado/visao/TelaDepositoContaFavorecida.java</file>
+            <file>file:/D:/Integrado/4semestre/Projetointegrador3/grupo/CaixaEletronicoProjeto/src/br/edu/grupointegrado/visao/TelaFormaDeposito.java</file>
+            <file>file:/D:/Integrado/4semestre/Projetointegrador3/grupo/CaixaEletronicoProjeto/src/br/edu/grupointegrado/visao/TelaInicialCaixa.java</file>
+            <file>file:/D:/Integrado/4semestre/Projetointegrador3/grupo/CaixaEletronicoProjeto/src/br/edu/grupointegrado/controle/ClassSessao.java</file>
+            <file>file:/D:/Integrado/4semestre/Projetointegrador3/grupo/CaixaEletronicoProjeto/src/br/edu/grupointegrado/visao/TelaValorBoletoPropriaConta.java</file>
+            <file>file:/D:/Integrado/4semestre/Projetointegrador3/grupo/CaixaEletronicoProjeto/src/br/edu/grupointegrado/visao/TelaIdentificacao.java</file>
+            <file>file:/D:/Integrado/4semestre/Projetointegrador3/grupo/CaixaEletronicoProjeto/src/br/edu/grupointegrado/visao/TelaFinalizar.java</file>
             <file>file:/D:/Integrado/4semestre/Projetointegrador3/grupo/CaixaEletronicoProjeto/src/br/edu/grupointegrado/visao/TelaInserirCodigoManualmente.java</file>
         </group>
     </open-files>

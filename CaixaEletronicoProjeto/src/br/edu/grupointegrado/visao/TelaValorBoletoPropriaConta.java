@@ -5,6 +5,8 @@
  */
 package br.edu.grupointegrado.visao;
 
+import br.edu.grupointegrado.controle.ClassTransferencia;
+
 /**
  *
  * @author BSP
@@ -12,8 +14,8 @@ package br.edu.grupointegrado.visao;
 public class TelaValorBoletoPropriaConta extends javax.swing.JFrame {
 
     TelaOperacao operacao;
-    
-
+    TelaInserirEnvelope inserirEnvelope;
+    ClassTransferencia deposito;
     
     
     public TelaValorBoletoPropriaConta() {
@@ -316,6 +318,7 @@ public class TelaValorBoletoPropriaConta extends javax.swing.JFrame {
 
     private void jBCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBCancelarActionPerformed
         setVisible(false);
+        
         operacao.setVisible(true);
     }//GEN-LAST:event_jBCancelarActionPerformed
 
@@ -324,7 +327,14 @@ public class TelaValorBoletoPropriaConta extends javax.swing.JFrame {
     }//GEN-LAST:event_jBCorrigirActionPerformed
 
     private void jBConfirmarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBConfirmarActionPerformed
-        // TODO add your handling code here:
+       setVisible(false);
+       inserirEnvelope = new TelaInserirEnvelope();
+       inserirEnvelope.setIdentificado(1);
+       inserirEnvelope.setProprio(1);
+       inserirEnvelope.setOperacao(operacao);
+       inserirEnvelope.setDeposito(deposito);
+       inserirEnvelope.setValor(Double.parseDouble(jTFValor.getText()));
+        inserirEnvelope.setVisible(true); 
     }//GEN-LAST:event_jBConfirmarActionPerformed
 
     private void jB9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jB9ActionPerformed
@@ -413,4 +423,9 @@ public class TelaValorBoletoPropriaConta extends javax.swing.JFrame {
     public void setOperacao(TelaOperacao operacao) {
         this.operacao = operacao;
     }
+
+    public void setDeposito(ClassTransferencia deposito) {
+        this.deposito = deposito;
+    }
+    
 }

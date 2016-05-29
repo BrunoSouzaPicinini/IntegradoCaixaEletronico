@@ -100,7 +100,7 @@ public class ClassOperacao extends ConexaoOracle {
         sql.delete(0, sql.length());
         sql.append("INSERT INTO OPERACAO (CD_OPERACAO,CD_TRANS,CD_SESSAO,DT_OPERACAO) VALUES (");
         sql.append(ultimasequencia("OPERACAO", "CD_OPERACAO")).append(",");
-        sql.append(getCdPagamento()).append(",");
+        sql.append(getCdTrans()).append(",");
         sql.append(getCdSessao()).append(",To_Date('");
         sql.append(getDateTime()).append("', 'dd/mm/yyyy hh24:mi:ss'))");
         System.out.println(sql.toString());

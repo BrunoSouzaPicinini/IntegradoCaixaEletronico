@@ -55,8 +55,6 @@ public class TelaDepositoContaFavorecida extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("CONTA QUE RECEBERÁ O DEPÓSITO");
         setAlwaysOnTop(true);
-        setFocusable(false);
-        setFocusableWindowState(false);
         setResizable(false);
 
         jLabel1.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
@@ -66,6 +64,7 @@ public class TelaDepositoContaFavorecida extends javax.swing.JFrame {
         jBCancelar.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         jBCancelar.setText("Cancelar");
         jBCancelar.setBorder(null);
+        jBCancelar.setFocusable(false);
         jBCancelar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jBCancelarActionPerformed(evt);
@@ -76,6 +75,7 @@ public class TelaDepositoContaFavorecida extends javax.swing.JFrame {
         jBConfirmar.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         jBConfirmar.setText("Confirmar");
         jBConfirmar.setBorder(null);
+        jBConfirmar.setFocusable(false);
         jBConfirmar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jBConfirmarActionPerformed(evt);
@@ -86,6 +86,7 @@ public class TelaDepositoContaFavorecida extends javax.swing.JFrame {
         jBCorrigir.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         jBCorrigir.setText("Corrigir");
         jBCorrigir.setBorder(null);
+        jBCorrigir.setFocusable(false);
         jBCorrigir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jBCorrigirActionPerformed(evt);
@@ -97,6 +98,7 @@ public class TelaDepositoContaFavorecida extends javax.swing.JFrame {
         jB7.setForeground(new java.awt.Color(255, 255, 255));
         jB7.setText("7");
         jB7.setBorder(null);
+        jB7.setFocusable(false);
         jB7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jB7ActionPerformed(evt);
@@ -108,6 +110,7 @@ public class TelaDepositoContaFavorecida extends javax.swing.JFrame {
         jB0.setForeground(new java.awt.Color(255, 255, 255));
         jB0.setText("0");
         jB0.setBorder(null);
+        jB0.setFocusable(false);
         jB0.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jB0ActionPerformed(evt);
@@ -119,6 +122,7 @@ public class TelaDepositoContaFavorecida extends javax.swing.JFrame {
         jB8.setForeground(new java.awt.Color(255, 255, 255));
         jB8.setText("8");
         jB8.setBorder(null);
+        jB8.setFocusable(false);
         jB8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jB8ActionPerformed(evt);
@@ -130,6 +134,7 @@ public class TelaDepositoContaFavorecida extends javax.swing.JFrame {
         jB9.setForeground(new java.awt.Color(255, 255, 255));
         jB9.setText("9");
         jB9.setBorder(null);
+        jB9.setFocusable(false);
         jB9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jB9ActionPerformed(evt);
@@ -141,6 +146,7 @@ public class TelaDepositoContaFavorecida extends javax.swing.JFrame {
         jB4.setForeground(new java.awt.Color(255, 255, 255));
         jB4.setText("4");
         jB4.setBorder(null);
+        jB4.setFocusable(false);
         jB4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jB4ActionPerformed(evt);
@@ -152,6 +158,7 @@ public class TelaDepositoContaFavorecida extends javax.swing.JFrame {
         jB5.setForeground(new java.awt.Color(255, 255, 255));
         jB5.setText("5");
         jB5.setBorder(null);
+        jB5.setFocusable(false);
         jB5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jB5ActionPerformed(evt);
@@ -163,6 +170,7 @@ public class TelaDepositoContaFavorecida extends javax.swing.JFrame {
         jB6.setForeground(new java.awt.Color(255, 255, 255));
         jB6.setText("6");
         jB6.setBorder(null);
+        jB6.setFocusable(false);
         jB6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jB6ActionPerformed(evt);
@@ -174,6 +182,7 @@ public class TelaDepositoContaFavorecida extends javax.swing.JFrame {
         jB3.setForeground(new java.awt.Color(255, 255, 255));
         jB3.setText("3");
         jB3.setBorder(null);
+        jB3.setFocusable(false);
         jB3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jB3ActionPerformed(evt);
@@ -185,6 +194,7 @@ public class TelaDepositoContaFavorecida extends javax.swing.JFrame {
         jB1.setForeground(new java.awt.Color(255, 255, 255));
         jB1.setText("1");
         jB1.setBorder(null);
+        jB1.setFocusable(false);
         jB1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jB1ActionPerformed(evt);
@@ -196,6 +206,7 @@ public class TelaDepositoContaFavorecida extends javax.swing.JFrame {
         jB2.setForeground(new java.awt.Color(255, 255, 255));
         jB2.setText("2");
         jB2.setBorder(null);
+        jB2.setFocusable(false);
         jB2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jB2ActionPerformed(evt);
@@ -350,6 +361,7 @@ public class TelaDepositoContaFavorecida extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jBCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBCancelarActionPerformed
+       
         setVisible(false);
         operacao.setVisible(false);
     }//GEN-LAST:event_jBCancelarActionPerformed
@@ -462,9 +474,7 @@ public class TelaDepositoContaFavorecida extends javax.swing.JFrame {
     private javax.swing.JTextField jTFConta;
     private javax.swing.JTextField jTFValor;
     // End of variables declaration//GEN-END:variables
-    public TelaOperacao getOperacao() {
-        return operacao;
-    }
+    
 
     public void setOperacao(TelaOperacao operacao) {
         this.operacao = operacao;

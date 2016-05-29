@@ -87,7 +87,7 @@ public class ClassTransferencia extends ConexaoOracle {
         this.bancoDestino = bancoDestino;
     }
     
-    public void incluirOperacaoTransDep() {
+    public void incluirOperacaoTransDepIdentificada() {
         sql.delete(0, sql.length());
         sql.append("INSERT INTO TRANSFERENCIA (CD_TRANS,CONTA_ORIGEM,CONTA_DESTINO,"
                 + "VALOR_TRANS,AGENCIA_ORIG,AGENCIA_DEST,BANCO_DEST,BANCO_ORIG) VALUES (");
@@ -105,4 +105,37 @@ public class ClassTransferencia extends ConexaoOracle {
         setCdtransferencia(Integer.parseInt(ultimoInserido("TRANSFERENCIA", "CD_TRANS")));
     }
     
+    public void incluirOperacaoTransDepNaoIdentificada() {
+        sql.delete(0, sql.length());
+        sql.append("INSERT INTO TRANSFERENCIA (CD_TRANS,CONTA_DESTINO,"
+                + "VALOR_TRANS,AGENCIA_DEST,BANCO_DEST) VALUES (");
+        sql.append(ultimasequencia("TRANSFERENCIA", "CD_TRANS")).append(",");      
+        sql.append(getContaDestino()).append(",");
+        sql.append(getValorTransferencia()).append(",");
+        sql.append(getAgenciaDestino()).append(",");
+        sql.append(getBancoDestino()).append(")");
+        System.out.println(sql.toString());
+        incluirsql(sql.toString());
+        commit();
+        setCdtransferencia(Integer.parseInt(ultimoInserido("TRANSFERENCIA", "CD_TRANS")));
+    }
+    
+    
+    public void incluirOperacaoDepositoProprio() {
+        sql.delete(0, sql.length());
+        sql.append("INSERT INTO TRANSFERENCIA (CD_TRANS,CONTA_ORIGEM,CONTA_DESTINO,"
+                + "VALOR_TRANS,AGENCIA_ORIG,AGENCIA_DEST,BANCO_DEST,BANCO_ORIG) VALUES (");
+        sql.append(ultimasequencia("TRANSFERENCIA", "CD_TRANS")).append(",");
+        sql.append(getContaOrigem()).append(",");
+        sql.append(getContaOrigem()).append(",");
+        sql.append(getValorTransferencia()).append(",");
+        sql.append(getAgenciaOrigem()).append(",");
+        sql.append(getAgenciaOrigem()).append(",");
+        sql.append(getBancoOrigem()).append(",");
+        sql.append(getBancoOrigem()).append(")");
+        System.out.println(sql.toString());
+        incluirsql(sql.toString());
+        commit();
+        setCdtransferencia(Integer.parseInt(ultimoInserido("TRANSFERENCIA", "CD_TRANS")));
+    }    
 }

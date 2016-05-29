@@ -367,7 +367,7 @@ public class TelaIdentificacao extends javax.swing.JFrame {
         if (conta.acessoConta() == true) {
          
             ClassSessao.carregarContaSessao(conta);
-            
+            sessao.setIdentificado(1);
             System.out.println("Sessao - Com Identificação");
             sessao.incluirSessao();
 
