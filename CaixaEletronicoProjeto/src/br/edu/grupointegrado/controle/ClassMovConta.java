@@ -60,14 +60,15 @@ public class ClassMovConta extends ConexaoOracle{
     public void setCdBanco(int cdBanco) {
         this.cdBanco = cdBanco;
     }
-public void inserirMovimentacaoConta(Double saldo) {
+public void inserirMovimentacaoConta(Double saldoAntigo,Double saldoNovo) {
         sql.delete(0, sql.length());
-        sql.append("INSERT INTO MOV_CONTA (CD_CONTA,CD_AGENCIA,CD_BANCO,CD_MOV,VL_SALDO,DT_MOV) VALUES (");
+        sql.append("INSERT INTO MOV_CONTA (CD_CONTA,CD_AGENCIA,CD_BANCO,CD_MOV,VL_SALDO_NOVO,VL_SALDO_ANTIGO,DT_MOV) VALUES (");
         sql.append(getCdConta()).append(",");
         sql.append(getCdAgencia()).append(",");
         sql.append(getCdBanco()).append(",");
         sql.append(getCdMovimentacao()).append(",");
-        sql.append(saldo).append(",To_Date('");
+        sql.append(saldoNovo).append(",");
+        sql.append(saldoAntigo).append(",To_Date('");
         sql.append(getDateTime()).append("', 'dd/mm/yyyy hh24:mi:ss'))");
         System.out.println(sql.toString());
         incluirsql(sql.toString());

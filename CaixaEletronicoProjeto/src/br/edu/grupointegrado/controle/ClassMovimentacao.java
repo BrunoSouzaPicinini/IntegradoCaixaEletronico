@@ -71,7 +71,7 @@ public class ClassMovimentacao extends ConexaoOracle {
         movConta.setCdConta(conta.getCdConta());
         movConta.setCdMovimentacao(getCdMovimentacao());
         conta.atualizarSaldo();
-        movConta.inserirMovimentacaoConta(conta.getSaldo());
+        movConta.inserirMovimentacaoConta(conta.getSaldo(),((conta.getSaldo())+getVlMovimentacao()));
         System.out.println(getVlMovimentacao());
         
         conta.alterarSaldoConta(getVlMovimentacao());
