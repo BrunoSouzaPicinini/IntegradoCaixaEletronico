@@ -5,15 +5,18 @@
  */
 package br.edu.grupointegrado.visao;
 
+import br.edu.grupointegrado.controle.ClassSaque;
+
 /**
  *
  * @author Luan
  */
 public class TelaOutroValorSaque extends javax.swing.JFrame {
 
-    /**
-     * Creates new form TelaOperacao
-     */
+    ClassSaque saque;
+    TelaOperacao operacao;
+    TelaInicialCaixa inicial;
+    TelaFinalizar finalizar;
     public TelaOutroValorSaque() {
         initComponents();
     }
@@ -398,4 +401,22 @@ public class TelaOutroValorSaque extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JTextField jTFValor;
     // End of variables declaration//GEN-END:variables
+
+    public void setSaque(ClassSaque saque) {
+        this.saque = saque;
+    }
+
+    public void setOperacao(TelaOperacao operacao) {
+        this.operacao = operacao;
+    }
+
+    public void setInicial(TelaInicialCaixa inicial) {
+        this.inicial = inicial;
+    }
+
+    public void setFinalizar(TelaFinalizar finalizar) {
+        this.finalizar = finalizar;
+    }
+
+
 }

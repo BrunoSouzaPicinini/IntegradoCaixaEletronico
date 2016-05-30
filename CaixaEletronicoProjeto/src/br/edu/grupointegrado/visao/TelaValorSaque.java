@@ -5,15 +5,24 @@
  */
 package br.edu.grupointegrado.visao;
 
+import br.edu.grupointegrado.controle.ClassMovimentacao;
+import br.edu.grupointegrado.controle.ClassOperacao;
+import br.edu.grupointegrado.controle.ClassSaque;
+import br.edu.grupointegrado.controle.ClassSessao;
+
 /**
  *
  * @author Luan
  */
 public class TelaValorSaque extends javax.swing.JFrame {
 
-    /**
-     * Creates new form TelaOperacao
-     */
+    ClassSaque saque;
+    ClassMovimentacao movimentacao;
+    TelaOperacao operacao;
+    TelaInicialCaixa inicial;
+    TelaFinalizar finalizar;
+    TelaOutroValorSaque outroValorSaque;
+    private double valor;
     public TelaValorSaque() {
         initComponents();
     }
@@ -41,6 +50,7 @@ public class TelaValorSaque extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Valor do Saque");
+        setAlwaysOnTop(true);
         setFocusable(false);
         setFocusableWindowState(false);
         setResizable(false);
@@ -217,39 +227,42 @@ public class TelaValorSaque extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jB20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jB20ActionPerformed
-        // TODO add your handling code here:
+        setValor(-20);
     }//GEN-LAST:event_jB20ActionPerformed
 
     private void jB40ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jB40ActionPerformed
-        // TODO add your handling code here:
+        setValor(-40);
     }//GEN-LAST:event_jB40ActionPerformed
 
     private void jB300ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jB300ActionPerformed
-        // TODO add your handling code here:
+       setValor(-300);
     }//GEN-LAST:event_jB300ActionPerformed
 
     private void jB200ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jB200ActionPerformed
-        // TODO add your handling code here:
+        setValor(-200);
     }//GEN-LAST:event_jB200ActionPerformed
 
     private void jBMenuAnteriorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBMenuAnteriorActionPerformed
-        // TODO add your handling code here:
+        setVisible(false);
+        operacao.setVisible(true);
     }//GEN-LAST:event_jBMenuAnteriorActionPerformed
 
     private void jBFinalizarOutroValorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBFinalizarOutroValorActionPerformed
-        // TODO add your handling code here:
+        setVisible(false);
+        inicial.setVisible(true);
     }//GEN-LAST:event_jBFinalizarOutroValorActionPerformed
 
     private void jB100ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jB100ActionPerformed
-        // TODO add your handling code here:
+       setValor(-100);
+       inserirSaqueBotao();
     }//GEN-LAST:event_jB100ActionPerformed
 
     private void jB50ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jB50ActionPerformed
-        // TODO add your handling code here:
+        setValor(-50);
     }//GEN-LAST:event_jB50ActionPerformed
 
     private void jB400ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jB400ActionPerformed
-        // TODO add your handling code here:
+       setValor(-400);
     }//GEN-LAST:event_jB400ActionPerformed
 
     private void jBOutroValorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBOutroValorActionPerformed
@@ -305,4 +318,49 @@ public class TelaValorSaque extends javax.swing.JFrame {
     private javax.swing.JButton jBOutroValor;
     private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
+
+    private void inserirSaqueBotao(){
+        saque.setVlSaque(valor);
+        saque.incluirSaque();
+    
+        ClassOperacao.setCdSaque(saque.getCdSaque());
+        
+        operacao.operacao.incluirOperacaoSaque();
+        movimentacao = new ClassMovimentacao();
+        movimentacao.setCdOperacao(operacao.operacao.getCdOperacao());
+        movimentacao.setDsMovimentacao("SAQUE");
+        movimentacao.setVlMovimentacao(valor);
+        movimentacao.inserirMovimentacao(ClassSessao.getConta());
+        
+        setVisible(false);
+        operacao.finalizar.setVisible(true);
+    
+    }
+    
+    
+    
+    public void setSaque(ClassSaque saque) {
+        this.saque = saque;
+    }
+
+    public void setOperacao(TelaOperacao operacao) {
+        this.operacao = operacao;
+    }
+
+    public void setInicial(TelaInicialCaixa inicial) {
+        this.inicial = inicial;
+    }
+
+    public void setFinalizar(TelaFinalizar finalizar) {
+        this.finalizar = finalizar;
+    }
+
+    public double getValor() {
+        return valor;
+    }
+
+    public void setValor(double valor) {
+        this.valor = valor;
+    }
+    
 }

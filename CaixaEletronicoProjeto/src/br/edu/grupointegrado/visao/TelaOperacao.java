@@ -8,6 +8,7 @@ package br.edu.grupointegrado.visao;
 import br.edu.grupointegrado.controle.ClassConta;
 import br.edu.grupointegrado.controle.ClassOperacao;
 import br.edu.grupointegrado.controle.ClassPagamento;
+import br.edu.grupointegrado.controle.ClassSaque;
 import br.edu.grupointegrado.controle.ClassSessao;
 import br.edu.grupointegrado.controle.ClassTransferencia;
 
@@ -18,7 +19,7 @@ import br.edu.grupointegrado.controle.ClassTransferencia;
 public class TelaOperacao extends javax.swing.JFrame {
     ClassConta conta;
 
-    
+    ClassSaque saque;
     ClassTransferencia transferencia;
     ClassOperacao operacao = new ClassOperacao();
     ClassPagamento pagamento;
@@ -259,7 +260,20 @@ public class TelaOperacao extends javax.swing.JFrame {
     }//GEN-LAST:event_jBTransferenciaActionPerformed
 
     private void jBSaqueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBSaqueActionPerformed
-        // TODO add your handling code here:
+        saque = new ClassSaque();
+        valorSaque = new TelaValorSaque();
+        System.out.println("SAQUE");
+        saque.setCdConta(ClassSessao.getCdConta());
+        saque.setCdAgencia(ClassSessao.getCdAgencia());
+        saque.setCdBanco(ClassSessao.getCdBanco());
+        
+        
+        valorSaque.setInicial(inicial);
+        valorSaque.setSaque(saque);
+        valorSaque.setFinalizar(finalizar);
+        valorSaque.setOperacao(this);
+        setVisible(false);
+        valorSaque.setVisible(true);
     }//GEN-LAST:event_jBSaqueActionPerformed
 
     /**
