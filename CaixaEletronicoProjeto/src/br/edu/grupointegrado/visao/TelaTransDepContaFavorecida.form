@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+<Form version="1.5" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
     <Property name="alwaysOnTop" type="boolean" value="true"/>
@@ -124,7 +124,7 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jTFValor" alignment="3" min="-2" pref="50" max="-2" attributes="0"/>
+                          <Component id="jTFValor" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jLabel2" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
                       </Group>
                       <Group type="103" groupAlignment="0" attributes="0">
@@ -274,7 +274,7 @@
         <Property name="horizontalAlignment" type="int" value="0"/>
       </Properties>
       <AuxValues>
-        <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="jTFConta.setDocument(new DocumentoLimitado(6));"/>
+        <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="jTFBanco.setDocument(new DocumentoLimitado(6));"/>
       </AuxValues>
     </Component>
     <Component class="javax.swing.JButton" name="jB8">
@@ -367,7 +367,7 @@
         <Property name="horizontalAlignment" type="int" value="0"/>
       </Properties>
       <AuxValues>
-        <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="jTFConta.setDocument(new DocumentoLimitado(6));"/>
+        <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="jTFAgencia.setDocument(new DocumentoLimitado(6));"/>
       </AuxValues>
     </Component>
     <Component class="javax.swing.JButton" name="jB5">

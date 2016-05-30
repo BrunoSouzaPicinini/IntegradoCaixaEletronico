@@ -247,10 +247,12 @@ public class TelaFormaDeposito extends javax.swing.JFrame {
             contaPropria.setOperacao(operacao);
             contaPropria.setVisible(true);
             contaPropria.setDeposito(deposito);
+            
         } else {
             contaOutro = new TelaTransDepContaFavorecida();
             contaOutro.setOperacao(operacao);
             contaOutro.setVisible(true);
+            contaOutro.setTransferencia(deposito);
         }
     }
     

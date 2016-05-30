@@ -134,6 +134,7 @@ public class TelaContaDeposito extends javax.swing.JFrame {
     private void jBOutraContaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBOutraContaActionPerformed
         forma.setContaDestino(0);
         forma.setOperacao(operacao);
+        forma.setDeposito(deposito);
         forma.setInicial(inicial);
         setVisible(false);
         forma.setVisible(true);

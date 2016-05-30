@@ -4,6 +4,10 @@
  * and open the template in the editor.
  */
 package br.edu.grupointegrado.visao;
+import br.edu.grupointegrado.controle.ClassConta;
+import br.edu.grupointegrado.controle.ClassMovimentacao;
+import br.edu.grupointegrado.controle.ClassOperacao;
+import br.edu.grupointegrado.controle.ClassSessao;
 import br.edu.grupointegrado.controle.ClassTransferencia;
 import br.edu.grupointegrado.ferramentas.DocumentoLimitado;
 /**
@@ -13,10 +17,13 @@ import br.edu.grupointegrado.ferramentas.DocumentoLimitado;
 public class TelaTransDepContaFavorecida extends javax.swing.JFrame {
 
     TelaOperacao operacao;
-    TelaInicialCaixa inicial;
+    
     TelaFinalizar finalizar;
     ClassTransferencia transferencia;
+    ClassMovimentacao movimentacao;
+    ClassConta contaDestino;
     private double valor;
+    private int origem; // 1 - DEPÓSITO 2 - TRANSFERENCIA
     public TelaTransDepContaFavorecida() {
         initComponents();
     }
@@ -318,7 +325,7 @@ public class TelaTransDepContaFavorecida extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jTFValor, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTFValor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
@@ -351,9 +358,9 @@ public class TelaTransDepContaFavorecida extends javax.swing.JFrame {
                 .addGap(25, 25, 25))
         );
 
+        jTFBanco.setDocument(new DocumentoLimitado(6));
         jTFConta.setDocument(new DocumentoLimitado(6));
-        jTFConta.setDocument(new DocumentoLimitado(6));
-        jTFConta.setDocument(new DocumentoLimitado(6));
+        jTFAgencia.setDocument(new DocumentoLimitado(6));
 
         pack();
         setLocationRelativeTo(null);
@@ -411,7 +418,39 @@ public class TelaTransDepContaFavorecida extends javax.swing.JFrame {
 
     private void jBConfirmarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBConfirmarActionPerformed
         valor = (Double.parseDouble(jTFValor.getText()));
+        contaDestino = new ClassConta();
+        transferencia.setValorTransferencia(valor);
+        transferencia.setContaDestino(Integer.parseInt(jTFConta.getText()));
+        transferencia.setAgenciaDestino(Integer.parseInt(jTFAgencia.getText()));
+        transferencia.setBancoDestino(Integer.parseInt(jTFBanco.getText()));
+        transferencia.incluirOperacaoTransDepIdentificada();
         
+        contaDestino.setCdConta(Integer.parseInt(jTFConta.getText()));
+        contaDestino.setAgencia(Integer.parseInt(jTFAgencia.getText()));
+        contaDestino.setBanco(Integer.parseInt(jTFBanco.getText()));
+    
+        ClassOperacao.setCdTrans(transferencia.getCdtransferencia());
+        
+        String descricaoMov;
+        if (origem ==1)
+           descricaoMov = "DEPOSITO"; 
+        else descricaoMov = "TRANSFERENCIA";
+        
+        operacao.operacao.incluirOperacaoTransDep();
+        movimentacao = new ClassMovimentacao();
+        movimentacao.setCdOperacao(operacao.operacao.getCdOperacao());
+        movimentacao.setDsMovimentacao(descricaoMov);
+        movimentacao.setVlMovimentacao(-valor);
+        movimentacao.inserirMovimentacao(ClassSessao.getConta());
+        
+        if ((contaDestino.verificaContaExite())){
+        movimentacao.setCdOperacao(operacao.operacao.getCdOperacao());
+        movimentacao.setDsMovimentacao(descricaoMov);
+        movimentacao.setVlMovimentacao(valor);
+        movimentacao.inserirMovimentacao(contaDestino);
+        }
+        setVisible(false);
+        operacao.finalizar.setVisible(true);
     }//GEN-LAST:event_jBConfirmarActionPerformed
 
     /**
@@ -478,9 +517,7 @@ public class TelaTransDepContaFavorecida extends javax.swing.JFrame {
         this.operacao = operacao;
     }
 
-    public void setInicial(TelaInicialCaixa inicial) {
-        this.inicial = inicial;
-    }
+    
 
     public void setFinalizar(TelaFinalizar finalizar) {
         this.finalizar = finalizar;
@@ -488,6 +525,10 @@ public class TelaTransDepContaFavorecida extends javax.swing.JFrame {
 
     public void setTransferencia(ClassTransferencia transferencia) {
         this.transferencia = transferencia;
+    }
+
+    public void setOrigem(int origem) {
+        this.origem = origem;
     }
 
 }

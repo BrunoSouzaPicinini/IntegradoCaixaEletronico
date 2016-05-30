@@ -102,6 +102,34 @@ public class ClassConta extends ConexaoOracle {
 
         return false;
     }
+    public boolean verificaContaExite() {
+        sql.delete(0, sql.length());
+        sql.append("SELECT COUNT(CD_CONTA) FROM CONTA WHERE CD_CONTA =");
+        sql.append(getCdConta()).append(" AND CD_BANCO =");
+        sql.append(getBanco()).append(" AND CD_AGENCIA =");
+        sql.append(getAgencia());
+        System.out.println("BUSCA DE REGISTRO:");
+        System.out.println(sql.toString());
+        executeSQL(sql.toString());
+        try {
+            int colunas = resultset.getMetaData().getColumnCount();
+
+            resultset.next();
+            acesso = resultset.getInt(1);
+
+            System.out.print("Resultado:");
+            System.out.println(acesso);
+            if (acesso == 1) {
+                return true;
+            }
+        } catch (SQLException erro) {
+            JOptionPane.showMessageDialog(null, "Erro ao listar no JTable " + erro);
+            return false;
+        }
+
+        return false;
+    }
+    
 
     public ResultSet consultaCodigo(int parseInt) {
         sql.delete(0, sql.length());

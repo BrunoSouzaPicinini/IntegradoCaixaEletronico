@@ -265,9 +265,9 @@ public class TelaOperacao extends javax.swing.JFrame {
         System.out.println("TRANSFERENCIA");
              
         telaTransferencia.setOperacao(this);
-        telaTransferencia.setInicial(inicial);
-        telaTransferencia.setTransferencia(transferencia);
         
+        telaTransferencia.setTransferencia(transferencia);
+        telaTransferencia.setOrigem(2);
          setVisible(false);
          telaTransferencia.setVisible(true);
     }//GEN-LAST:event_jBTransferenciaActionPerformed
