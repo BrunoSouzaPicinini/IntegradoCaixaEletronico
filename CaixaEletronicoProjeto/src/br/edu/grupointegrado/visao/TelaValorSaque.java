@@ -228,18 +228,22 @@ public class TelaValorSaque extends javax.swing.JFrame {
 
     private void jB20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jB20ActionPerformed
         setValor(-20);
+        inserirSaqueBotao();
     }//GEN-LAST:event_jB20ActionPerformed
 
     private void jB40ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jB40ActionPerformed
         setValor(-40);
+        inserirSaqueBotao();
     }//GEN-LAST:event_jB40ActionPerformed
 
     private void jB300ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jB300ActionPerformed
        setValor(-300);
+       inserirSaqueBotao();
     }//GEN-LAST:event_jB300ActionPerformed
 
     private void jB200ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jB200ActionPerformed
         setValor(-200);
+        inserirSaqueBotao();
     }//GEN-LAST:event_jB200ActionPerformed
 
     private void jBMenuAnteriorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBMenuAnteriorActionPerformed
@@ -259,14 +263,22 @@ public class TelaValorSaque extends javax.swing.JFrame {
 
     private void jB50ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jB50ActionPerformed
         setValor(-50);
+        inserirSaqueBotao();
     }//GEN-LAST:event_jB50ActionPerformed
 
     private void jB400ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jB400ActionPerformed
        setValor(-400);
+       inserirSaqueBotao();
     }//GEN-LAST:event_jB400ActionPerformed
 
     private void jBOutroValorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBOutroValorActionPerformed
-        // TODO add your handling code here:
+       outroValorSaque = new TelaOutroValorSaque();
+       outroValorSaque.setInicial(inicial);
+        outroValorSaque.setSaque(saque);
+        outroValorSaque.setFinalizar(finalizar);
+        outroValorSaque.setOperacao(operacao);
+        setVisible(false);
+        outroValorSaque.setVisible(true);
     }//GEN-LAST:event_jBOutroValorActionPerformed
 
     /**
