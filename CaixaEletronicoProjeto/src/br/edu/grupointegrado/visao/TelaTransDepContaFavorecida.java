@@ -4,19 +4,20 @@
  * and open the template in the editor.
  */
 package br.edu.grupointegrado.visao;
-
+import br.edu.grupointegrado.controle.ClassTransferencia;
 import br.edu.grupointegrado.ferramentas.DocumentoLimitado;
-
 /**
  *
- * @author Luan
+ * @author BSP
  */
-public class TelaDepositoContaFavorecida extends javax.swing.JFrame {
+public class TelaTransDepContaFavorecida extends javax.swing.JFrame {
 
     TelaOperacao operacao;
-
-    
-    public TelaDepositoContaFavorecida() {
+    TelaInicialCaixa inicial;
+    TelaFinalizar finalizar;
+    ClassTransferencia transferencia;
+    private double valor;
+    public TelaTransDepContaFavorecida() {
         initComponents();
     }
 
@@ -29,56 +30,41 @@ public class TelaDepositoContaFavorecida extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
-        jBCancelar = new javax.swing.JButton();
-        jBConfirmar = new javax.swing.JButton();
-        jBCorrigir = new javax.swing.JButton();
-        jB7 = new javax.swing.JButton();
-        jB0 = new javax.swing.JButton();
-        jB8 = new javax.swing.JButton();
-        jB9 = new javax.swing.JButton();
-        jB4 = new javax.swing.JButton();
-        jB5 = new javax.swing.JButton();
-        jB6 = new javax.swing.JButton();
-        jB3 = new javax.swing.JButton();
-        jB1 = new javax.swing.JButton();
         jB2 = new javax.swing.JButton();
+        jBCorrigir = new javax.swing.JButton();
         jTFValor = new javax.swing.JTextField();
+        jB7 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
+        jB0 = new javax.swing.JButton();
         jTFBanco = new javax.swing.JTextField();
+        jB8 = new javax.swing.JButton();
         jTFConta = new javax.swing.JTextField();
+        jB9 = new javax.swing.JButton();
         jLabel6 = new javax.swing.JLabel();
+        jB4 = new javax.swing.JButton();
         jTFAgencia = new javax.swing.JTextField();
+        jB5 = new javax.swing.JButton();
         jLabel7 = new javax.swing.JLabel();
+        jB6 = new javax.swing.JButton();
         jLabel8 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        jB3 = new javax.swing.JButton();
+        jBCancelar = new javax.swing.JButton();
+        jB1 = new javax.swing.JButton();
+        jBConfirmar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("CONTA QUE RECEBERÁ O DEPÓSITO");
         setAlwaysOnTop(true);
-        setResizable(false);
 
-        jLabel1.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
-        jLabel1.setText("Digite os dados do favorecido");
-
-        jBCancelar.setBackground(new java.awt.Color(255, 0, 0));
-        jBCancelar.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
-        jBCancelar.setText("Cancelar");
-        jBCancelar.setBorder(null);
-        jBCancelar.setFocusable(false);
-        jBCancelar.addActionListener(new java.awt.event.ActionListener() {
+        jB2.setBackground(new java.awt.Color(0, 0, 0));
+        jB2.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
+        jB2.setForeground(new java.awt.Color(255, 255, 255));
+        jB2.setText("2");
+        jB2.setBorder(null);
+        jB2.setFocusable(false);
+        jB2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jBCancelarActionPerformed(evt);
-            }
-        });
-
-        jBConfirmar.setBackground(new java.awt.Color(51, 153, 0));
-        jBConfirmar.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
-        jBConfirmar.setText("Confirmar");
-        jBConfirmar.setBorder(null);
-        jBConfirmar.setFocusable(false);
-        jBConfirmar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jBConfirmarActionPerformed(evt);
+                jB2ActionPerformed(evt);
             }
         });
 
@@ -93,6 +79,8 @@ public class TelaDepositoContaFavorecida extends javax.swing.JFrame {
             }
         });
 
+        jTFValor.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+
         jB7.setBackground(new java.awt.Color(0, 0, 0));
         jB7.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
         jB7.setForeground(new java.awt.Color(255, 255, 255));
@@ -104,6 +92,9 @@ public class TelaDepositoContaFavorecida extends javax.swing.JFrame {
                 jB7ActionPerformed(evt);
             }
         });
+
+        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel2.setText("Valor");
 
         jB0.setBackground(new java.awt.Color(0, 0, 0));
         jB0.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
@@ -117,6 +108,9 @@ public class TelaDepositoContaFavorecida extends javax.swing.JFrame {
             }
         });
 
+        jTFBanco.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jTFBanco.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+
         jB8.setBackground(new java.awt.Color(0, 0, 0));
         jB8.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
         jB8.setForeground(new java.awt.Color(255, 255, 255));
@@ -128,6 +122,9 @@ public class TelaDepositoContaFavorecida extends javax.swing.JFrame {
                 jB8ActionPerformed(evt);
             }
         });
+
+        jTFConta.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jTFConta.setHorizontalAlignment(javax.swing.JTextField.CENTER);
 
         jB9.setBackground(new java.awt.Color(0, 0, 0));
         jB9.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
@@ -141,6 +138,9 @@ public class TelaDepositoContaFavorecida extends javax.swing.JFrame {
             }
         });
 
+        jLabel6.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel6.setText("Agencia");
+
         jB4.setBackground(new java.awt.Color(0, 0, 0));
         jB4.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
         jB4.setForeground(new java.awt.Color(255, 255, 255));
@@ -152,6 +152,9 @@ public class TelaDepositoContaFavorecida extends javax.swing.JFrame {
                 jB4ActionPerformed(evt);
             }
         });
+
+        jTFAgencia.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jTFAgencia.setHorizontalAlignment(javax.swing.JTextField.CENTER);
 
         jB5.setBackground(new java.awt.Color(0, 0, 0));
         jB5.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
@@ -165,6 +168,9 @@ public class TelaDepositoContaFavorecida extends javax.swing.JFrame {
             }
         });
 
+        jLabel7.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel7.setText("Banco");
+
         jB6.setBackground(new java.awt.Color(0, 0, 0));
         jB6.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
         jB6.setForeground(new java.awt.Color(255, 255, 255));
@@ -177,6 +183,12 @@ public class TelaDepositoContaFavorecida extends javax.swing.JFrame {
             }
         });
 
+        jLabel8.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel8.setText("Conta");
+
+        jLabel1.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
+        jLabel1.setText("Digite os dados do favorecido");
+
         jB3.setBackground(new java.awt.Color(0, 0, 0));
         jB3.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
         jB3.setForeground(new java.awt.Color(255, 255, 255));
@@ -186,6 +198,17 @@ public class TelaDepositoContaFavorecida extends javax.swing.JFrame {
         jB3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jB3ActionPerformed(evt);
+            }
+        });
+
+        jBCancelar.setBackground(new java.awt.Color(255, 0, 0));
+        jBCancelar.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        jBCancelar.setText("Cancelar");
+        jBCancelar.setBorder(null);
+        jBCancelar.setFocusable(false);
+        jBCancelar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBCancelarActionPerformed(evt);
             }
         });
 
@@ -201,40 +224,16 @@ public class TelaDepositoContaFavorecida extends javax.swing.JFrame {
             }
         });
 
-        jB2.setBackground(new java.awt.Color(0, 0, 0));
-        jB2.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
-        jB2.setForeground(new java.awt.Color(255, 255, 255));
-        jB2.setText("2");
-        jB2.setBorder(null);
-        jB2.setFocusable(false);
-        jB2.addActionListener(new java.awt.event.ActionListener() {
+        jBConfirmar.setBackground(new java.awt.Color(51, 153, 0));
+        jBConfirmar.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        jBConfirmar.setText("Confirmar");
+        jBConfirmar.setBorder(null);
+        jBConfirmar.setFocusable(false);
+        jBConfirmar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jB2ActionPerformed(evt);
+                jBConfirmarActionPerformed(evt);
             }
         });
-
-        jTFValor.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-
-        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel2.setText("Valor");
-
-        jTFBanco.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jTFBanco.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-
-        jTFConta.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jTFConta.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-
-        jLabel6.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel6.setText("Agencia");
-
-        jTFAgencia.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jTFAgencia.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-
-        jLabel7.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel7.setText("Banco");
-
-        jLabel8.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel8.setText("Conta");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -360,15 +359,9 @@ public class TelaDepositoContaFavorecida extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jBCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBCancelarActionPerformed
-       
-        setVisible(false);
-        operacao.setVisible(false);
-    }//GEN-LAST:event_jBCancelarActionPerformed
-
-    private void jBConfirmarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBConfirmarActionPerformed
+    private void jB2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jB2ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jBConfirmarActionPerformed
+    }//GEN-LAST:event_jB2ActionPerformed
 
     private void jBCorrigirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBCorrigirActionPerformed
         // TODO add your handling code here:
@@ -406,13 +399,20 @@ public class TelaDepositoContaFavorecida extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jB3ActionPerformed
 
+    private void jBCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBCancelarActionPerformed
+        setVisible(false);
+        operacao.setVisible(true);
+        
+    }//GEN-LAST:event_jBCancelarActionPerformed
+
     private void jB1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jB1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jB1ActionPerformed
 
-    private void jB2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jB2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jB2ActionPerformed
+    private void jBConfirmarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBConfirmarActionPerformed
+        valor = (Double.parseDouble(jTFValor.getText()));
+        
+    }//GEN-LAST:event_jBConfirmarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -431,21 +431,20 @@ public class TelaDepositoContaFavorecida extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(TelaDepositoContaFavorecida.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaTransDepContaFavorecida.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(TelaDepositoContaFavorecida.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaTransDepContaFavorecida.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(TelaDepositoContaFavorecida.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaTransDepContaFavorecida.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(TelaDepositoContaFavorecida.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaTransDepContaFavorecida.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new TelaDepositoContaFavorecida().setVisible(true);
+                new TelaTransDepContaFavorecida().setVisible(true);
             }
         });
     }
@@ -474,9 +473,21 @@ public class TelaDepositoContaFavorecida extends javax.swing.JFrame {
     private javax.swing.JTextField jTFConta;
     private javax.swing.JTextField jTFValor;
     // End of variables declaration//GEN-END:variables
-    
 
     public void setOperacao(TelaOperacao operacao) {
         this.operacao = operacao;
     }
+
+    public void setInicial(TelaInicialCaixa inicial) {
+        this.inicial = inicial;
+    }
+
+    public void setFinalizar(TelaFinalizar finalizar) {
+        this.finalizar = finalizar;
+    }
+
+    public void setTransferencia(ClassTransferencia transferencia) {
+        this.transferencia = transferencia;
+    }
+
 }

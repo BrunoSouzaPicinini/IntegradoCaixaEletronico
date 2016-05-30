@@ -33,7 +33,7 @@ public class TelaOperacao extends javax.swing.JFrame {
     TelaContaDeposito contaDeposito ;
     TelaLeituraCodigoBarras leituraCodigoBarras;
     TelaFormaDeposito forma;
-    
+    TelaTransDepContaFavorecida telaTransferencia;
     
     
     
@@ -256,7 +256,20 @@ public class TelaOperacao extends javax.swing.JFrame {
     }//GEN-LAST:event_jBPagamentoActionPerformed
 
     private void jBTransferenciaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBTransferenciaActionPerformed
-        // TODO add your handling code here:
+       transferencia = new ClassTransferencia();
+       telaTransferencia = new TelaTransDepContaFavorecida();
+       
+        transferencia.setContaOrigem(ClassSessao.getCdConta());
+        transferencia.setAgenciaOrigem(ClassSessao.getCdAgencia());
+        transferencia.setBancoOrigem(ClassSessao.getCdBanco());
+        System.out.println("TRANSFERENCIA");
+             
+        telaTransferencia.setOperacao(this);
+        telaTransferencia.setInicial(inicial);
+        telaTransferencia.setTransferencia(transferencia);
+        
+         setVisible(false);
+         telaTransferencia.setVisible(true);
     }//GEN-LAST:event_jBTransferenciaActionPerformed
 
     private void jBSaqueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBSaqueActionPerformed
