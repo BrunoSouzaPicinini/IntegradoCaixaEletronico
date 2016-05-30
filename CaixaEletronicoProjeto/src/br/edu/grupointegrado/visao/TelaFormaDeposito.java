@@ -18,7 +18,7 @@ public class TelaFormaDeposito extends javax.swing.JFrame {
     TelaTransDepContaFavorecida contaOutro;
     TelaOperacao operacao;
     TelaInicialCaixa inicial;
-    private int contaDestino;
+    private int contaDestino; // 0 - OUTRA  1 - PROPRIA CONTA 
     ClassTransferencia deposito;
 
     public TelaFormaDeposito() {
