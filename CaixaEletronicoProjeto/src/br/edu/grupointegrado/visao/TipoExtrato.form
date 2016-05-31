@@ -40,6 +40,7 @@
                           <Component id="jBUltimosLancamentos" min="-2" pref="293" max="-2" attributes="0"/>
                           <Component id="jBUltimos30Dias" min="-2" pref="293" max="-2" attributes="0"/>
                           <Component id="jBFinalizarTipoExtrato" alignment="0" min="-2" pref="293" max="-2" attributes="0"/>
+                          <Component id="jBUltimos90Dias" alignment="0" min="-2" pref="293" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
@@ -60,7 +61,9 @@
               <Component id="jBUltimosLancamentos" min="-2" pref="66" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="jBUltimos30Dias" min="-2" pref="66" max="-2" attributes="0"/>
-              <EmptySpace pref="139" max="32767" attributes="0"/>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Component id="jBUltimos90Dias" min="-2" pref="66" max="-2" attributes="0"/>
+              <EmptySpace pref="62" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jBFinalizarTipoExtrato" alignment="3" min="-2" pref="66" max="-2" attributes="0"/>
                   <Component id="jBMenuAnterior" alignment="3" min="-2" pref="66" max="-2" attributes="0"/>
@@ -157,6 +160,26 @@
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBUltimosLancamentosActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="jBUltimos90Dias">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="7a" green="66" red="5c" type="rgb"/>
+        </Property>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Arial" size="24" style="1"/>
+        </Property>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="ff" red="ff" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="&#xda;ltimos 90 dias"/>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="null"/>
+        </Property>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBUltimos90DiasActionPerformed"/>
       </Events>
     </Component>
   </SubComponents>

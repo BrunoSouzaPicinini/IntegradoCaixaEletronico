@@ -44,6 +44,7 @@ public class TipoExtrato extends javax.swing.JFrame {
         jBFinalizarTipoExtrato = new javax.swing.JButton();
         jBMenuAnterior = new javax.swing.JButton();
         jBUltimosLancamentos = new javax.swing.JButton();
+        jBUltimos90Dias = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("FORMA DE EXTRATO");
@@ -99,6 +100,17 @@ public class TipoExtrato extends javax.swing.JFrame {
             }
         });
 
+        jBUltimos90Dias.setBackground(new java.awt.Color(92, 102, 122));
+        jBUltimos90Dias.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        jBUltimos90Dias.setForeground(new java.awt.Color(255, 255, 255));
+        jBUltimos90Dias.setText("Últimos 90 dias");
+        jBUltimos90Dias.setBorder(null);
+        jBUltimos90Dias.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBUltimos90DiasActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -112,7 +124,8 @@ public class TipoExtrato extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jBUltimosLancamentos, javax.swing.GroupLayout.PREFERRED_SIZE, 293, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jBUltimos30Dias, javax.swing.GroupLayout.PREFERRED_SIZE, 293, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jBFinalizarTipoExtrato, javax.swing.GroupLayout.PREFERRED_SIZE, 293, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(jBFinalizarTipoExtrato, javax.swing.GroupLayout.PREFERRED_SIZE, 293, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jBUltimos90Dias, javax.swing.GroupLayout.PREFERRED_SIZE, 293, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(176, 176, 176)
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 504, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -127,7 +140,9 @@ public class TipoExtrato extends javax.swing.JFrame {
                 .addComponent(jBUltimosLancamentos, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jBUltimos30Dias, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 139, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jBUltimos90Dias, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 62, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jBFinalizarTipoExtrato, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jBMenuAnterior, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -144,16 +159,24 @@ public class TipoExtrato extends javax.swing.JFrame {
     }//GEN-LAST:event_jBUltimos30DiasActionPerformed
 
     private void jBFinalizarTipoExtratoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBFinalizarTipoExtratoActionPerformed
-        // TODO add your handling code here:
+        inicial.setVisible(true);
+        setVisible(false);
     }//GEN-LAST:event_jBFinalizarTipoExtratoActionPerformed
 
     private void jBUltimosLancamentosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBUltimosLancamentosActionPerformed
-        // TODO add your handling code here:
+        movConta = new ClassMovConta();
+        ClassExtrato relatorio = new ClassExtrato(movConta.consultaMov(conta, 15));
     }//GEN-LAST:event_jBUltimosLancamentosActionPerformed
 
     private void jBMenuAnteriorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBMenuAnteriorActionPerformed
-        // TODO add your handling code here:
+        operacao.setVisible(true);
+        setVisible(false);
     }//GEN-LAST:event_jBMenuAnteriorActionPerformed
+
+    private void jBUltimos90DiasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBUltimos90DiasActionPerformed
+       movConta = new ClassMovConta();
+        ClassExtrato relatorio = new ClassExtrato(movConta.consultaMov(conta, 90));
+    }//GEN-LAST:event_jBUltimos90DiasActionPerformed
 
     /**
      * @param args the command line arguments
@@ -197,6 +220,7 @@ public class TipoExtrato extends javax.swing.JFrame {
     private javax.swing.JButton jBFinalizarTipoExtrato;
     private javax.swing.JButton jBMenuAnterior;
     private javax.swing.JButton jBUltimos30Dias;
+    private javax.swing.JButton jBUltimos90Dias;
     private javax.swing.JButton jBUltimosLancamentos;
     private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
