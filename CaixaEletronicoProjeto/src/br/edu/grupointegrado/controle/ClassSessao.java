@@ -26,6 +26,7 @@ public class ClassSessao extends ConexaoOracle {
     private static String date;
     private static int cdAgencia;
     private static int cdBanco;
+    private static double Saldo;
     StringBuffer sql = new StringBuffer();
 
     private String getDateTime() {
@@ -38,6 +39,7 @@ public class ClassSessao extends ConexaoOracle {
         setCdConta(conta.getCdConta());
         setCdAgencia(conta.getAgencia());
         setCdBanco(conta.getBanco());
+        setSaldo(conta.getSaldo());
     }
 
     public void incluirSessao() {
@@ -128,6 +130,14 @@ public class ClassSessao extends ConexaoOracle {
 
     public static void setIdentificado(int identificado) {
         ClassSessao.identificado = identificado;
+    }
+
+    public static double getSaldo() {
+        return Saldo;
+    }
+
+    public static void setSaldo(double Saldo) {
+        ClassSessao.Saldo = Saldo;
     }
 
     

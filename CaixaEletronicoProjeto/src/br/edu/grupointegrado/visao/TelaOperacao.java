@@ -201,7 +201,14 @@ public class TelaOperacao extends javax.swing.JFrame {
 
     private void jBSaldoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBSaldoActionPerformed
         saldo = new TelaSaldo();
+        saldo.setCdConta(ClassSessao.getCdConta());
+        saldo.setCdAgencia(ClassSessao.getCdAgencia());
+        saldo.setCdBanco(ClassSessao.getCdBanco());
+        saldo.setVlConta(ClassSessao.getSaldo());
+       
+        saldo.exibirSaldo();
         saldo.setOperacao(this);
+        saldo.setInicial(inicial);
         setVisible(false);
         saldo.setVisible(true);
     }//GEN-LAST:event_jBSaldoActionPerformed

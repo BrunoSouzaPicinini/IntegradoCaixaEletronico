@@ -92,7 +92,11 @@ public class ClassConta extends ConexaoOracle {
 
             System.out.print("Resultado:");
             System.out.println(acesso);
+            
             if (acesso == 1) {
+                
+                
+                
                 return true;
             }
         } catch (SQLException erro) {
@@ -198,6 +202,20 @@ public class ClassConta extends ConexaoOracle {
         atualizarSQL(sql.toString());
     }
 
+   public void retornaSaldo(){
+   
+    sql.delete(0, sql.length());
+        sql.append("SELECT VL_SD_CORRENTE FROM CONTA WHERE  CD_CONTA= ");
+        sql.append(getCdConta()).append(" AND CD_AGENCIA = ");
+        sql.append(getAgencia()).append(" AND CD_BANCO =");
+        sql.append(getBanco());
+        executeSQL(sql.toString());
+        try {
+            resultset.first();
+            setSaldo(resultset.getDouble("VL_SD_CORRENTE"));
+        } catch (SQLException ex) {
+        }
+    }
    
     
 }

@@ -10,29 +10,24 @@ import br.edu.grupointegrado.controle.ClassSaldo;
 import br.edu.grupointegrado.controle.ClassSessao;
 
 /**
- *
+ * 
  * @author Luan
  */
 public class TelaSaldo extends javax.swing.JFrame {
-
+    TelaInicialCaixa inicial;
     TelaOperacao operacao;
     ClassConta conta;
-    String t1 = "                                             SALDO\n"
-              + "---------------------------------------------------------------------------------------------\n"
-              + "  CONTA                                                                            SALDO     \n";
-    String contaString =
-            ""+conta.getCdConta()+"                                                                            ";
-    String contaSaldo = ""+conta.getSaldo()+"     \n";
-    String t2=  "                                                                                             \n"
-              + "---------------------------------------------------------------------------------------------\n";
+    private int cdConta ;
+    private int cdAgencia;
+    private int cdBanco;
+    private double vlConta ;
+    
     
     public TelaSaldo() {
         initComponents();
       conta = ClassSessao.getConta();
-       jTASaldo.append(t1);
-       jTASaldo.append(contaString);
-       jTASaldo.append(contaSaldo);
-       jTASaldo.append(t2);
+      
+      
      
         
     }
@@ -143,7 +138,8 @@ public class TelaSaldo extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jBFinalizarSaldoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBFinalizarSaldoActionPerformed
-        // TODO add your handling code here:
+        setVisible(false);
+        inicial.setVisible(true);
     }//GEN-LAST:event_jBFinalizarSaldoActionPerformed
 
     private void jBImprimirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBImprimirActionPerformed
@@ -152,7 +148,8 @@ public class TelaSaldo extends javax.swing.JFrame {
     }//GEN-LAST:event_jBImprimirActionPerformed
 
     private void jBMenuAnteriorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBMenuAnteriorActionPerformed
-        // TODO add your handling code here:
+        setVisible(false);
+        operacao.setVisible(true);
     }//GEN-LAST:event_jBMenuAnteriorActionPerformed
 
     /**
@@ -204,5 +201,41 @@ public class TelaSaldo extends javax.swing.JFrame {
         this.operacao = operacao;
     }
 
+    public void setCdConta(int cdConta) {
+        this.cdConta = cdConta;
+    }
 
+    public void setVlConta(double vlConta) {
+        this.vlConta = vlConta;
+    }
+
+    public void setCdAgencia(int cdAgencia) {
+        this.cdAgencia = cdAgencia;
+    }
+
+    public void setCdBanco(int cdBanco) {
+        this.cdBanco = cdBanco;
+    }
+
+    public void setInicial(TelaInicialCaixa inicial) {
+        this.inicial = inicial;
+    }
+    
+
+    public void exibirSaldo(){
+      String t1 = "                                             SALDO\n"
+              + "---------------------------------------------------------------------------------------------\n"
+              + "  CONTA           AGENCIA          BANCO                               SALDO     \n";
+      String contaString = 
+            "      "+cdConta+"                       "+cdAgencia+  "                        "+cdBanco+"          "
+              + "                           ";
+      String contaSaldo = "  "+vlConta+"     \n";
+      String t2=  "                                                                                             \n"
+              + "---------------------------------------------------------------------------------------------\n";
+        jTASaldo.append(t1);
+       jTASaldo.append(contaString);
+       
+       jTASaldo.append(contaSaldo);
+       jTASaldo.append(t2);
+    }
 }
