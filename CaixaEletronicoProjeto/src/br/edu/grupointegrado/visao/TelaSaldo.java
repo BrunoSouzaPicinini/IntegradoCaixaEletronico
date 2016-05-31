@@ -234,7 +234,6 @@ public class TelaSaldo extends javax.swing.JFrame {
               + "---------------------------------------------------------------------------------------------\n";
         jTASaldo.append(t1);
        jTASaldo.append(contaString);
-       
        jTASaldo.append(contaSaldo);
        jTASaldo.append(t2);
     }

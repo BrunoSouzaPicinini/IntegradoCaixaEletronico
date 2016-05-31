@@ -27,7 +27,7 @@ public class TelaOperacao extends javax.swing.JFrame {
     TelaInicialCaixa inicial;
     TelaFinalizar finalizar = new TelaFinalizar();
     TelaSaldo saldo ;
-    TelaExtrato extrato ;
+    TipoExtrato tipoExtrato;
     TelaValorSaque valorSaque;
     TelaOutroValorSaque outroValorSaque;
     TelaContaDeposito contaDeposito ;
@@ -214,7 +214,11 @@ public class TelaOperacao extends javax.swing.JFrame {
     }//GEN-LAST:event_jBSaldoActionPerformed
 
     private void jBExtratoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBExtratoActionPerformed
-        // TODO add your handling code here:
+        tipoExtrato = new TipoExtrato();
+        
+        
+        setVisible(false);
+        tipoExtrato.setVisible(true);
     }//GEN-LAST:event_jBExtratoActionPerformed
 
     private void jBDepositoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBDepositoActionPerformed

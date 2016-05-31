@@ -10,7 +10,10 @@ package br.edu.grupointegrado.visao;
  * @author Luan
  */
 public class TipoExtrato extends javax.swing.JFrame {
-
+    
+    
+    TelaOperacao operacao;
+    TelaInicialCaixa inicial;
     /**
      * Creates new form TelaOperacao
      */
