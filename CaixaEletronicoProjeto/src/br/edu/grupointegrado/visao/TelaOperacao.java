@@ -215,7 +215,8 @@ public class TelaOperacao extends javax.swing.JFrame {
 
     private void jBExtratoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBExtratoActionPerformed
         tipoExtrato = new TipoExtrato();
-        
+        tipoExtrato.setOperacao(this);
+        tipoExtrato.setInicial(inicial);
         
         setVisible(false);
         tipoExtrato.setVisible(true);

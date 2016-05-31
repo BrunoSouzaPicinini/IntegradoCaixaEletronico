@@ -5,6 +5,11 @@
  */
 package br.edu.grupointegrado.visao;
 
+import br.edu.grupointegrado.controle.ClassConta;
+import br.edu.grupointegrado.controle.ClassExtrato;
+import br.edu.grupointegrado.controle.ClassMovConta;
+import br.edu.grupointegrado.controle.ClassSessao;
+
 /**
  *
  * @author Luan
@@ -14,11 +19,15 @@ public class TipoExtrato extends javax.swing.JFrame {
     
     TelaOperacao operacao;
     TelaInicialCaixa inicial;
+    ClassConta conta;
+    ClassMovConta movConta;
+    
     /**
      * Creates new form TelaOperacao
      */
     public TipoExtrato() {
         initComponents();
+        conta = ClassSessao.getConta();
     }
 
     /**
@@ -38,6 +47,7 @@ public class TipoExtrato extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("FORMA DE EXTRATO");
+        setAlwaysOnTop(true);
         setFocusable(false);
         setFocusableWindowState(false);
         setResizable(false);
@@ -129,7 +139,8 @@ public class TipoExtrato extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jBUltimos30DiasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBUltimos30DiasActionPerformed
-        // TODO add your handling code here:
+        movConta = new ClassMovConta();
+        ClassExtrato relatorio = new ClassExtrato(movConta.consultaMov(conta, 30));
     }//GEN-LAST:event_jBUltimos30DiasActionPerformed
 
     private void jBFinalizarTipoExtratoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBFinalizarTipoExtratoActionPerformed
@@ -189,4 +200,17 @@ public class TipoExtrato extends javax.swing.JFrame {
     private javax.swing.JButton jBUltimosLancamentos;
     private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
+
+    public void setOperacao(TelaOperacao operacao) {
+        this.operacao = operacao;
+    }
+
+    public void setInicial(TelaInicialCaixa inicial) {
+        this.inicial = inicial;
+    }
+
+    public void setConta(ClassConta conta) {
+        this.conta = conta;
+    }
+
 }

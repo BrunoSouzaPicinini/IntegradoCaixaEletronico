@@ -6,6 +6,7 @@
 package br.edu.grupointegrado.controle;
 
 import br.edu.grupointegrado.conexao.ConexaoOracle;
+import java.sql.ResultSet;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -76,5 +77,21 @@ public void inserirMovimentacaoConta(Double saldoAntigo,Double saldoNovo) {
         
     }
 
+public ResultSet consultaMov(ClassConta conta, int periodoDias) {
+        sql.delete(0, sql.length());
+        
+        sql.append("select cd_mov,cd_conta, cd_agencia, cd_banco,dt_mov,"
+                + "vl_saldo_antigo,vl_saldo_novo,"
+                + "(vl_saldo_novo-vl_saldo_antigo) AS MOV from mov_conta\n" +
+                 "where cd_conta =");
+        sql.append(conta.getCdConta()).append(" and cd_agencia=");
+        sql.append(conta.getAgencia()).append(" and cd_banco =");
+        sql.append(conta.getBanco()).append(" and\n" +
+        " dt_mov between sysdate- ").append(""+periodoDias);
+        sql.append(" and sysdate");
+        executeSQL(sql.toString());
+        System.out.println(sql.toString());
+        return resultset;
+    }
 
 }
