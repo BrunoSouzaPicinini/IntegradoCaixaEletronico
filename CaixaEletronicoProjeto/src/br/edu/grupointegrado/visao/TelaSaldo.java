@@ -17,13 +17,23 @@ public class TelaSaldo extends javax.swing.JFrame {
 
     TelaOperacao operacao;
     ClassConta conta;
-    String t1 = "teste1 \n";
-    String t2 = "teste2";
+    String t1 = "                                             SALDO\n"
+              + "---------------------------------------------------------------------------------------------\n"
+              + "  CONTA                                                                            SALDO     \n";
+    String contaString =
+            ""+conta.getCdConta()+"                                                                            ";
+    String contaSaldo = ""+conta.getSaldo()+"     \n";
+    String t2=  "                                                                                             \n"
+              + "---------------------------------------------------------------------------------------------\n";
+    
     public TelaSaldo() {
         initComponents();
       conta = ClassSessao.getConta();
        jTASaldo.append(t1);
+       jTASaldo.append(contaString);
+       jTASaldo.append(contaSaldo);
        jTASaldo.append(t2);
+     
         
     }
 
