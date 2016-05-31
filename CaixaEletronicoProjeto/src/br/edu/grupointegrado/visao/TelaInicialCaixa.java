@@ -136,6 +136,7 @@ public class TelaInicialCaixa extends javax.swing.JFrame {
        identificacao.setVisible(true);
        identificacao.setSessao(sessao);
        identificacao.setInicial(this);
+       identificacao.limparCampos();
        
        operacao.Identificado();
        setVisible(false);

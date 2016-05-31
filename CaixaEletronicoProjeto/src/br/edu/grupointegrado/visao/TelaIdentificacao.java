@@ -16,20 +16,20 @@ import javax.swing.JOptionPane;
  * @author BSP
  */
 public class TelaIdentificacao extends javax.swing.JFrame {
+
     TelaInicialCaixa inicial;
     TelaOperacao operacao;
     ClassConta conta = new ClassConta();
     ClassSessao sessao;
     javax.swing.JTextField jTFComFoco;
 
-    
-   
     private StringBuffer conteudoJTFComFoco = new StringBuffer();
 
     public TelaIdentificacao() {
         initComponents();
         //jPFSenha.setEnabled(false);
         conteudoJTFComFoco.delete(0, conteudoJTFComFoco.length());
+        
     }
 
     /**
@@ -385,7 +385,6 @@ public class TelaIdentificacao extends javax.swing.JFrame {
 
     }//GEN-LAST:event_jBConfirmarIActionPerformed
 
-    
 
     private void jB2IActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jB2IActionPerformed
         if (conteudoJTFComFoco.length() < 6) {
@@ -473,7 +472,7 @@ public class TelaIdentificacao extends javax.swing.JFrame {
 
     private void jTFAgenciaIFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTFAgenciaIFocusGained
         jTFComFoco = jTFAgenciaI;
-        
+
         conteudoJTFComFoco.delete(0, conteudoJTFComFoco.length());
         conteudoJTFComFoco.append(jTFComFoco.getText());
 
@@ -481,21 +480,21 @@ public class TelaIdentificacao extends javax.swing.JFrame {
 
     private void jTFBancoIFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTFBancoIFocusGained
         jTFComFoco = jTFBancoI;
-     
+
         conteudoJTFComFoco.delete(0, conteudoJTFComFoco.length());
         conteudoJTFComFoco.append(jTFComFoco.getText());
     }//GEN-LAST:event_jTFBancoIFocusGained
 
     private void jTFContaIFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTFContaIFocusGained
         jTFComFoco = jTFContaI;
-       
+
         conteudoJTFComFoco.delete(0, conteudoJTFComFoco.length());
         conteudoJTFComFoco.append(jTFComFoco.getText());
     }//GEN-LAST:event_jTFContaIFocusGained
 
     private void jPFSenhaIFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jPFSenhaIFocusGained
         jTFComFoco = jPFSenhaI;
-   
+
         conteudoJTFComFoco.delete(0, conteudoJTFComFoco.length());
         conteudoJTFComFoco.append(jTFComFoco.getText());
     }//GEN-LAST:event_jPFSenhaIFocusGained
@@ -563,7 +562,7 @@ public void setInicial(TelaInicialCaixa inicial) {
         this.inicial = inicial;
     }
 
-public ClassSessao getSessao() {
+    public ClassSessao getSessao() {
         return sessao;
     }
 
@@ -571,4 +570,11 @@ public ClassSessao getSessao() {
         this.sessao = sessao;
     }
 
+    public void limparCampos() {
+        jTFAgenciaI.setText("");
+        jTFBancoI.setText("");
+        jPFSenhaI.setText("");
+        jTFContaI.setText("");
+
+    }
 }
