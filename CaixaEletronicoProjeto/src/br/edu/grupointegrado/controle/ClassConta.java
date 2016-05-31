@@ -130,14 +130,27 @@ public class ClassConta extends ConexaoOracle {
         return false;
     }
     
-
-    public ResultSet consultaCodigo(int parseInt) {
+    
+    public ResultSet consultaConta() {
         sql.delete(0, sql.length());
-        sql.append("SELECT * FROM CONTA WHERE CD_CONTA = ");
-        sql.append(getCdConta());
+        sql.append("SELECT CD_CONTA, CD_AGENCIA, CD_BANCO,VL_SD_CORRENTE FROM CONTA WHERE CD_CONTA = ");
+        sql.append(getCdConta()).append(" AND CD_AGENCIA = ");
+        sql.append(getAgencia()).append(" AND CD_BANCO = ");
+        sql.append(getBanco());
         executeSQL(sql.toString());
+        System.out.println(sql.toString());
         return resultset;
     }
+    
+    /*
+    public ResultSet consultaConta() {
+        sql.delete(0, sql.length());
+        sql.append("SELECT CD_CONTA, CD_AGENCIA, CD_BANCO,VL_SD_CORRENTE FROM CONTA ");
+        executeSQL(sql.toString());
+        System.out.println(sql.toString());
+        return resultset;
+    }
+    */
     
     public void atualizarSaldo() {
     sql.delete(0, sql.length());

@@ -372,6 +372,7 @@ public class TelaIdentificacao extends javax.swing.JFrame {
             sessao.incluirSessao();
 
             operacao = new TelaOperacao();
+            operacao.setSessao(sessao);
             operacao.setInicial(inicial);
             operacao.operacao.setCdSessao(sessao.getCdSessao());
             sessao.setConta(conta);

@@ -331,6 +331,12 @@
 <OPTIONSELECT Value="0" />
 </OPTIONSELECTED>
 </COLUMN>
+<COLUMN ID="3166" ColName="CD_BANCO" PrevColName="" Pos="1" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="1" NotNull="1" AutoInc="0" IsForeignKey="1" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="1" />
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
 <COLUMN ID="2462" ColName="VL_SD_CORRENTE" PrevColName="" Pos="2" idDatatype="13" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="0" NotNull="0" AutoInc="0" IsForeignKey="0" DefaultValue="" Comments="">
 <OPTIONSELECTED>
 <OPTIONSELECT Value="0" />
@@ -360,11 +366,13 @@
 <INDEXCOLUMNS>
 <INDEXCOLUMN idColumn="2371" LengthParam="0" />
 <INDEXCOLUMN idColumn="3069" LengthParam="0" />
+<INDEXCOLUMN idColumn="3166" LengthParam="0" />
 </INDEXCOLUMNS>
 </INDEX>
 <INDEX ID="3068" IndexName="CONTA_FKIndex1" IndexKind="1" FKRefDef_Obj_id="3065">
 <INDEXCOLUMNS>
 <INDEXCOLUMN idColumn="3069" LengthParam="0" />
+<INDEXCOLUMN idColumn="3166" LengthParam="0" />
 </INDEXCOLUMNS>
 </INDEX>
 </INDICES>
@@ -431,6 +439,12 @@
 <OPTIONSELECT Value="0" />
 </OPTIONSELECTED>
 </COLUMN>
+<COLUMN ID="3167" ColName="CONTA_CD_BANCO" PrevColName="" Pos="1" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="0" NotNull="1" AutoInc="0" IsForeignKey="1" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="1" />
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
 <COLUMN ID="3084" ColName="CONTA_CD_AGENCIA" PrevColName="" Pos="1" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="0" NotNull="1" AutoInc="0" IsForeignKey="1" DefaultValue="" Comments="">
 <OPTIONSELECTED>
 <OPTIONSELECT Value="0" />
@@ -489,6 +503,7 @@
 <INDEXCOLUMNS>
 <INDEXCOLUMN idColumn="2662" LengthParam="0" />
 <INDEXCOLUMN idColumn="3084" LengthParam="0" />
+<INDEXCOLUMN idColumn="3167" LengthParam="0" />
 </INDEXCOLUMNS>
 </INDEX>
 <INDEX ID="2699" IndexName="CARTAO_FKIndex3" IndexKind="1" FKRefDef_Obj_id="2608">
@@ -543,6 +558,12 @@
 <OPTIONSELECT Value="0" />
 </OPTIONSELECTED>
 </COLUMN>
+<COLUMN ID="3168" ColName="CONTA_CD_BANCO" PrevColName="" Pos="1" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="1" NotNull="1" AutoInc="0" IsForeignKey="1" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="1" />
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
 </COLUMNS>
 <RELATIONS_END>
 <RELATION_END ID="2388" />
@@ -554,12 +575,14 @@
 <INDEXCOLUMN idColumn="2575" LengthParam="0" />
 <INDEXCOLUMN idColumn="2576" LengthParam="0" />
 <INDEXCOLUMN idColumn="3086" LengthParam="0" />
+<INDEXCOLUMN idColumn="3168" LengthParam="0" />
 </INDEXCOLUMNS>
 </INDEX>
 <INDEX ID="2391" IndexName="CONTA_has_CLIENTE_FKIndex1" IndexKind="1" FKRefDef_Obj_id="2388">
 <INDEXCOLUMNS>
 <INDEXCOLUMN idColumn="2576" LengthParam="0" />
 <INDEXCOLUMN idColumn="3086" LengthParam="0" />
+<INDEXCOLUMN idColumn="3168" LengthParam="0" />
 </INDEXCOLUMNS>
 </INDEX>
 <INDEX ID="2393" IndexName="CONTA_has_CLIENTE_FKIndex2" IndexKind="1" FKRefDef_Obj_id="2389">
@@ -651,6 +674,12 @@
 <OPTIONSELECT Value="0" />
 </OPTIONSELECTED>
 </COLUMN>
+<COLUMN ID="3175" ColName="CD_BANCO" PrevColName="" Pos="1" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="0" NotNull="1" AutoInc="0" IsForeignKey="1" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="1" />
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
 <COLUMN ID="3088" ColName="CD_AGENCIA" PrevColName="" Pos="1" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="0" NotNull="1" AutoInc="0" IsForeignKey="1" DefaultValue="" Comments="">
 <OPTIONSELECTED>
 <OPTIONSELECT Value="0" />
@@ -685,6 +714,7 @@
 <INDEXCOLUMNS>
 <INDEXCOLUMN idColumn="3064" LengthParam="0" />
 <INDEXCOLUMN idColumn="3088" LengthParam="0" />
+<INDEXCOLUMN idColumn="3175" LengthParam="0" />
 </INDEXCOLUMNS>
 </INDEX>
 </INDICES>
@@ -846,6 +876,12 @@
 <OPTIONSELECT Value="0" />
 </OPTIONSELECTED>
 </COLUMN>
+<COLUMN ID="3178" ColName="CD_BANCO" PrevColName="" Pos="1" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="0" NotNull="1" AutoInc="0" IsForeignKey="1" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="1" />
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
 <COLUMN ID="3163" ColName="CD_AGENCIA" PrevColName="" Pos="1" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="0" NotNull="1" AutoInc="0" IsForeignKey="1" DefaultValue="" Comments="">
 <OPTIONSELECTED>
 <OPTIONSELECT Value="0" />
@@ -880,6 +916,7 @@
 <INDEXCOLUMNS>
 <INDEXCOLUMN idColumn="3161" LengthParam="0" />
 <INDEXCOLUMN idColumn="3163" LengthParam="0" />
+<INDEXCOLUMN idColumn="3178" LengthParam="0" />
 </INDEXCOLUMNS>
 </INDEX>
 </INDICES>
@@ -892,7 +929,13 @@
 <OPTIONSELECT Value="0" />
 </OPTIONSELECTED>
 </COLUMN>
-<COLUMN ID="3090" ColName="CONTA_CD_AGENCIA" PrevColName="" Pos="1" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="0" NotNull="1" AutoInc="0" IsForeignKey="1" DefaultValue="" Comments="">
+<COLUMN ID="3172" ColName="CD_BANCO" PrevColName="" Pos="1" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="0" NotNull="1" AutoInc="0" IsForeignKey="1" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="1" />
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+<COLUMN ID="3171" ColName="CD_AGENCIA" PrevColName="" Pos="1" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="0" NotNull="1" AutoInc="0" IsForeignKey="1" DefaultValue="" Comments="">
 <OPTIONSELECTED>
 <OPTIONSELECT Value="0" />
 <OPTIONSELECT Value="0" />
@@ -924,7 +967,8 @@
 <INDEX ID="3013" IndexName="SESSAO_FKIndex1" IndexKind="1" FKRefDef_Obj_id="3011">
 <INDEXCOLUMNS>
 <INDEXCOLUMN idColumn="3014" LengthParam="0" />
-<INDEXCOLUMN idColumn="3090" LengthParam="0" />
+<INDEXCOLUMN idColumn="3171" LengthParam="0" />
+<INDEXCOLUMN idColumn="3172" LengthParam="0" />
 </INDEXCOLUMNS>
 </INDEX>
 </INDICES>
@@ -1006,6 +1050,18 @@
 <OPTIONSELECT Value="0" />
 </OPTIONSELECTED>
 </COLUMN>
+<COLUMN ID="3177" ColName="CD_BANCO_DEST" PrevColName="" Pos="1" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="0" NotNull="1" AutoInc="0" IsForeignKey="1" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="1" />
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+<COLUMN ID="3176" ColName="CD_BANCO_ORIG" PrevColName="" Pos="1" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="0" NotNull="1" AutoInc="0" IsForeignKey="1" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="1" />
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
 <COLUMN ID="3117" ColName="CD_AGENCIA_DEST" PrevColName="" Pos="1" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="0" NotNull="1" AutoInc="0" IsForeignKey="1" DefaultValue="" Comments="">
 <OPTIONSELECTED>
 <OPTIONSELECT Value="0" />
@@ -1053,12 +1109,14 @@
 <INDEXCOLUMNS>
 <INDEXCOLUMN idColumn="3110" LengthParam="0" />
 <INDEXCOLUMN idColumn="3112" LengthParam="0" />
+<INDEXCOLUMN idColumn="3176" LengthParam="0" />
 </INDEXCOLUMNS>
 </INDEX>
 <INDEX ID="3118" IndexName="TRANSFERENCIA_FKIndex2" IndexKind="1" FKRefDef_Obj_id="2996">
 <INDEXCOLUMNS>
 <INDEXCOLUMN idColumn="3115" LengthParam="0" />
 <INDEXCOLUMN idColumn="3117" LengthParam="0" />
+<INDEXCOLUMN idColumn="3177" LengthParam="0" />
 </INDEXCOLUMNS>
 </INDEX>
 </INDICES>
@@ -1080,6 +1138,12 @@
 <COLUMN ID="3153" ColName="CD_AGENCIA" PrevColName="" Pos="1" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="1" NotNull="1" AutoInc="0" IsForeignKey="1" DefaultValue="" Comments="">
 <OPTIONSELECTED>
 <OPTIONSELECT Value="0" />
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+<COLUMN ID="3174" ColName="CONTA_CD_BANCO" PrevColName="" Pos="1" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="1" NotNull="1" AutoInc="0" IsForeignKey="1" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="1" />
 <OPTIONSELECT Value="0" />
 </OPTIONSELECTED>
 </COLUMN>
@@ -1110,12 +1174,14 @@
 <INDEXCOLUMN idColumn="3049" LengthParam="0" />
 <INDEXCOLUMN idColumn="3052" LengthParam="0" />
 <INDEXCOLUMN idColumn="3153" LengthParam="0" />
+<INDEXCOLUMN idColumn="3174" LengthParam="0" />
 </INDEXCOLUMNS>
 </INDEX>
 <INDEX ID="3042" IndexName="CONTA_has_MOVIMENTACAO_FKIndex1" IndexKind="1" FKRefDef_Obj_id="3039">
 <INDEXCOLUMNS>
 <INDEXCOLUMN idColumn="3052" LengthParam="0" />
 <INDEXCOLUMN idColumn="3153" LengthParam="0" />
+<INDEXCOLUMN idColumn="3174" LengthParam="0" />
 </INDEXCOLUMNS>
 </INDEX>
 <INDEX ID="3044" IndexName="CONTA_has_MOVIMENTACAO_FKIndex2" IndexKind="1" FKRefDef_Obj_id="3040">
@@ -1127,13 +1193,13 @@
 </TABLE>
 </TABLES>
 <RELATIONS>
-<RELATION ID="2388" RelationName="Rel_01" Kind="1" SrcTable="2350" DestTable="2387" FKFields="CD_CONTA=CONTA\nCD_AGENCIA=CONTA_CD_AGENCIA\n" FKFieldsComments="\n\n" relDirection="1" MidOffset="0" OptionalStart="0" OptionalEnd="0" CaptionOffsetX="0" CaptionOffsetY="0" StartIntervalOffsetX="0" StartIntervalOffsetY="0" EndIntervalOffsetX="0" EndIntervalOffsetY="0" CreateRefDef="1" Invisible="0" RefDef="Matching=0\nOnDelete=3\nOnUpdate=3\n" Comments="" FKRefDefIndex_Obj_id="2391" Splitted="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="10" />
+<RELATION ID="2388" RelationName="Rel_01" Kind="1" SrcTable="2350" DestTable="2387" FKFields="CD_CONTA=CONTA\nCD_AGENCIA=CONTA_CD_AGENCIA\nCD_BANCO=CONTA_CD_BANCO\n" FKFieldsComments="\n\n\n" relDirection="1" MidOffset="0" OptionalStart="0" OptionalEnd="0" CaptionOffsetX="0" CaptionOffsetY="0" StartIntervalOffsetX="0" StartIntervalOffsetY="0" EndIntervalOffsetX="0" EndIntervalOffsetY="0" CreateRefDef="1" Invisible="0" RefDef="Matching=0\nOnDelete=3\nOnUpdate=3\n" Comments="" FKRefDefIndex_Obj_id="2391" Splitted="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="10" />
 <RELATION ID="2389" RelationName="Rel_02" Kind="1" SrcTable="2351" DestTable="2387" FKFields="CD_CLIENTE=CLIENTE\n" FKFieldsComments="\n" relDirection="3" MidOffset="0" OptionalStart="0" OptionalEnd="0" CaptionOffsetX="0" CaptionOffsetY="0" StartIntervalOffsetX="0" StartIntervalOffsetY="0" EndIntervalOffsetX="0" EndIntervalOffsetY="0" CreateRefDef="1" Invisible="0" RefDef="Matching=0\nOnDelete=3\nOnUpdate=3\n" Comments="" FKRefDefIndex_Obj_id="2393" Splitted="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="11" />
 <RELATION ID="2428" RelationName="Rel_11" Kind="2" SrcTable="2383" DestTable="2354" FKFields="CD_OPERADORA=OPERADORA\n" FKFieldsComments="\n" relDirection="3" MidOffset="0" OptionalStart="0" OptionalEnd="0" CaptionOffsetX="0" CaptionOffsetY="0" StartIntervalOffsetX="0" StartIntervalOffsetY="0" EndIntervalOffsetX="0" EndIntervalOffsetY="0" CreateRefDef="1" Invisible="0" RefDef="Matching=0\nOnDelete=3\nOnUpdate=3\n" Comments="" FKRefDefIndex_Obj_id="2430" Splitted="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="15" />
 <RELATION ID="2492" RelationName="Rel_11" Kind="2" SrcTable="2484" DestTable="2476" FKFields="CD_cidade=CD_UF\n" FKFieldsComments="\n" relDirection="3" MidOffset="0" OptionalStart="0" OptionalEnd="0" CaptionOffsetX="0" CaptionOffsetY="0" StartIntervalOffsetX="0" StartIntervalOffsetY="0" EndIntervalOffsetX="0" EndIntervalOffsetY="0" CreateRefDef="1" Invisible="0" RefDef="Matching=0\nOnDelete=3\nOnUpdate=3\n" Comments="" FKRefDefIndex_Obj_id="2494" Splitted="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="24" />
 <RELATION ID="2505" RelationName="Rel_12" Kind="2" SrcTable="2476" DestTable="2501" FKFields="CD_CIDADE=CD_CIDADE\n" FKFieldsComments="\n" relDirection="3" MidOffset="0" OptionalStart="0" OptionalEnd="0" CaptionOffsetX="0" CaptionOffsetY="0" StartIntervalOffsetX="0" StartIntervalOffsetY="0" EndIntervalOffsetX="0" EndIntervalOffsetY="0" CreateRefDef="1" Invisible="0" RefDef="Matching=0\nOnDelete=3\nOnUpdate=3\n" Comments="" FKRefDefIndex_Obj_id="3026" Splitted="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="25" />
 <RELATION ID="2608" RelationName="Rel_21" Kind="2" SrcTable="2602" DestTable="2354" FKFields="CD_TP_CARTAO=TP_CARTAO\n" FKFieldsComments="\n" relDirection="3" MidOffset="0" OptionalStart="0" OptionalEnd="0" CaptionOffsetX="0" CaptionOffsetY="0" StartIntervalOffsetX="0" StartIntervalOffsetY="0" EndIntervalOffsetX="0" EndIntervalOffsetY="0" CreateRefDef="1" Invisible="0" RefDef="Matching=0\nOnDelete=3\nOnUpdate=3\n" Comments="" FKRefDefIndex_Obj_id="2699" Splitted="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="40" />
-<RELATION ID="2659" RelationName="Rel_24" Kind="2" SrcTable="2350" DestTable="2354" FKFields="CD_CONTA=CONTA\nCD_AGENCIA=CONTA_CD_AGENCIA\n" FKFieldsComments="\n\n" relDirection="2" MidOffset="-21" OptionalStart="0" OptionalEnd="0" CaptionOffsetX="0" CaptionOffsetY="0" StartIntervalOffsetX="0" StartIntervalOffsetY="0" EndIntervalOffsetX="0" EndIntervalOffsetY="0" CreateRefDef="1" Invisible="0" RefDef="Matching=0\nOnDelete=3\nOnUpdate=3\n" Comments="" FKRefDefIndex_Obj_id="2661" Splitted="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="38" />
+<RELATION ID="2659" RelationName="Rel_24" Kind="2" SrcTable="2350" DestTable="2354" FKFields="CD_CONTA=CONTA\nCD_AGENCIA=CONTA_CD_AGENCIA\nCD_BANCO=CONTA_CD_BANCO\n" FKFieldsComments="\n\n\n" relDirection="2" MidOffset="-21" OptionalStart="0" OptionalEnd="0" CaptionOffsetX="0" CaptionOffsetY="0" StartIntervalOffsetX="0" StartIntervalOffsetY="0" EndIntervalOffsetX="0" EndIntervalOffsetY="0" CreateRefDef="1" Invisible="0" RefDef="Matching=0\nOnDelete=3\nOnUpdate=3\n" Comments="" FKRefDefIndex_Obj_id="2661" Splitted="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="38" />
 <RELATION ID="2757" RelationName="Rel_29" Kind="5" SrcTable="2501" DestTable="2348" FKFields="CD_END=ENDERECO_CD_END\n" FKFieldsComments="\n" relDirection="3" MidOffset="0" OptionalStart="0" OptionalEnd="0" CaptionOffsetX="0" CaptionOffsetY="0" StartIntervalOffsetX="0" StartIntervalOffsetY="0" EndIntervalOffsetX="0" EndIntervalOffsetY="0" CreateRefDef="1" Invisible="0" RefDef="Matching=0\nOnDelete=3\nOnUpdate=3\n" Comments="" FKRefDefIndex_Obj_id="2759" Splitted="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="34" />
 <RELATION ID="2764" RelationName="Rel_31" Kind="5" SrcTable="2501" DestTable="2351" FKFields="CD_END=ENDERECO_CD_END\n" FKFieldsComments="\n" relDirection="2" MidOffset="-23" OptionalStart="0" OptionalEnd="0" CaptionOffsetX="0" CaptionOffsetY="0" StartIntervalOffsetX="0" StartIntervalOffsetY="0" EndIntervalOffsetX="0" EndIntervalOffsetY="0" CreateRefDef="1" Invisible="0" RefDef="Matching=0\nOnDelete=3\nOnUpdate=3\n" Comments="" FKRefDefIndex_Obj_id="2766" Splitted="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="35" />
 <RELATION ID="2861" RelationName="Rel_45" Kind="2" SrcTable="2852" DestTable="2434" FKFields="CD_SESSAO=CD_SESSAO\n" FKFieldsComments="\n" relDirection="3" MidOffset="0" OptionalStart="0" OptionalEnd="0" CaptionOffsetX="0" CaptionOffsetY="0" StartIntervalOffsetX="0" StartIntervalOffsetY="0" EndIntervalOffsetX="0" EndIntervalOffsetY="0" CreateRefDef="1" Invisible="0" RefDef="Matching=0\nOnDelete=3\nOnUpdate=3\n" Comments="" FKRefDefIndex_Obj_id="2864" Splitted="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="30" />
@@ -1142,14 +1208,14 @@
 <RELATION ID="2907" RelationName="Rel_55" Kind="5" SrcTable="2434" DestTable="2881" FKFields="CD_OPERACAO=CD_OPERACAO\n" FKFieldsComments="\n" relDirection="2" MidOffset="0" OptionalStart="0" OptionalEnd="0" CaptionOffsetX="0" CaptionOffsetY="0" StartIntervalOffsetX="0" StartIntervalOffsetY="0" EndIntervalOffsetX="0" EndIntervalOffsetY="0" CreateRefDef="1" Invisible="0" RefDef="Matching=0\nOnDelete=3\nOnUpdate=3\n" Comments="" FKRefDefIndex_Obj_id="2909" Splitted="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="38" />
 <RELATION ID="2922" RelationName="Rel_20" Kind="1" SrcTable="2913" DestTable="2348" FKFields="CD_BANCO=CD_BANCO\n" FKFieldsComments="\n" relDirection="4" MidOffset="0" OptionalStart="0" OptionalEnd="0" CaptionOffsetX="0" CaptionOffsetY="0" StartIntervalOffsetX="0" StartIntervalOffsetY="0" EndIntervalOffsetX="0" EndIntervalOffsetY="0" CreateRefDef="1" Invisible="0" RefDef="Matching=0\nOnDelete=3\nOnUpdate=3\n" Comments="" FKRefDefIndex_Obj_id="2924" Splitted="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="40" />
 <RELATION ID="2896" RelationName="Rel_51" Kind="5" SrcTable="2446" DestTable="2434" FKFields="CD_TRANS=CD_TRANS\n" FKFieldsComments="\n" relDirection="2" MidOffset="0" OptionalStart="0" OptionalEnd="0" CaptionOffsetX="0" CaptionOffsetY="0" StartIntervalOffsetX="0" StartIntervalOffsetY="0" EndIntervalOffsetX="0" EndIntervalOffsetY="0" CreateRefDef="1" Invisible="0" RefDef="Matching=0\nOnDelete=3\nOnUpdate=3\n" Comments="" FKRefDefIndex_Obj_id="3004" Splitted="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="34" />
-<RELATION ID="3000" RelationName="Rel_26" Kind="2" SrcTable="2350" DestTable="2448" FKFields="CD_CONTA=CD_CONTA\nCD_AGENCIA=CD_AGENCIA\n" FKFieldsComments="\n\n" relDirection="4" MidOffset="8" OptionalStart="0" OptionalEnd="0" CaptionOffsetX="0" CaptionOffsetY="0" StartIntervalOffsetX="0" StartIntervalOffsetY="0" EndIntervalOffsetX="0" EndIntervalOffsetY="0" CreateRefDef="1" Invisible="0" RefDef="Matching=0\nOnDelete=3\nOnUpdate=3\n" Comments="" FKRefDefIndex_Obj_id="3002" Splitted="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="41" />
-<RELATION ID="3011" RelationName="Rel_23" Kind="2" SrcTable="2350" DestTable="2852" FKFields="CD_CONTA=CD_CONTA\nCD_AGENCIA=CONTA_CD_AGENCIA\n" FKFieldsComments="\n\n" relDirection="2" MidOffset="0" OptionalStart="0" OptionalEnd="0" CaptionOffsetX="0" CaptionOffsetY="0" StartIntervalOffsetX="0" StartIntervalOffsetY="0" EndIntervalOffsetX="0" EndIntervalOffsetY="0" CreateRefDef="1" Invisible="0" RefDef="Matching=0\nOnDelete=3\nOnUpdate=3\n" Comments="" FKRefDefIndex_Obj_id="3013" Splitted="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="41" />
-<RELATION ID="3039" RelationName="Rel_25" Kind="1" SrcTable="2350" DestTable="3038" FKFields="CD_CONTA=CD_CONTA\nCD_AGENCIA=CD_AGENCIA\n" FKFieldsComments="\n\n" relDirection="2" MidOffset="0" OptionalStart="0" OptionalEnd="0" CaptionOffsetX="0" CaptionOffsetY="0" StartIntervalOffsetX="0" StartIntervalOffsetY="0" EndIntervalOffsetX="0" EndIntervalOffsetY="0" CreateRefDef="1" Invisible="0" RefDef="Matching=0\nOnDelete=3\nOnUpdate=3\n" Comments="" FKRefDefIndex_Obj_id="3042" Splitted="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="40" />
+<RELATION ID="3000" RelationName="Rel_26" Kind="2" SrcTable="2350" DestTable="2448" FKFields="CD_CONTA=CD_CONTA\nCD_AGENCIA=CD_AGENCIA\nCD_BANCO=CD_BANCO\n" FKFieldsComments="\n\n\n" relDirection="4" MidOffset="8" OptionalStart="0" OptionalEnd="0" CaptionOffsetX="0" CaptionOffsetY="0" StartIntervalOffsetX="0" StartIntervalOffsetY="0" EndIntervalOffsetX="0" EndIntervalOffsetY="0" CreateRefDef="1" Invisible="0" RefDef="Matching=0\nOnDelete=3\nOnUpdate=3\n" Comments="" FKRefDefIndex_Obj_id="3002" Splitted="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="41" />
+<RELATION ID="3011" RelationName="Rel_23" Kind="2" SrcTable="2350" DestTable="2852" FKFields="CD_CONTA=CD_CONTA\nCD_AGENCIA=CD_AGENCIA\nCD_BANCO=CD_BANCO\n" FKFieldsComments="\n\n\n" relDirection="2" MidOffset="0" OptionalStart="0" OptionalEnd="0" CaptionOffsetX="0" CaptionOffsetY="0" StartIntervalOffsetX="0" StartIntervalOffsetY="0" EndIntervalOffsetX="0" EndIntervalOffsetY="0" CreateRefDef="1" Invisible="0" RefDef="Matching=0\nOnDelete=3\nOnUpdate=3\n" Comments="" FKRefDefIndex_Obj_id="3013" Splitted="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="41" />
+<RELATION ID="3039" RelationName="Rel_25" Kind="1" SrcTable="2350" DestTable="3038" FKFields="CD_CONTA=CD_CONTA\nCD_AGENCIA=CD_AGENCIA\nCD_BANCO=CONTA_CD_BANCO\n" FKFieldsComments="\n\n\n" relDirection="2" MidOffset="0" OptionalStart="0" OptionalEnd="0" CaptionOffsetX="0" CaptionOffsetY="0" StartIntervalOffsetX="0" StartIntervalOffsetY="0" EndIntervalOffsetX="0" EndIntervalOffsetY="0" CreateRefDef="1" Invisible="0" RefDef="Matching=0\nOnDelete=3\nOnUpdate=3\n" Comments="" FKRefDefIndex_Obj_id="3042" Splitted="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="40" />
 <RELATION ID="3040" RelationName="Rel_26" Kind="1" SrcTable="2881" DestTable="3038" FKFields="CD_MOV=CD_MOV\n" FKFieldsComments="\n" relDirection="1" MidOffset="0" OptionalStart="0" OptionalEnd="0" CaptionOffsetX="0" CaptionOffsetY="0" StartIntervalOffsetX="0" StartIntervalOffsetY="0" EndIntervalOffsetX="0" EndIntervalOffsetY="0" CreateRefDef="1" Invisible="0" RefDef="Matching=0\nOnDelete=3\nOnUpdate=3\n" Comments="" FKRefDefIndex_Obj_id="3044" Splitted="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="41" />
-<RELATION ID="3065" RelationName="Rel_23" Kind="1" SrcTable="2348" DestTable="2350" FKFields="CD_AGENCIA=CD_AGENCIA\nCD_BANCO=AGENCIA_CD_BANCO\n" FKFieldsComments="\n\n" relDirection="2" MidOffset="-15" OptionalStart="0" OptionalEnd="0" CaptionOffsetX="0" CaptionOffsetY="0" StartIntervalOffsetX="0" StartIntervalOffsetY="0" EndIntervalOffsetX="0" EndIntervalOffsetY="0" CreateRefDef="1" Invisible="0" RefDef="Matching=0\nOnDelete=3\nOnUpdate=3\n" Comments="" FKRefDefIndex_Obj_id="3068" Splitted="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="41" />
-<RELATION ID="2990" RelationName="Rel_24" Kind="2" SrcTable="2350" DestTable="2446" FKFields="CD_CONTA=CONTA_ORIG\nCD_AGENCIA=CD_AGENCIA_ORIG\n" FKFieldsComments="\n\n" relDirection="3" MidOffset="0" OptionalStart="0" OptionalEnd="0" CaptionOffsetX="0" CaptionOffsetY="0" StartIntervalOffsetX="0" StartIntervalOffsetY="0" EndIntervalOffsetX="0" EndIntervalOffsetY="0" CreateRefDef="1" Invisible="0" RefDef="Matching=0\nOnDelete=3\nOnUpdate=3\n" Comments="" FKRefDefIndex_Obj_id="3113" Splitted="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="39" />
-<RELATION ID="2996" RelationName="Rel_25" Kind="2" SrcTable="2350" DestTable="2446" FKFields="CD_CONTA=CONTA_DEST\nCD_AGENCIA=CD_AGENCIA_DEST\n" FKFieldsComments="\n\n" relDirection="3" MidOffset="0" OptionalStart="0" OptionalEnd="0" CaptionOffsetX="0" CaptionOffsetY="0" StartIntervalOffsetX="0" StartIntervalOffsetY="0" EndIntervalOffsetX="0" EndIntervalOffsetY="0" CreateRefDef="1" Invisible="0" RefDef="Matching=0\nOnDelete=3\nOnUpdate=3\n" Comments="" FKRefDefIndex_Obj_id="3118" Splitted="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="40" />
-<RELATION ID="3156" RelationName="Rel_23" Kind="2" SrcTable="2350" DestTable="2718" FKFields="CD_CONTA=CD_CONTA\nCD_AGENCIA=CD_AGENCIA\n" FKFieldsComments="\n\n" relDirection="2" MidOffset="-190" OptionalStart="0" OptionalEnd="0" CaptionOffsetX="0" CaptionOffsetY="0" StartIntervalOffsetX="0" StartIntervalOffsetY="0" EndIntervalOffsetX="0" EndIntervalOffsetY="0" CreateRefDef="1" Invisible="0" RefDef="Matching=0\nOnDelete=3\nOnUpdate=3\n" Comments="" FKRefDefIndex_Obj_id="3160" Splitted="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="42" />
+<RELATION ID="3065" RelationName="Rel_23" Kind="1" SrcTable="2348" DestTable="2350" FKFields="CD_AGENCIA=CD_AGENCIA\nCD_BANCO=CD_BANCO\n" FKFieldsComments="\n\n" relDirection="2" MidOffset="-15" OptionalStart="0" OptionalEnd="0" CaptionOffsetX="0" CaptionOffsetY="0" StartIntervalOffsetX="0" StartIntervalOffsetY="0" EndIntervalOffsetX="0" EndIntervalOffsetY="0" CreateRefDef="1" Invisible="0" RefDef="Matching=0\nOnDelete=3\nOnUpdate=3\n" Comments="" FKRefDefIndex_Obj_id="3068" Splitted="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="41" />
+<RELATION ID="2990" RelationName="Rel_24" Kind="2" SrcTable="2350" DestTable="2446" FKFields="CD_CONTA=CONTA_ORIG\nCD_AGENCIA=CD_AGENCIA_ORIG\nCD_BANCO=CD_BANCO_ORIG\n" FKFieldsComments="\n\n\n" relDirection="3" MidOffset="0" OptionalStart="0" OptionalEnd="0" CaptionOffsetX="0" CaptionOffsetY="0" StartIntervalOffsetX="0" StartIntervalOffsetY="0" EndIntervalOffsetX="0" EndIntervalOffsetY="0" CreateRefDef="1" Invisible="0" RefDef="Matching=0\nOnDelete=3\nOnUpdate=3\n" Comments="" FKRefDefIndex_Obj_id="3113" Splitted="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="39" />
+<RELATION ID="2996" RelationName="Rel_25" Kind="2" SrcTable="2350" DestTable="2446" FKFields="CD_CONTA=CONTA_DEST\nCD_AGENCIA=CD_AGENCIA_DEST\nCD_BANCO=CD_BANCO_DEST\n" FKFieldsComments="\n\n\n" relDirection="3" MidOffset="0" OptionalStart="0" OptionalEnd="0" CaptionOffsetX="0" CaptionOffsetY="0" StartIntervalOffsetX="0" StartIntervalOffsetY="0" EndIntervalOffsetX="0" EndIntervalOffsetY="0" CreateRefDef="1" Invisible="0" RefDef="Matching=0\nOnDelete=3\nOnUpdate=3\n" Comments="" FKRefDefIndex_Obj_id="3118" Splitted="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="40" />
+<RELATION ID="3156" RelationName="Rel_23" Kind="2" SrcTable="2350" DestTable="2718" FKFields="CD_CONTA=CD_CONTA\nCD_AGENCIA=CD_AGENCIA\nCD_BANCO=CD_BANCO\n" FKFieldsComments="\n\n\n" relDirection="2" MidOffset="-190" OptionalStart="0" OptionalEnd="0" CaptionOffsetX="0" CaptionOffsetY="0" StartIntervalOffsetX="0" StartIntervalOffsetY="0" EndIntervalOffsetX="0" EndIntervalOffsetY="0" CreateRefDef="1" Invisible="0" RefDef="Matching=0\nOnDelete=3\nOnUpdate=3\n" Comments="" FKRefDefIndex_Obj_id="3160" Splitted="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="42" />
 </RELATIONS>
 <NOTES>
 </NOTES>

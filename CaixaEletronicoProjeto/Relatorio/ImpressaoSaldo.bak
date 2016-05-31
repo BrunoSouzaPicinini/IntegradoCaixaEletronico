@@ -2,7 +2,7 @@
 <!-- Created with iReport - A designer for JasperReports -->
 <!DOCTYPE jasperReport PUBLIC "//JasperReports//DTD Report Design//EN" "http://jasperreports.sourceforge.net/dtds/jasperreport.dtd">
 <jasperReport
-		 name="Saldo"
+		 name="ImpressaoSaldo"
 		 columnCount="1"
 		 printOrder="Vertical"
 		 orientation="Portrait"
@@ -17,30 +17,32 @@
 		 whenNoDataType="NoPages"
 		 isTitleNewPage="false"
 		 isSummaryNewPage="false">
-	<property name="ireport.scriptlethandling" value="0" />
+	<property name="ireport.scriptlethandling" value="2" />
 	<property name="ireport.encoding" value="UTF-8" />
 	<import value="java.util.*" />
 	<import value="net.sf.jasperreports.engine.*" />
 	<import value="net.sf.jasperreports.engine.data.*" />
 
-	<queryString><![CDATA[SELECT CD_CONTA, CD_AGENCIA, CD_BANCO,VL_SD_CORRENTE FROM CONTA ]]></queryString>
+	<queryString><![CDATA[SELECT * FROM CONTA]]></queryString>
 
-	<field name="CD_CONTA" class="java.math.BigDecimal"/>
-	<field name="CD_AGENCIA" class="java.math.BigDecimal"/>
 	<field name="CD_BANCO" class="java.math.BigDecimal"/>
+	<field name="CD_AGENCIA" class="java.math.BigDecimal"/>
 	<field name="VL_SD_CORRENTE" class="java.math.BigDecimal"/>
+	<field name="VL_SD_POUPANCA" class="java.math.BigDecimal"/>
+	<field name="CD_SENHA" class="java.math.BigDecimal"/>
+	<field name="CD_CONTA" class="java.math.BigDecimal"/>
 
 		<background>
 			<band height="0"  isSplitAllowed="true" >
 			</band>
 		</background>
 		<title>
-			<band height="49"  isSplitAllowed="true" >
+			<band height="50"  isSplitAllowed="true" >
 				<staticText>
 					<reportElement
-						x="51"
-						y="1"
-						width="186"
+						x="52"
+						y="5"
+						width="185"
 						height="36"
 						key="staticText-1"/>
 					<box></box>
@@ -51,8 +53,8 @@
 				</staticText>
 				<image  evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
-						x="0"
-						y="0"
+						x="1"
+						y="-1"
 						width="51"
 						height="48"
 						key="image-1"/>
@@ -63,15 +65,15 @@
 			</band>
 		</title>
 		<pageHeader>
-			<band height="39"  isSplitAllowed="true" >
+			<band height="50"  isSplitAllowed="true" >
 				<staticText>
 					<reportElement
-						x="0"
-						y="6"
+						x="1"
+						y="14"
 						width="45"
 						height="21"
 						forecolor="#000000"
-						key="staticText-3"/>
+						key="staticText-2"/>
 					<box></box>
 					<textElement textAlignment="Center">
 						<font fontName="Arial" size="12" isBold="true"/>
@@ -80,12 +82,12 @@
 				</staticText>
 				<staticText>
 					<reportElement
-						x="45"
-						y="6"
+						x="46"
+						y="14"
 						width="63"
 						height="21"
 						forecolor="#000000"
-						key="staticText-4"/>
+						key="staticText-3"/>
 					<box></box>
 					<textElement textAlignment="Center">
 						<font fontName="Arial" size="12" isBold="true"/>
@@ -94,12 +96,12 @@
 				</staticText>
 				<staticText>
 					<reportElement
-						x="108"
-						y="6"
+						x="109"
+						y="14"
 						width="63"
 						height="21"
 						forecolor="#000000"
-						key="staticText-5"/>
+						key="staticText-4"/>
 					<box></box>
 					<textElement textAlignment="Center">
 						<font fontName="Arial" size="12" isBold="true"/>
@@ -108,103 +110,64 @@
 				</staticText>
 				<staticText>
 					<reportElement
-						x="171"
-						y="6"
-						width="66"
+						x="172"
+						y="14"
+						width="65"
 						height="21"
 						forecolor="#000000"
-						key="staticText-6"/>
+						key="staticText-5"/>
 					<box></box>
 					<textElement textAlignment="Center">
 						<font fontName="Arial" size="12" isBold="true"/>
 					</textElement>
 				<text><![CDATA[SALDO]]></text>
 				</staticText>
-				<staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
-						x="0"
-						y="18"
-						width="236"
-						height="14"
-						key="staticText-7"/>
+						x="1"
+						y="27"
+						width="235"
+						height="17"
+						key="textField-1"/>
 					<box></box>
 					<textElement>
 						<font/>
 					</textElement>
-				<text><![CDATA[---------------------------------------------------------------------]]></text>
-				</staticText>
-				<staticText>
+				<textFieldExpression   class="java.lang.String"><![CDATA[-------------------------------------------------------------------------]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
-						x="0"
-						y="-8"
-						width="236"
-						height="15"
-						key="staticText-8"/>
+						x="1"
+						y="2"
+						width="235"
+						height="17"
+						key="textField-2"/>
 					<box></box>
 					<textElement>
 						<font/>
 					</textElement>
-				<text><![CDATA[---------------------------------------------------------------------]]></text>
-				</staticText>
+				<textFieldExpression   class="java.lang.String"><![CDATA[-------------------------------------------------------------------------]]></textFieldExpression>
+				</textField>
 			</band>
 		</pageHeader>
 		<columnHeader>
-			<band height="7"  isSplitAllowed="true" >
+			<band height="30"  isSplitAllowed="true" >
 			</band>
 		</columnHeader>
 		<detail>
-			<band height="33"  isSplitAllowed="true" >
-				<textField isStretchWithOverflow="false" pattern="##0" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+			<band height="100"  isSplitAllowed="true" >
+				<textField isStretchWithOverflow="false" pattern="##0.00" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
-						x="45"
-						y="6"
-						width="63"
-						height="18"
+						x="7"
+						y="7"
+						width="80"
+						height="27"
 						key="textField"/>
 					<box></box>
-					<textElement textAlignment="Center">
-						<font/>
-					</textElement>
-				<textFieldExpression   class="java.math.BigDecimal"><![CDATA[$F{CD_AGENCIA}]]></textFieldExpression>
-				</textField>
-				<textField isStretchWithOverflow="false" pattern="##0" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
-					<reportElement
-						x="108"
-						y="6"
-						width="63"
-						height="18"
-						key="textField"/>
-					<box></box>
-					<textElement textAlignment="Center">
-						<font/>
-					</textElement>
-				<textFieldExpression   class="java.math.BigDecimal"><![CDATA[$F{CD_BANCO}]]></textFieldExpression>
-				</textField>
-				<textField isStretchWithOverflow="false" pattern="##0" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
-					<reportElement
-						x="0"
-						y="6"
-						width="45"
-						height="18"
-						key="textField"/>
-					<box></box>
-					<textElement textAlignment="Center">
+					<textElement>
 						<font/>
 					</textElement>
 				<textFieldExpression   class="java.math.BigDecimal"><![CDATA[$F{CD_CONTA}]]></textFieldExpression>
-				</textField>
-				<textField isStretchWithOverflow="false" pattern="##0" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
-					<reportElement
-						x="171"
-						y="6"
-						width="66"
-						height="18"
-						key="textField"/>
-					<box></box>
-					<textElement textAlignment="Center">
-						<font/>
-					</textElement>
-				<textFieldExpression   class="java.math.BigDecimal"><![CDATA[$F{VL_SD_CORRENTE}]]></textFieldExpression>
 				</textField>
 			</band>
 		</detail>

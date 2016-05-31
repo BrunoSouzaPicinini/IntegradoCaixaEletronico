@@ -5,17 +5,25 @@
  */
 package br.edu.grupointegrado.visao;
 
+import br.edu.grupointegrado.controle.ClassConta;
+import br.edu.grupointegrado.controle.ClassSaldo;
+import br.edu.grupointegrado.controle.ClassSessao;
+
 /**
  *
  * @author Luan
  */
 public class TelaSaldo extends javax.swing.JFrame {
 
+    TelaOperacao operacao;
+    ClassConta conta;
+    String t1 = "teste1 \n";
+    String t2 = "teste2";
     public TelaSaldo() {
         initComponents();
-        
-        
-        
+      conta = ClassSessao.getConta();
+       jTASaldo.append(t1);
+       jTASaldo.append(t2);
         
     }
 
@@ -37,6 +45,7 @@ public class TelaSaldo extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("SALDO");
+        setAlwaysOnTop(true);
         setFocusable(false);
         setFocusableWindowState(false);
         setResizable(false);
@@ -128,7 +137,8 @@ public class TelaSaldo extends javax.swing.JFrame {
     }//GEN-LAST:event_jBFinalizarSaldoActionPerformed
 
     private void jBImprimirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBImprimirActionPerformed
-        // TODO add your handling code here:
+         
+        ClassSaldo relatorio = new ClassSaldo(conta.consultaConta()); 
     }//GEN-LAST:event_jBImprimirActionPerformed
 
     private void jBMenuAnteriorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBMenuAnteriorActionPerformed
@@ -179,4 +189,10 @@ public class TelaSaldo extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea jTASaldo;
     // End of variables declaration//GEN-END:variables
+
+    public void setOperacao(TelaOperacao operacao) {
+        this.operacao = operacao;
+    }
+
+
 }

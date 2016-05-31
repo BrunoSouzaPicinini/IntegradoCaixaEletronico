@@ -7,3 +7,13 @@ constraint FK_CD_SAQUE foreign key(CD_BANCO,CD_AGENCIA,CD_CONTA) references CONT
 
 ALTER TABLE TRANSFERENCIA DROP CONSTRAINT fk_conta_td;
 
+
+delete from mov_conta;
+delete from MOVIMENTACAO;
+delete from OPERACAO;
+delete from TRANSFERENCIA;
+delete from sessao;
+commit;
+
+SELECT CD_CONTA, CD_AGENCIA, CD_BANCO,VL_SD_CORRENTE FROM CONTA ;
+

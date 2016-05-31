@@ -18,7 +18,7 @@ import br.edu.grupointegrado.controle.ClassTransferencia;
  */
 public class TelaOperacao extends javax.swing.JFrame {
     ClassConta conta;
-
+    ClassSessao sessao;
     ClassSaque saque;
     ClassTransferencia transferencia;
     ClassOperacao operacao = new ClassOperacao();
@@ -200,7 +200,10 @@ public class TelaOperacao extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jBSaldoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBSaldoActionPerformed
-        // TODO add your handling code here:
+        saldo = new TelaSaldo();
+        saldo.setOperacao(this);
+        setVisible(false);
+        saldo.setVisible(true);
     }//GEN-LAST:event_jBSaldoActionPerformed
 
     private void jBExtratoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBExtratoActionPerformed
@@ -367,6 +370,10 @@ public class TelaOperacao extends javax.swing.JFrame {
 
     public void setInicial(TelaInicialCaixa inicial) {
         this.inicial = inicial;
+    }
+
+    public void setSessao(ClassSessao sessao) {
+        this.sessao = sessao;
     }
     
     
