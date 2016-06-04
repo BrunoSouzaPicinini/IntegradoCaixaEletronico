@@ -33,7 +33,6 @@ public class TelaContaDeposito extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
-        jBOutraConta = new javax.swing.JButton();
         jBFinalizarContaDeposito = new javax.swing.JButton();
         jBMenuAnterior = new javax.swing.JButton();
         jBPropriaConta = new javax.swing.JButton();
@@ -47,17 +46,6 @@ public class TelaContaDeposito extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
         jLabel1.setText("Selecione a opção desejada");
-
-        jBOutraConta.setBackground(new java.awt.Color(92, 102, 122));
-        jBOutraConta.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
-        jBOutraConta.setForeground(new java.awt.Color(255, 255, 255));
-        jBOutraConta.setText("Outra Conta");
-        jBOutraConta.setBorder(null);
-        jBOutraConta.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jBOutraContaActionPerformed(evt);
-            }
-        });
 
         jBFinalizarContaDeposito.setBackground(new java.awt.Color(92, 102, 122));
         jBFinalizarContaDeposito.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
@@ -104,7 +92,6 @@ public class TelaContaDeposito extends javax.swing.JFrame {
                         .addGap(32, 32, 32)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jBPropriaConta, javax.swing.GroupLayout.PREFERRED_SIZE, 293, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jBOutraConta, javax.swing.GroupLayout.PREFERRED_SIZE, 293, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jBFinalizarContaDeposito, javax.swing.GroupLayout.PREFERRED_SIZE, 293, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(194, 194, 194)
@@ -118,9 +105,7 @@ public class TelaContaDeposito extends javax.swing.JFrame {
                 .addComponent(jLabel1)
                 .addGap(18, 18, 18)
                 .addComponent(jBPropriaConta, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jBOutraConta, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 139, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 223, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jBFinalizarContaDeposito, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jBMenuAnterior, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -130,16 +115,6 @@ public class TelaContaDeposito extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jBOutraContaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBOutraContaActionPerformed
-        forma.setContaDestino(0);
-        forma.setOperacao(operacao);
-        forma.setDeposito(deposito);
-        forma.setInicial(inicial);
-        setVisible(false);
-        forma.setVisible(true);
-
-    }//GEN-LAST:event_jBOutraContaActionPerformed
 
     private void jBFinalizarContaDepositoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBFinalizarContaDepositoActionPerformed
         setVisible(false);
@@ -199,7 +174,6 @@ public class TelaContaDeposito extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jBFinalizarContaDeposito;
     private javax.swing.JButton jBMenuAnterior;
-    private javax.swing.JButton jBOutraConta;
     private javax.swing.JButton jBPropriaConta;
     private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables

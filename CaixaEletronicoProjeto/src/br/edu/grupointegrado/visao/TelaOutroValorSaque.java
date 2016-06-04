@@ -327,7 +327,7 @@ public class TelaOutroValorSaque extends javax.swing.JFrame {
         movimentacao = new ClassMovimentacao();
         movimentacao.setCdOperacao(operacao.operacao.getCdOperacao());
         movimentacao.setDsMovimentacao("SAQUE");
-        movimentacao.setVlMovimentacao(valor);
+        movimentacao.setVlMovimentacao(-(valor));
         movimentacao.inserirMovimentacao(ClassSessao.getConta());
         
         setVisible(false);
